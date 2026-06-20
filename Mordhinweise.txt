@@ -1,0 +1,26 @@
+Fehlender Finger
+- Einladung Party => Schlafzimmer immer
+- Kuchenreztept => Küche immer
+- Butter gefroren im Kühlschrank => Küche 12:00 Mordtag
+- Finger abgeschnitten => Werkstatt 16:00 Mordtag
+- Butter neben Kreissäge => Werkstatt 16:00 Mordtag
+- Leichenumrandung fehlt Finger => Wohnzimmer 8:00 Tag danach
+
+Bananenschale
+- Messer in Raviolidose => Küche immer
+- 5 Bananen => Küche 12:00 Mordtag
+- 4 Bananen => Küche nach 12:00
+- Bananenschale hinter Stuhl => Wohnzimmer 16:00 Mordtag
+- Bananenschale neben Leiche => Wohnzimmer 20:00 Mordtag
+
+Wurfsterne
+- Hängen an Deckenventilator => Wohnzimmer 12:00 & 16:00 Mordtag
+- Sind in/neben der Leiche => Wohnzimmer 20:00 Mordtag
+
+Notrufzettel
+- Im Schlafzimmer => Schlafzimmer 12:00 & 16:00 Mordtag
+- Unter Regal => Wohnzimmer 8:00 Tag danach
+
+Deckenventilator:
+- Schalter auf leicht => Wohnzimmer 12:00 & 16:00 Mordtag
+- Schalter auf ultra => Wohnzimmer 20:00 Mordtag & 8:00 Tag danach

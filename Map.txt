@@ -1,0 +1,54 @@
+Wohnzimmer
+- Regal/Schrank mit kleinem Spalt zum Boden
+- Wählscheibentelefon
+- Deckenventilator
+    => kaputt ab 20:00 Mordtag
+- Regulierung für Deckenventilator
+    => auf leicht um 12:00 und 16:00 Mordtag
+    => auf ultra um 20:00 Mordtag und 8:00 Tag danach
+- Wurfsterne
+    => Hängen an Deckenventilator um 12:00 und 16:00 Mordtag
+    => in/neben Leiche am Boden um 20:00 Mordtag
+    => nicht mehr da um 8:00 Tag danach
+- Hinweiszettel Notfall
+    => nicht da/im Schlafzimmer um 12:00 und 16:00 Mordtag
+    => verdeckt von Leiche um 20:00 Mordtag
+    => unter Regal um 8:00 Tag danach
+- Leiche
+    => da um 20:00 Mordtag
+    => Umrandung mit fehlendem Finger um 8:00 Tag danach
+- Bananenschale
+    => Hinter Stuhl um 16:00 Mordtag
+    => Neben Leiche um 20:00 Mordtag
+    => nicht da um 12:00 Mordtag und 8:00 Tag danach
+
+Schlafzimmer
+- Plattenspieler
+    => keine Platte aufgelegt um 12:00 und 16:00 Mordtag und 8:00 Tag danach
+    => Platte spielt um 20:00 Mordtag
+- Regal mit Platten
+    => eine Herausgenommen um 20:00 Mordtag
+- Hinweiszettel Notfall
+    => Da um 12:00 und 16:00 Mordtag
+    => Weg ab 20:00 Mordtag
+
+Küche
+- Kühlschrank
+- Kuchenrezept
+- Schale mit Bananen
+    => 5 Stück 12:00 Mordtag
+    => 4 Stück ab 16:00 Mordtag
+- Dosenravioli mit Messer darin
+- gefrorene Butter im Kühlschrank
+    => da um 12:00 Mordtag
+    => weg ab 16:00 Mordtag
+
+Keller/Werkstatt
+- Kreissäge
+    => Blutig ab 16:00 Mordtag
+- Finger
+    => am Boden ab 16:00 Mordtag
+    => weg um 8:00 Tag danach
+- Butter
+    => neben Kreissäge um 16:00 Mordtag
+    => weg gerutscht (Zahnrad halb sichtbar) ab 20:00 Mordtag
