@@ -47,8 +47,34 @@ namespace FlorianMan.Watch
                 tan = 180 + tan;
             }
             
-            transform.RotateAround(Vector3.zero, Vector3.forward, currentRotation - (float)tan);
+            float angle = currentRotation - (float)tan;
 
+            if (angle > 180)
+            {
+                angle -= 360;
+
+                SmallPointer.Instance.HourUp();
+            }
+            if (angle < -180)
+            {
+                angle += 360;
+
+                SmallPointer.Instance.HourDown();
+            }
+            
+            transform.RotateAround(Vector3.zero, Vector3.forward, angle);
+
+            SmallPointer.Instance.Turn(angle / 12);
+
+            if (currentRotation is < 90 and > 0 && tan is < 0 and > -90)
+            {
+                Debug.Log("Back " + SmallPointer.Instance.GetTime());
+            }
+            if (currentRotation is < 0 and > -90 && tan is < 90 and > 0)
+            {
+                Debug.Log("Forth " + SmallPointer.Instance.GetTime());
+            }
+            
             currentRotation = (float)tan;
         }
     }
