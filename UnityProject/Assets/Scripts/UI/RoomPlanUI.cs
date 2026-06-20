@@ -1,3 +1,4 @@
+using FlorianMan.Game;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,22 +16,22 @@ namespace FlorianMan.UI
             
             buttons[0].onClick.AddListener(() =>
             {
-                CameraMovement.Instance.MoveToLivingRoom();
+                RoomManager.Instance.ChangeToRoom(Rooms.LivingRoom);
             });
             
             buttons[1].onClick.AddListener(() =>
             {
-                CameraMovement.Instance.MoveToKitchen();
+                RoomManager.Instance.ChangeToRoom(Rooms.Kitchen);
             });
             
             buttons[2].onClick.AddListener(() =>
             {
-                CameraMovement.Instance.MoveToBedroom();
+                RoomManager.Instance.ChangeToRoom(Rooms.Bedroom);
             });
             
             buttons[3].onClick.AddListener(() =>
             {
-                CameraMovement.Instance.MoveToBasement();
+                RoomManager.Instance.ChangeToRoom(Rooms.Basement);
             });
         }
     }
