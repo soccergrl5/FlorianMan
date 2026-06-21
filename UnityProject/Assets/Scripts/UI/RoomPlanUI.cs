@@ -34,5 +34,17 @@ namespace FlorianMan.UI
                 RoomManager.Instance.ChangeToRoom(Rooms.Basement);
             });
         }
+
+        public void Disable()
+        {
+            foreach (Button button in buttons)
+                button.interactable = false;
+        }
+
+        public void Enable()
+        {
+            foreach (Button button in buttons)
+                button.interactable = true;
+        }
     }
 }

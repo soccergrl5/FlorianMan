@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FlorianMan.UI;
+using UnityEngine;
 
 namespace FlorianMan.Watch
 {
@@ -20,6 +21,22 @@ namespace FlorianMan.Watch
             
             _currentDay  = 2;
             _currentTime = MorningTime;
+            
+            Hide();
+        }
+
+        public void Show()
+        {
+            gameObject.SetActive(true);
+            
+            RoomPlanUI.Instance.Disable();
+        }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+            
+            RoomPlanUI.Instance.Enable();
         }
 
         public void BackOneDay() => _currentDay--;
