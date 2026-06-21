@@ -3,19 +3,21 @@ using UnityEngine.UI;
 
 namespace FlorianMan.UI
 {
-    public abstract class TextBoxUI : MonoBehaviour
+    public class TextBoxUI : MonoBehaviour
     {
         [SerializeField] private GameObject[] textboxes;
         [SerializeField] private Button backgroundButton;
         
         private int _currentTextbox;
 
-        protected void ActivateButton()
+        private void Awake()
         {
             backgroundButton.onClick.AddListener(NextTextbox);
+            
+            Hide();
         }
 
-        protected void Hide()
+        private void Hide()
         {
             gameObject.SetActive(false);
         }
@@ -34,6 +36,7 @@ namespace FlorianMan.UI
 
             if (_currentTextbox == textboxes.Length)
             {
+                _currentTextbox = 0;
                 Hide();
                 return;
             }

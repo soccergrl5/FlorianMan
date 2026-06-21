@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FlorianMan.Watch;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace FlorianMan.UI
@@ -24,6 +25,11 @@ namespace FlorianMan.UI
                 {
                     Watch.Watch.Instance.Show();
                     ShowTurnButton();
+
+                    if (TimeManager.Instance.GetUnlockedTimes() == 1)
+                    {
+                        TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning1);
+                    }
                 }
                 else
                 {
