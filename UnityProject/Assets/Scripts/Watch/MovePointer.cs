@@ -182,7 +182,9 @@ namespace FlorianMan.Watch
             _currentRotation = (float)tan;
         }
 
-        //Reset the Lock for Backwards when new cogwheel inserted
+        /// <summary>
+        /// Reset the Lock for Backwards when new cogwheel inserted
+        /// </summary>
         public void UnlockedNewTime()
         {
             _lockedBack = false;
