@@ -5,39 +5,43 @@ namespace FlorianMan.Watch
 {
     public class MovePointer : MonoBehaviour
     {
-        private bool onClick = false;
+        private bool _onClick;
 
-        private float currentRotation = 0;
+        private float _currentRotation;
         
-        private Vector2 middlePoint;
+        private Vector2 _middlePoint;
         
         private void Start()
         {
-            middlePoint.x = Screen.width / 2;
-            middlePoint.y = Screen.height / 2;
+            _middlePoint.x = Screen.width / 2f;
+            _middlePoint.y = Screen.height / 2f;
         }
         
         private void OnMouseDown()
         {
-            onClick = true;
+            _onClick = true;
         }
 
         private void OnMouseUp()
         {
-            onClick = false;
+            _onClick = false;
         }
 
         private void Update()
         {
-            if (!onClick) return;
+            if (!_onClick) return;
 
             Vector3 mousePos = Input.mousePosition;
 
-            float xDiff = middlePoint.x - mousePos.x;
-            float yDiff = middlePoint.y - mousePos.y;
+            float xDiff = _middlePoint.x - mousePos.x;
+            float yDiff = _middlePoint.y - mousePos.y;
             
             double tan = Math.Atan(xDiff / yDiff) * (180/Math.PI);
             
+            if (xDiff != 0 && yDiff == 0)
+            {
+                tan = -tan;
+            }
             if (xDiff > 0 && yDiff > 0)
             {
                 tan = -(180 - tan);
@@ -47,7 +51,7 @@ namespace FlorianMan.Watch
                 tan = 180 + tan;
             }
             
-            float angle = currentRotation - (float)tan;
+            float angle = _currentRotation - (float)tan;
 
             if (angle > 180)
             {
@@ -63,19 +67,23 @@ namespace FlorianMan.Watch
             }
             
             transform.RotateAround(Vector3.zero, Vector3.forward, angle);
-
+            
             SmallPointer.Instance.Turn(angle / 12);
 
-            if (currentRotation is < 90 and > 0 && tan is < 0 and > -90)
+            if (_currentRotation is < 90 and > 0 && tan is < 0 and > -90)
             {
                 Debug.Log("Back " + SmallPointer.Instance.GetTime());
+                
+                int status = Watch.Instance.CanTurnBackFurther(SmallPointer.Instance.GetTime());
+
+                if (status == 1 || status == 2) _onClick = false;
             }
-            if (currentRotation is < 0 and > -90 && tan is < 90 and > 0)
+            if (_currentRotation is < 0 and > -90 && tan is < 90 and > 0)
             {
                 Debug.Log("Forth " + SmallPointer.Instance.GetTime());
             }
             
-            currentRotation = (float)tan;
+            _currentRotation = (float)tan;
         }
     }
 }

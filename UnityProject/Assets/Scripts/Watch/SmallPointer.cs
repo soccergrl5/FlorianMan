@@ -6,7 +6,7 @@ namespace FlorianMan.Watch
     {
         public static SmallPointer Instance { get; private set; }
         
-        private int time = 8;
+        private int _time;
 
         private void Awake()
         {
@@ -15,7 +15,9 @@ namespace FlorianMan.Watch
 
         private void Start()
         {
-            transform.RotateAround(Vector3.zero, Vector3.forward, -30 * time);
+            _time = Watch.Instance.GetCurrentTime();
+            
+            transform.RotateAround(Vector3.zero, Vector3.forward, -30 * _time);
         }
     
         public void Turn(float angle)
@@ -25,18 +27,27 @@ namespace FlorianMan.Watch
         
         public void HourDown()
         {
-            time--;
+            _time--;
 
-            if (time == 0) time = 12;
+            if (_time == 0)
+            {
+                _time = 12;
+                
+                Watch.Instance.BackOneDay();
+            }
         }
 
         public void HourUp()
         {
-            time++;
-            
-            if (time == 13) time = 1;
+            _time++;
+
+            if (_time == 13)
+            {
+                _time = 1;
+                Watch.Instance.ForwardOneDay();
+            }
         }
 
-        public int GetTime() => time;
+        public int GetTime() => _time;
     }
 }
