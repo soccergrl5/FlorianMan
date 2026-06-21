@@ -7,6 +7,8 @@ namespace FlorianMan.Watch
         public static SmallPointer Instance { get; private set; }
         
         private int _time;
+        
+        private Vector3 _localMiddlePoint;
 
         private void Awake()
         {
@@ -17,12 +19,19 @@ namespace FlorianMan.Watch
         {
             _time = Watch.Instance.GetCurrentTime();
             
-            transform.RotateAround(Vector3.zero, Vector3.forward, -30 * _time);
+            _localMiddlePoint = Vector3.zero;
+            
+            transform.RotateAround(_localMiddlePoint, Vector3.forward, -30 * _time);
         }
     
         public void Turn(float angle)
         {
-            transform.RotateAround(Vector3.zero, Vector3.forward, angle);
+            transform.RotateAround(_localMiddlePoint, Vector3.forward, angle);
+        }
+
+        public void SetNewLocalMiddlePoint(int middlePointX)
+        {
+            _localMiddlePoint.x = middlePointX;
         }
         
         public void HourDown()

@@ -1,4 +1,5 @@
 using FlorianMan.Game;
+using FlorianMan.Watch;
 using UnityEngine;
 
 namespace FlorianMan
@@ -24,6 +25,8 @@ namespace FlorianMan
         private void MoveToCurrentPosition()
         {
             transform.SetPositionAndRotation(new Vector3(_currentPositionX, 0, -10), Quaternion.identity);
+            
+            MovePointer.Instance.SetNewLocalMiddlePoint(_currentPositionX);
         }
         
         public void MoveToNewRoom(Rooms nextRoom)

@@ -5,6 +5,8 @@ namespace FlorianMan.Watch
 {
     public class MovePointer : MonoBehaviour
     {
+        public static MovePointer Instance {get; private set;}
+        
         private bool _onClick;
         private bool _moving;
 
@@ -14,14 +16,22 @@ namespace FlorianMan.Watch
         private float _currentRotation;
         
         private Vector2 _middlePoint;
+        private Vector3 _middlePointLocal;
         
         private Vector3 _defaultPosition;
         private Quaternion _defaultRotation;
-        
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         private void Start()
         {
             _middlePoint.x = Screen.width / 2f;
             _middlePoint.y = Screen.height / 2f;
+            
+            _middlePointLocal = Vector3.zero;
 
             _lockedForward = true;
             
@@ -34,6 +44,13 @@ namespace FlorianMan.Watch
         private void ResetToDefaultTransform()
         {
             transform.SetLocalPositionAndRotation(_defaultPosition, _defaultRotation);
+        }
+
+        public void SetNewLocalMiddlePoint(int middlePointX)
+        {
+            _middlePointLocal.x = middlePointX;
+            
+            SmallPointer.Instance.SetNewLocalMiddlePoint(middlePointX);
         }
         
         private void OnMouseDown()
@@ -107,7 +124,7 @@ namespace FlorianMan.Watch
                 SmallPointer.Instance.HourDown();
             }
             
-            transform.RotateAround(Vector3.zero, Vector3.forward, angle);
+            transform.RotateAround(_middlePointLocal, Vector3.forward, angle);
             
             SmallPointer.Instance.Turn(angle / 12);
 
