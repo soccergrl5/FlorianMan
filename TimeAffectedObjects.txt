@@ -1,0 +1,52 @@
+Liste aller TimeAffected Objekte, die auch das TimeAffected Skript bekommen:
+- Butter
+	-> Mi 	|Küche		|Gefroren
+	-> N	|Werkstatt	|Hart
+	-> A,Mo	|Werkstatt	|geschmolzen in Kreissäge
+
+- Finger
+	-> N 	|Werkstatt
+
+- Bananen
+	-> Mi	|Küche		|5 Stück
+	-> ~	|Küche		|4 Stück
+
+- Bananenschale
+	-> N	|Wohnzimmer 	|hinter Stuhl
+	-> A	|Wohnzimmer	|neben Leiche
+
+- Wurfsterne
+	-> Mi,N	|Wohnzimmer 	|Hängen an Deckenventilator
+	-> A	|Wohnzimmer 	|In/ Neben Leiche
+	-> Mo	|verschwunden
+
+- Notrufzettel
+	-> Mi,N	|Schlafzimmer	
+	-> A	|Wohnzimmer	|Unter Regal, verdeckt von Leiche
+	-> M	|Wohnzimmer	|Unter Regal
+
+- Deckenventilator Schalter
+	-> Mi,N	|Wohnzimmer	|Auf leicht
+	-> A,Mo	|Wohnzimmer	|Auf ultra
+
+- Deckenventilator 
+	-> Mi,N	|Schlafzimmer 	|Mit Wurfsternen
+	-> A,Mo	|Schlafzimmer	|Kaputt, ohne Wurfsterne
+ 
+- Kreissäge
+	-> Mi	|Werkstatt 	|Ohne Blut
+	-> ~	|Werkstatt	|Mit Blut	
+
+- Leiche
+	-> Mi,N	|Nichts
+	-> A	|Wohnzimmer	|Leiche
+	-> Mo	|Wohnzimmer	|Umrandung
+
+- Stuhl
+	-> Mi	|Wohnzimmer	|Vor Bananeneschale
+	-> ~	|Wohnzimmer	|verschoben, Bananenschale sichtbar
+
+- Plattenspieler?
+
+
+
