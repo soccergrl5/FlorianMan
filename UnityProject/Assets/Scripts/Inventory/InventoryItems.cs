@@ -4,6 +4,7 @@
     {
         Cogwheel,
         Butter,
-        VinylRecord
+        MusicVinylRecord,
+        HintVinylRecord,
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using FlorianMan.Inventory.Buttons;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace FlorianMan.Inventory
 {
@@ -36,8 +38,14 @@ namespace FlorianMan.Inventory
                     Instantiate(butterPrefab);
                     break;
                 
-                case InventoryItems.VinylRecord:
-                    Instantiate(vinylRecordPrefab);
+                case InventoryItems.MusicVinylRecord:
+                    GameObject musicVinyl = Instantiate(vinylRecordPrefab);
+                    musicVinyl.GetComponent<VinylRecord>().SetIsHint(false);
+                    break;
+                
+                case InventoryItems.HintVinylRecord:
+                    GameObject hintVinyl = Instantiate(vinylRecordPrefab);
+                    hintVinyl.GetComponent<VinylRecord>().SetIsHint(true);
                     break;
             }
         }
