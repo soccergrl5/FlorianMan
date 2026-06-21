@@ -1,39 +1,25 @@
-﻿using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine.EventSystems;
 
 namespace FlorianMan.Inventory.Buttons
 {
-    public class Cogwheel : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+    public class Cogwheel : InventoryButton
     {
-        [SerializeField] private GameObject prefab;
-
-        private GameObject item;
-
-        /// <summary>
-        /// Create the Item when the Cogwheel Inventory Button gets clicked
-        /// </summary>
-        /// <param name="eventData"></param>
-        public void OnPointerDown(PointerEventData eventData)
+        public override void OnPointerUp(PointerEventData eventData)
         {
-            item = Instantiate(prefab, Camera.main.transform.position, Quaternion.identity);
-        }
-        
-        /// <summary>
-        /// Check if the Item is over a valid Position to be placed
-        /// </summary>
-        /// <param name="eventData"></param>
-        public void OnPointerUp(PointerEventData eventData)
-        {
-            if (item == null) return;
+            if (Item == null) return;
             
-            if (Watch.Watch.Instance.CogwheelIsAtRightPosition(item.transform.position))
+            //If the Position the Cogwheel was released is valid put it there
+            //otherwise keep it in the Inventory
+            if (Watch.Watch.Instance.CogwheelIsAtRightPosition(Item.transform.position))
             {
-                Destroy(item.gameObject);
+                InventoryManager.Instance.RemoveItem(InventoryItems.Cogwheel);
+                
+                Destroy(Item.gameObject);
                 Destroy(gameObject);
             }
             else
             {
-                Destroy(item.gameObject);
+                Destroy(Item.gameObject);
             }
         }
     }

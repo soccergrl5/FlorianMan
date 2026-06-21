@@ -23,6 +23,8 @@ namespace FlorianMan.UI
         public void Show()
         {
             gameObject.SetActive(true);
+            
+            textboxes[0].gameObject.SetActive(true);
         }
 
         private void NextTextbox()

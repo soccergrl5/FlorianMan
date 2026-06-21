@@ -6,6 +6,7 @@ namespace FlorianMan.Inventory
     {
         private void Update()
         {
+            //Update the Position to where the Mouse is at
             Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             position.z += 8;
             

@@ -734,6 +734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cogwheelPrefab: {fileID: 8950503151725207738, guid: 7c56a16d266a7134884eed57617d72de, type: 3}
+  butterPrefab: {fileID: 649173406693156348, guid: 86ab45aeb34d5214597906b696dcb50c, type: 3}
+  vinylRecordPrefab: {fileID: 7164735068108463244, guid: b031f373c97e0b044aa0bc1216e4d7aa, type: 3}
 --- !u!1 &308466746
 GameObject:
   m_ObjectHideFlags: 0
