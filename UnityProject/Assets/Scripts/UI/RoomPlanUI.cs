@@ -35,12 +35,18 @@ namespace FlorianMan.UI
             });
         }
 
+        /// <summary>
+        /// Disable the Room Change Buttons
+        /// </summary>
         public void Disable()
         {
             foreach (Button button in buttons)
                 button.interactable = false;
         }
 
+        /// <summary>
+        /// Enable the Room Change Buttons
+        /// </summary>
         public void Enable()
         {
             foreach (Button button in buttons)

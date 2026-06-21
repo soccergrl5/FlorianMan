@@ -40,11 +40,17 @@ namespace FlorianMan.UI
             HideTurnButton();
         }
 
+        /// <summary>
+        /// Hide the Turn Button
+        /// </summary>
         private void HideTurnButton()
         {
             turnButton.gameObject.SetActive(false);
         }
 
+        /// <summary>
+        /// Show the Turn Button
+        /// </summary>
         private void ShowTurnButton()
         {
             turnButton.gameObject.SetActive(true);

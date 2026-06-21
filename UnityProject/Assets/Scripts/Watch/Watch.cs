@@ -34,6 +34,9 @@ namespace FlorianMan.Watch
             Hide();
         }
 
+        /// <summary>
+        /// Show the Watch
+        /// </summary>
         public void Show()
         {
             gameObject.SetActive(true);
@@ -41,6 +44,9 @@ namespace FlorianMan.Watch
             RoomPlanUI.Instance.Disable();
         }
 
+        /// <summary>
+        /// Hide the Watch
+        /// </summary>
         public void Hide()
         {
             gameObject.SetActive(false);
@@ -48,6 +54,9 @@ namespace FlorianMan.Watch
             RoomPlanUI.Instance.Enable();
         }
 
+        /// <summary>
+        /// Turn the Clock back and forth
+        /// </summary>
         public void TurnClock()
         {
             _showFront = !_showFront;
@@ -56,14 +65,20 @@ namespace FlorianMan.Watch
             clockBack.SetActive(!_showFront);
         }
 
+        /// <summary>
+        /// Go Back one day if turned over Hour 12
+        /// </summary>
         public void BackOneDay() => _currentDay--;
         
+        /// <summary>
+        /// Go Forth one day if turned over Hour 12
+        /// </summary>
         public void ForwardOneDay() => _currentDay++;
         
         /// <summary>
-        /// 
+        /// Check if the Clock can be turned Further Back
         /// </summary>
-        /// <param name="currentTime"></param>
+        /// <param name="currentTime">The Current Time</param>
         /// <returns>
         /// -1: Error
         /// 0: Can Turn Back Further
@@ -145,9 +160,9 @@ namespace FlorianMan.Watch
         }
         
         /// <summary>
-        /// 
+        /// Check if the Clock can be turned further Forward
         /// </summary>
-        /// <param name="currentTime"></param>
+        /// <param name="currentTime">The current Time</param>
         /// <returns>
         /// -1: Error
         /// 0: Can Turn Forward Further
@@ -236,6 +251,11 @@ namespace FlorianMan.Watch
             return -1;
         }
 
+        /// <summary>
+        /// Check if the Position of the Cogwheel Item is at the right spot
+        /// </summary>
+        /// <param name="position">Position of the Cogwheel Item</param>
+        /// <returns>If the Spot is valid</returns>
         public bool CogwheelIsAtRightPosition(Vector3 position)
         {
             if (!gameObject.activeSelf) return false;
@@ -244,7 +264,7 @@ namespace FlorianMan.Watch
             int unlockedTimes = TimeManager.Instance.GetUnlockedTimes();
             
             Vector3 positionCogwheel = cogwheels[unlockedTimes - 1].transform.position;
-            float radius = cogwheels[unlockedTimes - 1].transform.localScale.x;
+            float radius             = cogwheels[unlockedTimes - 1].transform.localScale.x;
 
             if (position.x < positionCogwheel.x + radius && position.x > positionCogwheel.x - radius
                                                          && position.y < positionCogwheel.y + radius &&
@@ -260,6 +280,10 @@ namespace FlorianMan.Watch
             return false;
         }
         
+        /// <summary>
+        /// Get the current Time
+        /// </summary>
+        /// <returns>Current Time</returns>
         public int GetCurrentTime() => _currentTime;
     }
 }

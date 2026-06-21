@@ -6,6 +6,9 @@ namespace FlorianMan.Watch
     {
         [SerializeField] private GameObject cogwheel;
 
+        /// <summary>
+        /// Activate the Graphic for the Placed Cogwheel
+        /// </summary>
         public void Placed()
         {
             cogwheel.SetActive(true);

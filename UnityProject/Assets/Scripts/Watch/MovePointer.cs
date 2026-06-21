@@ -41,11 +41,18 @@ namespace FlorianMan.Watch
             _defaultPosition.z += 10;
         }
 
+        /// <summary>
+        /// Reset the Position so it points exactly at 12
+        /// </summary>
         private void ResetToDefaultTransform()
         {
             transform.SetLocalPositionAndRotation(_defaultPosition, _defaultRotation);
         }
 
+        /// <summary>
+        /// Set new Middle Point to Turn around when the Camera changes Position
+        /// </summary>
+        /// <param name="middlePointX">New x-Coordinate of the Camera Position</param>
         public void SetNewLocalMiddlePoint(int middlePointX)
         {
             _middlePointLocal.x = middlePointX;
@@ -53,6 +60,9 @@ namespace FlorianMan.Watch
             SmallPointer.Instance.SetNewLocalMiddlePoint(middlePointX);
         }
         
+        /// <summary>
+        /// Enable Turning when Mouse Button Clicked on the Pointer
+        /// </summary>
         private void OnMouseDown()
         {
             if (TimeManager.Instance.GetUnlockedTimes() == 1) return;
@@ -60,6 +70,9 @@ namespace FlorianMan.Watch
             _onClick = true;
         }
 
+        /// <summary>
+        /// Disable Turning when Mouse Button is no longer clicked
+        /// </summary>
         private void OnMouseUp()
         {
             _onClick = false;
@@ -70,6 +83,7 @@ namespace FlorianMan.Watch
         {
             if (!_onClick) return;
 
+            //Calculate Angle to Rotate
             Vector3 mousePos = Input.mousePosition;
 
             float xDiff = _middlePoint.x - mousePos.x;
@@ -77,6 +91,7 @@ namespace FlorianMan.Watch
             
             double tan = Math.Atan(xDiff / yDiff) * (180/Math.PI);
 
+            //Check if start Moving in that Direction is allowed
             if (!_moving && _lockedBack && tan < 0)
             {
                 _onClick = false;
@@ -88,7 +103,8 @@ namespace FlorianMan.Watch
                 _onClick = false;
                 return;
             }
-
+            
+            //Start Rotating
             if (!_moving)
             {
                 _moving        = true;
@@ -96,6 +112,7 @@ namespace FlorianMan.Watch
                 _lockedForward = false;
             }
             
+            //Special Cases
             if (xDiff != 0 && yDiff == 0)
             {
                 tan = -tan;
@@ -111,6 +128,7 @@ namespace FlorianMan.Watch
             
             float angle = _currentRotation - (float)tan;
 
+            //Check if Pointer went through the bottom
             if (angle > 180)
             {
                 angle -= 360;
@@ -124,12 +142,15 @@ namespace FlorianMan.Watch
                 SmallPointer.Instance.HourDown();
             }
             
+            //Turn the Pointers
             transform.RotateAround(_middlePointLocal, Vector3.forward, angle);
             
             SmallPointer.Instance.Turn(angle / 12);
 
+            //Check if Pointer went through the top
             if (_currentRotation is < 90 and > 0 && tan is < 0 and > -90)
             {
+                //Check if allowed to turn Back Further
                 int status = Watch.Instance.CanTurnBackFurther(SmallPointer.Instance.GetTime());
 
                 if (status == 1 || status == 2)
@@ -144,6 +165,7 @@ namespace FlorianMan.Watch
             }
             if (_currentRotation is < 0 and > -90 && tan is < 90 and > 0)
             {
+                //Check if allowed to turn Forward Further
                 int status = Watch.Instance.CanTurnForwardFurther(SmallPointer.Instance.GetTime());
 
                 if (status == 1 || status == 2)
@@ -160,6 +182,7 @@ namespace FlorianMan.Watch
             _currentRotation = (float)tan;
         }
 
+        //Reset the Lock for Backwards when new cogwheel inserted
         public void UnlockedNewTime()
         {
             _lockedBack = false;

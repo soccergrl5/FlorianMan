@@ -20,12 +20,27 @@ namespace FlorianMan.Watch
             _unlockedTimes = 1;
         }
         
+        /// <summary>
+        /// Set the new Current Time
+        /// </summary>
+        /// <param name="times">New set Time</param>
         public void SetCurrentTime(Times times) => _currentTime = times;
 
+        /// <summary>
+        /// Get how many Times are already unlocked
+        /// </summary>
+        /// <returns>Amount of unlocked Times</returns>
         public int GetUnlockedTimes() => _unlockedTimes;
         
+        /// <summary>
+        /// Unlock a new Time
+        /// </summary>
         public void UnlockNextTime() => _unlockedTimes++;
         
+        /// <summary>
+        /// Get the current Time
+        /// </summary>
+        /// <returns>Current Time</returns>
         public Times GetCurrentTime() => _currentTime;
     }
 }

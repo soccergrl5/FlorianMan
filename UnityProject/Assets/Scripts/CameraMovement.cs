@@ -11,9 +11,9 @@ namespace FlorianMan
         private int _currentPositionX;
         
         private const int LivingRoomPosition = 0;
-        private const int KitchenPosition = 25;
-        private const int BedroomPosition = 50;
-        private const int BasementPosition = 75;
+        private const int KitchenPosition    = 25;
+        private const int BedroomPosition    = 50;
+        private const int BasementPosition   = 75;
 
         private void Awake()
         {
@@ -22,6 +22,9 @@ namespace FlorianMan
             _currentPositionX = LivingRoomPosition;
         }
         
+        /// <summary>
+        /// Move the Camera to the currently selected Position
+        /// </summary>
         private void MoveToCurrentPosition()
         {
             transform.SetPositionAndRotation(new Vector3(_currentPositionX, 0, -10), Quaternion.identity);
@@ -29,6 +32,10 @@ namespace FlorianMan
             MovePointer.Instance.SetNewLocalMiddlePoint(_currentPositionX);
         }
         
+        /// <summary>
+        /// Select the Position for the new Room
+        /// </summary>
+        /// <param name="nextRoom">Room the Camera should show</param>
         public void MoveToNewRoom(Rooms nextRoom)
         {
             switch (nextRoom)
