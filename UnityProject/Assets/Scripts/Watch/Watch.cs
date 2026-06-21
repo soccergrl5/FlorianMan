@@ -7,6 +7,13 @@ namespace FlorianMan.Watch
     {
         public static Watch Instance {get; private set;}
 
+        [SerializeField] private GameObject clockFront;
+        [SerializeField] private GameObject clockBack;
+        
+        [SerializeField] private GameObject[] cogwheels;
+
+        private bool _showFront;
+
         private const int MorningTime   = 7;
         private const int EveningTime   = 10;
         private const int AfternoonTime = 4;
@@ -21,6 +28,8 @@ namespace FlorianMan.Watch
             
             _currentDay  = 2;
             _currentTime = MorningTime;
+            
+            _showFront = true;
             
             Hide();
         }
@@ -39,6 +48,14 @@ namespace FlorianMan.Watch
             RoomPlanUI.Instance.Enable();
         }
 
+        public void TurnClock()
+        {
+            _showFront = !_showFront;
+
+            clockFront.SetActive(_showFront);
+            clockBack.SetActive(!_showFront);
+        }
+
         public void BackOneDay() => _currentDay--;
         
         public void ForwardOneDay() => _currentDay++;
@@ -48,7 +65,7 @@ namespace FlorianMan.Watch
         /// </summary>
         /// <param name="currentTime"></param>
         /// <returns>
-        /// -1 : Error
+        /// -1: Error
         /// 0: Can Turn Back Further
         /// 1: Valid Time But can Turn Back Further
         /// 2: Valid Time but cannot turn back further
@@ -132,7 +149,7 @@ namespace FlorianMan.Watch
         /// </summary>
         /// <param name="currentTime"></param>
         /// <returns>
-        /// -1 : Error
+        /// -1: Error
         /// 0: Can Turn Forward Further
         /// 1: Valid Time But can Turn Forward Further
         /// 2: Valid Time but cannot turn forward further
@@ -217,6 +234,30 @@ namespace FlorianMan.Watch
             }
 
             return -1;
+        }
+
+        public bool CogwheelIsAtRightPosition(Vector3 position)
+        {
+            if (!gameObject.activeSelf) return false;
+            if (_showFront) return false;
+            
+            int unlockedTimes = TimeManager.Instance.GetUnlockedTimes();
+            
+            Vector3 positionCogwheel = cogwheels[unlockedTimes - 1].transform.position;
+            float radius = cogwheels[unlockedTimes - 1].transform.localScale.x;
+
+            if (position.x < positionCogwheel.x + radius && position.x > positionCogwheel.x - radius
+                                                         && position.y < positionCogwheel.y + radius &&
+                                                         position.y > positionCogwheel.y - radius)
+            {
+                cogwheels[unlockedTimes - 1].GetComponent<WatchCogwheel>().Placed();
+                TimeManager.Instance.UnlockNextTime();
+                MovePointer.Instance.UnlockedNewTime();
+                
+                return true;
+            }
+            
+            return false;
         }
         
         public int GetCurrentTime() => _currentTime;

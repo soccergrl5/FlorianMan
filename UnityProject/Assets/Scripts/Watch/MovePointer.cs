@@ -159,5 +159,10 @@ namespace FlorianMan.Watch
             
             _currentRotation = (float)tan;
         }
+
+        public void UnlockedNewTime()
+        {
+            _lockedBack = false;
+        }
     }
 }
