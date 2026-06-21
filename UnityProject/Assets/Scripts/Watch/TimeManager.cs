@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace FlorianMan.Watch
 {
@@ -8,6 +9,8 @@ namespace FlorianMan.Watch
 
         private Times _currentTime;
         private int _unlockedTimes;
+        
+        public static event EventHandler OnTimeChanged; 
 
         private void Awake()
         {
@@ -19,12 +22,16 @@ namespace FlorianMan.Watch
             _currentTime   = Times.Morning;
             _unlockedTimes = 1;
         }
-        
+
         /// <summary>
         /// Set the new Current Time
         /// </summary>
         /// <param name="times">New set Time</param>
-        public void SetCurrentTime(Times times) => _currentTime = times;
+        public void SetCurrentTime(Times times)
+        {
+            _currentTime = times;
+            OnTimeChanged?.Invoke(_currentTime, EventArgs.Empty);
+        }
 
         /// <summary>
         /// Get how many Times are already unlocked

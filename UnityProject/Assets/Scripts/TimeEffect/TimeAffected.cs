@@ -1,4 +1,5 @@
 using System;
+using FlorianMan.Watch;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
@@ -16,16 +17,22 @@ public class TimeAffected : MonoBehaviour
     [SerializeField] private bool isVisibleInMorning, isVisibleInEvening, isVisibleInAfternoon, isVisibleInNoon;
 
     private SpriteRenderer _spriteRenderer;
+    
+    [SerializeField] private TimeAffected timeAffectedObject;
+
     void Start()
     {
         
         //Instantiates the array and the states for each time
         InitializeStates();
+        TimeManager.OnTimeChanged += OnTimeChangedSubscriber;
         //Test
         _currentState = _states[2];
         _currentState.SetPosition(GetComponentInParent<Transform>().position);
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
+    
+    
 
     private void Update()
     {
@@ -45,10 +52,26 @@ public class TimeAffected : MonoBehaviour
         
         _states = new ObjectState[]{_morningState, _eveningState, _afternoonState, _noonState};
     }
+    
+    
+    //Event: is called when the time in the watch is changed
+    private void OnTimeChangedSubscriber(object sender, EventArgs eventArgs)
+    {
+        //If the time is changed, the current time is adapted
+        Times currentTime = TimeManager.Instance.GetCurrentTime();
+        switch (currentTime)
+        {
+            case Times.Morning: _currentState = _morningState; break;
+            case Times.Evening: _currentState = _eveningState; break;
+            case Times.Afternoon: _currentState = _afternoonState; break;
+            case Times.Noon: _currentState = _noonState; break;
+            default: throw new ArgumentOutOfRangeException();
+        }    
+    }
 }
 
 
-
+// Private inner struct
 // Creates a state for each time-affected object 
 public struct ObjectState
 {
