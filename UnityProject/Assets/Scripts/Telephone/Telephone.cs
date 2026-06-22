@@ -6,17 +6,21 @@ namespace FlorianMan.Telephone
     public class Telephone : MonoBehaviour
     {
         public static Telephone Instance {get; private set;}
+        
+        private AudioSource _audioSource;
 
         private string _dialedNumber;
 
         private void Awake()
         {
             Instance = this;
+            
+            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Start()
         {
-            Hide();
+            //Hide();
         }
 
         /// <summary>
@@ -54,9 +58,21 @@ namespace FlorianMan.Telephone
             if (_dialedNumber == "811")
             {
                 TurnablePart.Instance.LockTelephone();
+                TelephoneBackground.Instance.Lock();
                 
-                Debug.Log("DIAL 811");
+                float duration = _audioSource.clip.length;
+                Invoke(nameof(UnlockTurnablePart), duration);
+                
+                _audioSource.Play();
+                
+                _dialedNumber = "";
             }
+        }
+
+        private void UnlockTurnablePart()
+        {
+            TurnablePart.Instance.UnlockTelephone();
+            TelephoneBackground.Instance.Unlock();
         }
     }
 }

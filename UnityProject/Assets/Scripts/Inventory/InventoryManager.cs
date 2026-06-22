@@ -13,12 +13,18 @@ namespace FlorianMan.Inventory
         [SerializeField] private GameObject cogwheelPrefab;
         [SerializeField] private GameObject butterPrefab;
         [SerializeField] private GameObject vinylRecordPrefab;
+        
+        [SerializeField] private AudioClip cogwheelSound;
 
+        private AudioSource _audioSource;
+        
         private List<InventoryItems> _items = new ();
         
         private void Awake()
         {
             Instance = this;
+            
+            _audioSource = GetComponent<AudioSource>();
         }
 
         /// <summary>
@@ -33,6 +39,8 @@ namespace FlorianMan.Inventory
             {
                 case InventoryItems.Cogwheel:
                     Instantiate(cogwheelPrefab, transform);
+                    
+                    _audioSource.PlayOneShot(cogwheelSound);
                     break;
                 
                 case InventoryItems.Butter:
