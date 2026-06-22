@@ -9,7 +9,7 @@ namespace FlorianMan.Telephone
         
         private AudioSource _audioSource;
 
-        private string _dialedNumber;
+        private string _dialedNumber = "";
 
         private void Awake()
         {
