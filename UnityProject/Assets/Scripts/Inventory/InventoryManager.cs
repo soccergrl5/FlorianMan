@@ -19,9 +19,7 @@ namespace FlorianMan.Inventory
         private void Awake()
         {
             Instance = this;
-            AddItem(InventoryItems.Cogwheel);
-            AddItem(InventoryItems.Cogwheel);
-            AddItem(InventoryItems.Cogwheel);
+            AddItem(InventoryItems.Butter);
         }
 
         /// <summary>

@@ -1,4 +1,6 @@
-﻿using UnityEngine.EventSystems;
+﻿using TreeEditor;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.LowLevel;
 
 namespace FlorianMan.Inventory.Buttons
 {
@@ -11,11 +13,18 @@ namespace FlorianMan.Inventory.Buttons
         public override void OnPointerUp(PointerEventData eventData)
         {
             if (Item == null) return;
+
+            if (RecordPlayer.RecordPlayer.Instance.RecordIsAtRightPosition(Item.transform.position, _isHint))
+            {
+                InventoryManager.Instance.RemoveItem(InventoryItems.MusicVinylRecord);
             
-            InventoryManager.Instance.RemoveItem(InventoryItems.MusicVinylRecord);
-            
-            Destroy(Item.gameObject);
-            Destroy(gameObject);
+                Destroy(Item.gameObject);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(Item.gameObject);
+            }
         }
     }
 }
