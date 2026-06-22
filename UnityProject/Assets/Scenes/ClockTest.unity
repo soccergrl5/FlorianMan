@@ -168,10 +168,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.169, y: -0.137}
-  eveningPos: {x: -0.19, y: -0.15}
-  afternoonPos: {x: -0.169, y: -0.137}
-  noonPos: {x: -0.169, y: -0.137}
+  morningPos: {x: -0.169, y: -0.137, z: 0}
+  eveningPos: {x: -0.19, y: -0.15, z: 0}
+  afternoonPos: {x: -0.169, y: -0.137, z: 0}
+  noonPos: {x: -0.169, y: -0.137, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -1691,7 +1691,7 @@ Transform:
   m_GameObject: {fileID: 361326956}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.273, y: -0.273, z: -1}
+  m_LocalPosition: {x: -0.32, y: -0.273, z: -1}
   m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1713,10 +1713,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 21300000, guid: 5c81e841f99f744f997dfa12ce9c2a82, type: 3}
   afternoonSprite: {fileID: 21300000, guid: b533c652136df4744a089524507a44c6, type: 3}
   noonSprite: {fileID: 21300000, guid: 19370790a791d4fc99ee3830251366f8, type: 3}
-  morningPos: {x: -0.273, y: -0.273}
-  eveningPos: {x: -0.273, y: -0.273}
-  afternoonPos: {x: 50, y: -0.273}
-  noonPos: {x: -50, y: -0.273}
+  morningPos: {x: -0.273, y: -0.273, z: 0}
+  eveningPos: {x: -0.273, y: -0.273, z: 0}
+  afternoonPos: {x: -2.5, y: -0.273, z: 0}
+  noonPos: {x: -2.5, y: -0.273, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -3532,10 +3532,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: 0.007, y: -0.24}
-  eveningPos: {x: 0.007, y: -0.24}
-  afternoonPos: {x: 0.007, y: -0.24}
-  noonPos: {x: 0.007, y: -0.24}
+  morningPos: {x: 0.007, y: -0.24, z: 0}
+  eveningPos: {x: 0.007, y: -0.24, z: 0}
+  afternoonPos: {x: 0.007, y: -0.24, z: 0}
+  noonPos: {x: 0.007, y: -0.24, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -5028,10 +5028,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.395, y: -0.4}
-  eveningPos: {x: -0.395, y: -0.4}
-  afternoonPos: {x: -0.395, y: -0.4}
-  noonPos: {x: -0.395, y: -0.4}
+  morningPos: {x: -0.395, y: -0.4, z: 0}
+  eveningPos: {x: -0.395, y: -0.4, z: 0}
+  afternoonPos: {x: -0.395, y: -0.4, z: 0}
+  noonPos: {x: -0.395, y: -0.4, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -5086,10 +5086,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.395, y: -0.4}
-  eveningPos: {x: -0.37, y: 0.115}
-  afternoonPos: {x: -0.37, y: 0.115}
-  noonPos: {x: -0.37, y: 0.115}
+  morningPos: {x: -0.395, y: -0.4, z: 0}
+  eveningPos: {x: -0.37, y: 0.115, z: 0}
+  afternoonPos: {x: -0.37, y: 0.115, z: 0}
+  noonPos: {x: -0.37, y: 0.115, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -5723,10 +5723,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.4, y: -0.148}
-  eveningPos: {x: -0.4, y: -0.148}
-  afternoonPos: {x: -0.4, y: -0.148}
-  noonPos: {x: -0.4, y: -0.148}
+  morningPos: {x: -0.4, y: -0.148, z: 0}
+  eveningPos: {x: -0.4, y: -0.148, z: 0}
+  afternoonPos: {x: -0.4, y: -0.148, z: 0}
+  noonPos: {x: -0.4, y: -0.148, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 0
@@ -6290,10 +6290,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.332, y: -0.341}
-  eveningPos: {x: -0.332, y: -0.341}
-  afternoonPos: {x: -0.332, y: -0.341}
-  noonPos: {x: -0.332, y: -0.341}
+  morningPos: {x: -0.332, y: -0.341, z: 0}
+  eveningPos: {x: -0.332, y: -0.341, z: 0}
+  afternoonPos: {x: -0.332, y: -0.341, z: 0}
+  noonPos: {x: -0.332, y: -0.341, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -6403,10 +6403,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: 0, y: 0}
-  eveningPos: {x: 0, y: 0}
-  afternoonPos: {x: 0, y: 0}
-  noonPos: {x: 0, y: 0}
+  morningPos: {x: -0.285, y: -0.139, z: 0}
+  eveningPos: {x: -0.285, y: -0.139, z: 0}
+  afternoonPos: {x: -0.285, y: -0.139, z: 0}
+  noonPos: {x: -2.5, y: -0.139, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -6637,10 +6637,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.174, y: -0.391}
-  eveningPos: {x: -0.174, y: -0.391}
-  afternoonPos: {x: -0.174, y: -0.391}
-  noonPos: {x: -0.174, y: -0.391}
+  morningPos: {x: -0.174, y: -0.391, z: 0}
+  eveningPos: {x: -0.174, y: -0.391, z: 0}
+  afternoonPos: {x: -0.174, y: -0.391, z: 0}
+  noonPos: {x: -0.174, y: -0.391, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -6840,10 +6840,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: 0, y: 0}
-  eveningPos: {x: 0, y: 0}
-  afternoonPos: {x: 0, y: 0}
-  noonPos: {x: 0, y: 0}
+  morningPos: {x: 0, y: 0, z: 0}
+  eveningPos: {x: 0, y: 0, z: 0}
+  afternoonPos: {x: 0, y: 0, z: 0}
+  noonPos: {x: 0, y: 0, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -6953,10 +6953,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: 0, y: 0}
-  eveningPos: {x: 0, y: 0}
-  afternoonPos: {x: 0, y: 0}
-  noonPos: {x: 0, y: 0}
+  morningPos: {x: 0, y: 0, z: 0}
+  eveningPos: {x: 0, y: 0, z: 0}
+  afternoonPos: {x: 0, y: 0, z: 0}
+  noonPos: {x: 0, y: 0, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1

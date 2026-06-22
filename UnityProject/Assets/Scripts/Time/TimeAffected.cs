@@ -35,12 +35,6 @@ public class TimeAffected : MonoBehaviour
     {
         _spriteRenderer.sprite = _currentState.GetSprite();
         GetComponentInParent<Transform>().SetLocalPositionAndRotation(_currentState.GetPosition(), Quaternion.identity);
-        if (name.Equals("Emergency Call Note"))
-        {
-            Debug.Log(this.name + _currentState.GetPosition());
-            if(_currentState.Equals(_eveningState))
-                Debug.Log(_eveningState.GetPosition());
-        }
         _spriteRenderer.enabled = _currentState.GetIsActive();
     }
 
@@ -78,6 +72,39 @@ public class TimeAffected : MonoBehaviour
             default: throw new ArgumentOutOfRangeException();
         } 
     }
+
+    public void setVisibilityInThisTimeAndAllTimesPrior(bool visibility)
+    {
+        Times time = TimeManager.Instance.GetCurrentTime();
+        switch (time)
+        {
+            case Times.Morning:
+                _morningState.SetIsActive(visibility);
+                _eveningState.SetIsActive(visibility);
+                _afternoonState.SetIsActive(visibility);
+                _noonState.SetIsActive(visibility);
+                break;
+            case Times.Evening:
+                _eveningState.SetIsActive(visibility);
+                _afternoonState.SetIsActive(visibility);
+                _noonState.SetIsActive(visibility);
+                break;
+            case Times.Afternoon:
+                _afternoonState.SetIsActive(visibility);
+                _noonState.SetIsActive(visibility);
+                break;
+            case Times.Noon:
+                _noonState.SetIsActive(visibility);
+                break;
+            default: throw new ArgumentOutOfRangeException();
+        }
+
+    }
+
+    public ObjectState getCurrentState()
+    {
+        return _currentState;
+    }
 }
 
 
@@ -99,7 +126,10 @@ public struct ObjectState
     public Sprite GetSprite() { return _objectStateSprite; }
     public Vector3 GetPosition() { return _objectStatePosition; }
     public bool GetIsActive() { return _objectStateIsActive; }
+
     public void SetPosition(Vector3 position) { _objectStatePosition = position; }
+
+    public void SetIsActive(bool isActive) { _objectStateIsActive = isActive; }
 }
 
 
