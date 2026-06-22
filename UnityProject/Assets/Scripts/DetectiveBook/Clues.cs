@@ -24,6 +24,7 @@
         ThrowingStarsInCorps,
         
         EmergencyNoteInBedRoom,
+        RecordPlayerPlaying,
         EmergencyNoteUnderShelf,
     }
 }

@@ -34,7 +34,7 @@ namespace FlorianMan.Fridge
 
         private void Start()
         {
-            //Hide();
+            Hide();
         }
 
         /// <summary>
