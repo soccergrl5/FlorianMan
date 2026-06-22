@@ -15,15 +15,15 @@
         ChopedOfFinger,
         MissingFingerOnCorpse,
         
-        EmergencyNoteUnderShelf,
-        EmergencyNoteInBedRoom,
-        
         CeilingFanSwitchOnNormal,
-        CeilingFanSwitchOnUltra,
         CeilingFanWorking,
+        CeilingFanSwitchOnUltra,
         CeilingFanBroken,
         
-        ThrowingStarsInCorps,
         ThrowingStarsHangingOnCeiling,
+        ThrowingStarsInCorps,
+        
+        EmergencyNoteInBedRoom,
+        EmergencyNoteUnderShelf,
     }
 }
