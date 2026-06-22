@@ -35,12 +35,6 @@ public class TimeAffected : MonoBehaviour
     {
         _spriteRenderer.sprite = _currentState.GetSprite();
         GetComponentInParent<Transform>().SetLocalPositionAndRotation(_currentState.GetPosition(), Quaternion.identity);
-        if (name.Equals("Emergency Call Note"))
-        {
-            Debug.Log(this.name + _currentState.GetPosition());
-            if(_currentState.Equals(_eveningState))
-                Debug.Log(_eveningState.GetPosition());
-        }
         _spriteRenderer.enabled = _currentState.GetIsActive();
     }
 

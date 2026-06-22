@@ -19,7 +19,6 @@ namespace FlorianMan.Inventory
         private void Awake()
         {
             Instance = this;
-            AddItem(InventoryItems.Butter);
         }
 
         /// <summary>

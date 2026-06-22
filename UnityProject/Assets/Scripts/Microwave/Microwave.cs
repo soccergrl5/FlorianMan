@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FlorianMan.UI;
+using UnityEngine;
 
 namespace FlorianMan.Microwave
 {
@@ -24,6 +25,10 @@ namespace FlorianMan.Microwave
         public void Hide()
         {
             gameObject.SetActive(false);
+            
+            RoomPlanUI.Instance.Enable();
+            DetectiveBookUI.Instance.Enable();
+            OpenClockUI.Instance.Enable();
         }
 
         /// <summary>
@@ -32,6 +37,10 @@ namespace FlorianMan.Microwave
         public void Show()
         {
             gameObject.SetActive(true);
+            
+            RoomPlanUI.Instance.Disable();
+            DetectiveBookUI.Instance.Disable();
+            OpenClockUI.Instance.Disable();
         }
 
         /// <summary>
