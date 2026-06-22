@@ -269,11 +269,12 @@ namespace FlorianMan.Watch
             int unlockedTimes = TimeManager.Instance.GetUnlockedTimes();
             
             Vector3 positionCogwheel = cogwheels[unlockedTimes - 1].transform.position;
-            float radius             = cogwheels[unlockedTimes - 1].transform.localScale.x;
+            float radius = 1f;
 
-            if (position.x < positionCogwheel.x + radius && position.x > positionCogwheel.x - radius
-                                                         && position.y < positionCogwheel.y + radius &&
-                                                         position.y > positionCogwheel.y - radius)
+            if (position.x < positionCogwheel.x + radius
+                && position.x > positionCogwheel.x - radius 
+                && position.y < positionCogwheel.y + radius 
+                && position.y > positionCogwheel.y - radius)
             {
                 cogwheels[unlockedTimes - 1].GetComponent<WatchCogwheel>().Placed();
                 TimeManager.Instance.UnlockNextTime();
