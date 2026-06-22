@@ -23,6 +23,9 @@ namespace FlorianMan.RecordPlayer
             Hide();
         }
 
+        /// <summary>
+        /// Show the Record Player
+        /// </summary>
         public void Show()
         {
             gameObject.SetActive(true);
@@ -32,6 +35,9 @@ namespace FlorianMan.RecordPlayer
             OpenClockUI.Instance.Disable();
         }
 
+        /// <summary>
+        /// Hide the Record Player
+        /// </summary>
         public void Hide()
         {
             gameObject.SetActive(false);
@@ -41,6 +47,9 @@ namespace FlorianMan.RecordPlayer
             OpenClockUI.Instance.Enable();
         }
 
+        /// <summary>
+        /// Play the Record Forward
+        /// </summary>
         public void PlayForward()
         {
             BackwardsButton.Instance.Unlock();
@@ -54,6 +63,9 @@ namespace FlorianMan.RecordPlayer
             Debug.Log("Playing Forward " + _activeRecord);
         }
 
+        /// <summary>
+        /// Play the Record Backward
+        /// </summary>
         public void PlayBackward()
         {
             ForwardButton.Instance.Unlock();
@@ -67,6 +79,9 @@ namespace FlorianMan.RecordPlayer
             Debug.Log("Playing Backward " + _activeRecord);
         }
 
+        /// <summary>
+        /// Release the Record that is in the Player
+        /// </summary>
         public void ReleaseRecord()
         {
             if (_activeRecord == 0) return;
@@ -80,6 +95,12 @@ namespace FlorianMan.RecordPlayer
             _activeRecord = 0;
         }
 
+        /// <summary>
+        /// Check if the Record Item is on the Right Position to be Placed in the Player
+        /// </summary>
+        /// <param name="position">Position of the Record Item</param>
+        /// <param name="isHintRecord">Is the Record the Hint Record or not (Music Record)</param>
+        /// <returns>True if the Position is valid, False otherwise</returns>
         public bool RecordIsAtRightPosition(Vector3 position, bool isHintRecord)
         {
             if (!gameObject.activeSelf) return false;

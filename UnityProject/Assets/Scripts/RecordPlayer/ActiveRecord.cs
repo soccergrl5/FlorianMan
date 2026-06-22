@@ -13,6 +13,9 @@ namespace FlorianMan.RecordPlayer
             gameObject.SetActive(false);
         }
 
+        /// <summary>
+        /// Activate the Graphic if a Record is Placed
+        /// </summary>
         public void PlaceRecord()
         {
             gameObject.SetActive(true);
