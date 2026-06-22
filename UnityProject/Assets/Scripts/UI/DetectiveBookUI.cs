@@ -62,6 +62,22 @@ namespace FlorianMan.UI
         }
 
         /// <summary>
+        /// Disable the Detective Book Button
+        /// </summary>
+        public void Disable()
+        {
+            button.interactable = false;
+        }
+
+        /// <summary>
+        /// Enable the Detective Book Button
+        /// </summary>
+        public void Enable()
+        {
+            button.interactable = true;
+        }
+
+        /// <summary>
         /// Show the next Page of the Book
         /// </summary>
         private void NextPage()

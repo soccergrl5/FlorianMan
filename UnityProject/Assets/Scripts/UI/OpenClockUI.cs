@@ -61,5 +61,21 @@ namespace FlorianMan.UI
         {
             turnButton.gameObject.SetActive(true);
         }
+
+        /// <summary>
+        /// Disable the Open Clock Button
+        /// </summary>
+        public void Disable()
+        {
+            openButton.interactable = false;
+        }
+
+        /// <summary>
+        /// Enable the Open Clock Button
+        /// </summary>
+        public void Enable()
+        {
+            openButton.interactable = true;
+        }
     }
 }

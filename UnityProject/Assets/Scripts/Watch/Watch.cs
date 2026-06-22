@@ -30,7 +30,10 @@ namespace FlorianMan.Watch
             _currentTime = MorningTime;
             
             _showFront = true;
-            
+        }
+
+        private void Start()
+        {
             Hide();
         }
 
@@ -42,6 +45,7 @@ namespace FlorianMan.Watch
             gameObject.SetActive(true);
             
             RoomPlanUI.Instance.Disable();
+            DetectiveBookUI.Instance.Disable();
         }
 
         /// <summary>
@@ -52,6 +56,7 @@ namespace FlorianMan.Watch
             gameObject.SetActive(false);
             
             RoomPlanUI.Instance.Enable();
+            DetectiveBookUI.Instance.Enable();
         }
 
         /// <summary>
