@@ -20,7 +20,7 @@ namespace FlorianMan.Telephone
 
         private void Start()
         {
-            //Hide();
+            Hide();
         }
 
         /// <summary>
