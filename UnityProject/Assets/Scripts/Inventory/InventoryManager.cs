@@ -20,6 +20,8 @@ namespace FlorianMan.Inventory
         {
             Instance = this;
             AddItem(InventoryItems.Cogwheel);
+            AddItem(InventoryItems.Cogwheel);
+            AddItem(InventoryItems.Cogwheel);
         }
 
         /// <summary>

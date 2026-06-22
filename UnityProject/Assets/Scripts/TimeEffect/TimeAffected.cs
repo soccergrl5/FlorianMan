@@ -13,7 +13,7 @@ public class TimeAffected : MonoBehaviour
     
     //public attributes for setting Sprite, pos and activity for each object
     [SerializeField] private Sprite morningSprite, eveningSprite, afternoonSprite, noonSprite;
-    [SerializeField] private Vector2 morningPos, eveningPos, afternoonPos, noonPos;
+    [SerializeField] private Vector3 morningPos, eveningPos, afternoonPos, noonPos;
     [SerializeField] private bool isVisibleInMorning, isVisibleInEvening, isVisibleInAfternoon, isVisibleInNoon;
 
     private SpriteRenderer _spriteRenderer;
@@ -22,13 +22,10 @@ public class TimeAffected : MonoBehaviour
 
     void Start()
     {
-        
         //Instantiates the array and the states for each time
         InitializeStates();
         TimeManager.OnTimeChanged += OnTimeChangedSubscriber;
-        //Test
-        _currentState = _states[2];
-        _currentState.SetPosition(GetComponentInParent<Transform>().position);
+        
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
@@ -37,7 +34,13 @@ public class TimeAffected : MonoBehaviour
     private void Update()
     {
         _spriteRenderer.sprite = _currentState.GetSprite();
-        transform.position = _currentState.GetPosition();
+        GetComponentInParent<Transform>().SetLocalPositionAndRotation(_currentState.GetPosition(), Quaternion.identity);
+        if (name.Equals("Emergency Call Note"))
+        {
+            Debug.Log(this.name + _currentState.GetPosition());
+            if(_currentState.Equals(_eveningState))
+                Debug.Log(_eveningState.GetPosition());
+        }
         _spriteRenderer.enabled = _currentState.GetIsActive();
     }
 
@@ -45,12 +48,19 @@ public class TimeAffected : MonoBehaviour
     private void InitializeStates()
     {
         
+        morningPos.Set(morningPos.x, morningPos.y, -1);
+        eveningPos.Set(eveningPos.x, eveningPos.y, -1);
+        afternoonPos.Set(afternoonPos.x, afternoonPos.y, -1);
+        noonPos.Set(noonPos.x, noonPos.y, -1);
+        
         _morningState = new ObjectState(morningSprite, morningPos, isVisibleInMorning);
         _eveningState = new ObjectState(eveningSprite, eveningPos, isVisibleInEvening);
         _afternoonState = new ObjectState(afternoonSprite, afternoonPos, isVisibleInAfternoon);
         _noonState = new ObjectState(noonSprite, noonPos, isVisibleInNoon);
         
         _states = new ObjectState[]{_morningState, _eveningState, _afternoonState, _noonState};
+        
+        _currentState = _states[0];
     }
     
     
@@ -66,7 +76,7 @@ public class TimeAffected : MonoBehaviour
             case Times.Afternoon: _currentState = _afternoonState; break;
             case Times.Noon: _currentState = _noonState; break;
             default: throw new ArgumentOutOfRangeException();
-        }    
+        } 
     }
 }
 
@@ -76,10 +86,10 @@ public class TimeAffected : MonoBehaviour
 public struct ObjectState
 {
     private Sprite _objectStateSprite;
-    private Vector2 _objectStatePosition;
+    private Vector3 _objectStatePosition;
     private bool _objectStateIsActive;
 
-    public ObjectState(Sprite objectStateSprite, Vector2 objectStatePosition, bool objectStateIsActive)
+    public ObjectState(Sprite objectStateSprite, Vector3 objectStatePosition, bool objectStateIsActive)
     {
         this._objectStateSprite = objectStateSprite;
         this._objectStatePosition = objectStatePosition;
@@ -87,9 +97,9 @@ public struct ObjectState
     }
 
     public Sprite GetSprite() { return _objectStateSprite; }
-    public Vector2 GetPosition() { return _objectStatePosition; }
+    public Vector3 GetPosition() { return _objectStatePosition; }
     public bool GetIsActive() { return _objectStateIsActive; }
-    public void SetPosition(Vector2 position) { _objectStatePosition = position; }
+    public void SetPosition(Vector3 position) { _objectStatePosition = position; }
 }
 
 
