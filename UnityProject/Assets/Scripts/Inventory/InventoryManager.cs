@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FlorianMan.Inventory.Buttons;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -18,6 +19,7 @@ namespace FlorianMan.Inventory
         private void Awake()
         {
             Instance = this;
+            AddItem(InventoryItems.Cogwheel);
         }
 
         /// <summary>
@@ -31,20 +33,20 @@ namespace FlorianMan.Inventory
             switch (item)
             {
                 case InventoryItems.Cogwheel:
-                    Instantiate(cogwheelPrefab);
+                    Instantiate(cogwheelPrefab, transform);
                     break;
                 
                 case InventoryItems.Butter:
-                    Instantiate(butterPrefab);
+                    Instantiate(butterPrefab, transform);
                     break;
                 
                 case InventoryItems.MusicVinylRecord:
-                    GameObject musicVinyl = Instantiate(vinylRecordPrefab);
+                    GameObject musicVinyl = Instantiate(vinylRecordPrefab, transform);
                     musicVinyl.GetComponent<VinylRecord>().SetIsHint(false);
                     break;
                 
                 case InventoryItems.HintVinylRecord:
-                    GameObject hintVinyl = Instantiate(vinylRecordPrefab);
+                    GameObject hintVinyl = Instantiate(vinylRecordPrefab, transform);
                     hintVinyl.GetComponent<VinylRecord>().SetIsHint(true);
                     break;
             }
