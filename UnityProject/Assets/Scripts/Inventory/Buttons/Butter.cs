@@ -7,11 +7,18 @@ namespace FlorianMan.Inventory.Buttons
         public override void OnPointerUp(PointerEventData eventData)
         {
             if (Item == null) return;
+
+            if (Microwave.Microwave.Instance.ButterIsAtRightPosition(Item.transform.position))
+            {
+                InventoryManager.Instance.RemoveItem(InventoryItems.Butter);
             
-            InventoryManager.Instance.RemoveItem(InventoryItems.Butter);
-            
-            Destroy(Item.gameObject);
-            Destroy(gameObject);
+                Destroy(Item.gameObject);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(Item.gameObject);
+            }
         }
     }
 }

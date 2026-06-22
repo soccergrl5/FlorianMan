@@ -19,8 +19,7 @@ namespace FlorianMan.Inventory
         private void Awake()
         {
             Instance = this;
-            AddItem(InventoryItems.MusicVinylRecord);
-            AddItem(InventoryItems.HintVinylRecord);
+            AddItem(InventoryItems.Butter);
         }
 
         /// <summary>
