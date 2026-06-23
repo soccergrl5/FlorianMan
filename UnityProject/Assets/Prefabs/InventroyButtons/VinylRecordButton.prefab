@@ -226,4 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b8cd87d8d04d13a2488127e1a42a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5475455040443389585, guid: 668120c035943ce4b891e7fe3670a633, type: 3}
+  prefab: {fileID: 0}
+  musicVinylPrefab: {fileID: 5475455040443389585, guid: 668120c035943ce4b891e7fe3670a633, type: 3}
+  hintVinylPrefab: {fileID: 2072084439312216792, guid: 3aff141cb06bebb4bac7f9e6f16f348c, type: 3}

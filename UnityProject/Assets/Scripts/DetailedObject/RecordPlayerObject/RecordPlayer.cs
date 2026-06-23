@@ -135,42 +135,17 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
 
             if (currentTime == Times.Afternoon || currentTime == Times.Noon) return;
             
-            if (currentTime == Times.Morning)
-            {
-                _activeRecord = _recordAtMorning;
-                
-                /*if (_recordAtMorning == 1 || _recordAtMorning == 2)
-                {
-                    _activeRecord = _recordAtMorning;
-                    ActiveRecord.Instance.PlaceRecord();
-                    PlayForward();
-                }
-                else
-                {
-                    _activeRecord = 0;
-                    ActiveRecord.Instance.RemoveRecord();
-                }
-                return;*/
-            }
-            else _activeRecord = _recordAtEvening;
-
+            _activeRecord = currentTime == Times.Morning ? _recordAtMorning : _recordAtEvening;
             
             switch (_activeRecord)
             {
                 case 0:
-                    //_activeRecord = 0;
                     ActiveRecord.Instance.RemoveRecord();
                     break;
                 
                 case 1:
-                    //_activeRecord = 1;
-                    ActiveRecord.Instance.PlaceRecord();
-                    PlayForward();
-                    break;
-                
                 case 2:
-                    //_activeRecord = 2;
-                    ActiveRecord.Instance.PlaceRecord();
+                    ActiveRecord.Instance.PlaceRecord(_activeRecord);
                     PlayForward();
                     break;
             }
@@ -227,7 +202,7 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
                 && position.y > positionRecord.y - radius)
             {
                 _activeRecord = isHintRecord ? 2 : 1;
-                ActiveRecord.Instance.PlaceRecord();
+                ActiveRecord.Instance.PlaceRecord(_activeRecord);
                 CreateAccordingRecordHistory();
 
                 return true;

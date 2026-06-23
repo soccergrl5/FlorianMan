@@ -4,6 +4,8 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
 {
     public class ActiveRecord : MonoBehaviour
     {
+        [SerializeField] private Sprite[] sprites;
+        
         public static ActiveRecord Instance {get; private set;}
 
         private void Awake()
@@ -15,9 +17,12 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
 
         /// <summary>
         /// Activate the Graphic if a Record is Placed
+        /// <param name="record">Number of the Record that is placed (to select the right sprite)</param>
         /// </summary>
-        public void PlaceRecord()
+        public void PlaceRecord(int record)
         {
+            GetComponent<SpriteRenderer>().sprite = sprites[record - 1];
+            
             gameObject.SetActive(true);
         }
 
