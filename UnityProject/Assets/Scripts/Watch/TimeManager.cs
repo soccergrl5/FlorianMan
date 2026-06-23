@@ -10,7 +10,7 @@ namespace FlorianMan.Watch
         private Times _currentTime;
         private int _unlockedTimes;
         
-        public static event EventHandler OnTimeChanged; 
+        public event EventHandler OnTimeChanged; 
 
         private void Awake()
         {
@@ -29,6 +29,8 @@ namespace FlorianMan.Watch
         /// <param name="times">New set Time</param>
         public void SetCurrentTime(Times times)
         {
+            if (_currentTime == times) return;
+            
             _currentTime = times;
             OnTimeChanged?.Invoke(_currentTime, EventArgs.Empty);
         }
