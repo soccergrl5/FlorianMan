@@ -7,6 +7,11 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
     public class RecordPlayer : MonoBehaviour
     {
         public static RecordPlayer Instance {get; private set;}
+        
+        [SerializeField]private AudioSource audioSource;
+        
+        [SerializeField] private AudioClip[] audioClipsMusic;
+        [SerializeField] private AudioClip[] audioClipsHint;
 
         private int _activeRecord; //0: No Record, 1: Music, 2: Hint
 
@@ -58,8 +63,12 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
                 ForwardButton.Instance.Unlock();
                 return;
             }
+
+            audioSource.clip = _activeRecord == 1 ? audioClipsMusic[0] : audioClipsHint[0];
+            audioSource.Play();
             
-            Debug.Log("Playing Forward " + _activeRecord);
+            CancelInvoke();
+            Invoke(nameof(ReleaseForwardButton), audioSource.clip.length);
         }
 
         /// <summary>
@@ -75,7 +84,21 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
                 return;
             }
             
-            Debug.Log("Playing Backward " + _activeRecord);
+            audioSource.clip = _activeRecord == 1 ? audioClipsMusic[1] : audioClipsHint[1];
+            audioSource.Play();
+            
+            CancelInvoke();
+            Invoke(nameof(ReleaseBackwardButton), audioSource.clip.length);
+        }
+
+        private void ReleaseForwardButton()
+        {
+            ForwardButton.Instance.Unlock();
+        }
+        
+        private void ReleaseBackwardButton()
+        {
+            BackwardsButton.Instance.Unlock();
         }
 
         /// <summary>
@@ -84,6 +107,8 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         public void ReleaseRecord()
         {
             if (_activeRecord == 0) return;
+            
+            audioSource.Stop();
             
             if (_activeRecord == 1) InventoryManager.Instance.AddItem(InventoryItems.MusicVinylRecord);
             if (_activeRecord == 2) InventoryManager.Instance.AddItem(InventoryItems.HintVinylRecord);
