@@ -37,8 +37,23 @@ namespace FlorianMan.Inventory
             
             switch (item)
             {
-                case InventoryItems.Cogwheel:
-                    Instantiate(cogwheelPrefab, transform);
+                case InventoryItems.Cogwheel1:
+                    GameObject cogwheel1 = Instantiate(cogwheelPrefab, transform);
+                    cogwheel1.GetComponent<Cogwheel>().SetCogwheelNumber(1);
+                    
+                    _audioSource.PlayOneShot(cogwheelSound);
+                    break;
+                
+                case InventoryItems.Cogwheel2:
+                    GameObject cogwheel2 = Instantiate(cogwheelPrefab, transform);
+                    cogwheel2.GetComponent<Cogwheel>().SetCogwheelNumber(2);
+                    
+                    _audioSource.PlayOneShot(cogwheelSound);
+                    break;
+                
+                case InventoryItems.Cogwheel3:
+                    GameObject cogwheel3 = Instantiate(cogwheelPrefab, transform);
+                    cogwheel3.GetComponent<Cogwheel>().SetCogwheelNumber(3);
                     
                     _audioSource.PlayOneShot(cogwheelSound);
                     break;

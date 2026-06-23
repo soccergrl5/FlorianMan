@@ -17,9 +17,9 @@ public class InventoryActivated : MonoBehaviour
         //Needs to be given to Cogs, Butter, and the vinyls
         switch (this.gameObject.name)
         {
-            case "Cogwheel1":InventoryManager.Instance.AddItem(InventoryItems.Cogwheel); break;
-            case "Cogwheel2": InventoryManager.Instance.AddItem(InventoryItems.Cogwheel); break;
-            case "Cogwheel3": InventoryManager.Instance.AddItem(InventoryItems.Cogwheel); break;
+            case "Cogwheel1":InventoryManager.Instance.AddItem(InventoryItems.Cogwheel1); break;
+            case "Cogwheel2": InventoryManager.Instance.AddItem(InventoryItems.Cogwheel2); break;
+            case "Cogwheel3": InventoryManager.Instance.AddItem(InventoryItems.Cogwheel3); break;
             case "Butter": InventoryManager.Instance.AddItem(InventoryItems.Butter); break;
             case "MusicVinyl": InventoryManager.Instance.AddItem(InventoryItems.MusicVinylRecord); break;
             case "HintVinyl": InventoryManager.Instance.AddItem(InventoryItems.HintVinylRecord); break;

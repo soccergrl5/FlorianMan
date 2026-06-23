@@ -261,14 +261,12 @@ namespace FlorianMan.Watch
         /// </summary>
         /// <param name="position">Position of the Cogwheel Item</param>
         /// <returns>If the Spot is valid</returns>
-        public bool CogwheelIsAtRightPosition(Vector3 position)
+        public bool CogwheelIsAtRightPosition(Vector3 position, int cogwheelNumber)
         {
             if (!gameObject.activeSelf) return false;
             if (_showFront) return false;
             
-            int unlockedTimes = TimeManager.Instance.GetUnlockedTimes();
-            
-            Vector3 positionCogwheel = cogwheels[unlockedTimes - 1].transform.position;
+            Vector3 positionCogwheel = cogwheels[cogwheelNumber - 1].transform.position;
             float radius = 1f;
 
             if (position.x < positionCogwheel.x + radius
@@ -276,7 +274,7 @@ namespace FlorianMan.Watch
                 && position.y < positionCogwheel.y + radius 
                 && position.y > positionCogwheel.y - radius)
             {
-                cogwheels[unlockedTimes - 1].GetComponent<WatchCogwheel>().Placed();
+                cogwheels[cogwheelNumber - 1].GetComponent<WatchCogwheel>().Placed();
                 TimeManager.Instance.UnlockNextTime();
                 MovePointer.Instance.UnlockedNewTime();
                 

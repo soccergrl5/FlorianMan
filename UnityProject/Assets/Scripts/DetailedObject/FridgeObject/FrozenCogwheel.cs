@@ -18,7 +18,7 @@ namespace FlorianMan.DetailedObject.FridgeObject
         {
             if (_isFrozen) return;
             
-            InventoryManager.Instance.AddItem(InventoryItems.Cogwheel);
+            InventoryManager.Instance.AddItem(InventoryItems.Cogwheel2);
             Destroy(gameObject);
         }
         

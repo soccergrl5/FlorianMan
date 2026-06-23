@@ -28,7 +28,7 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
 
         private void OnMouseDown()
         {
-            InventoryManager.Instance.AddItem(_microwaved ? InventoryItems.Cogwheel : InventoryItems.Butter);
+            InventoryManager.Instance.AddItem(_microwaved ? InventoryItems.Cogwheel3 : InventoryItems.Butter);
             
             Hide();
         }

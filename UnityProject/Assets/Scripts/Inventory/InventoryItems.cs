@@ -2,7 +2,9 @@
 {
     public enum InventoryItems
     {
-        Cogwheel,
+        Cogwheel1,
+        Cogwheel2,
+        Cogwheel3,
         Butter,
         MusicVinylRecord,
         HintVinylRecord,
