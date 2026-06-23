@@ -8,10 +8,14 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
         public static Microwave Instance {get; private set;}
 
         [SerializeField] private GameObject inside;
+        
+        private AudioSource _audioSource;
 
         private void Awake()
         {
             Instance = this;
+            
+            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -49,8 +53,13 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
         public void StartMicrowave()
         {
             MicrowaveDoor.Instance.LockDoor();
+            MicrowaveStart.Instance.Lock();
+            MicrowaveClose.Instance.Lock();
             
-            Invoke(nameof(EndMicrowaving), 5f);
+            float length = _audioSource.clip.length;
+            _audioSource.Play();
+            
+            Invoke(nameof(EndMicrowaving), length);
         }
 
         /// <summary>
@@ -59,6 +68,8 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
         private void EndMicrowaving()
         {
             MicrowaveDoor.Instance.UnlockDoor();
+            MicrowaveStart.Instance.Unlock();
+            MicrowaveClose.Instance.Unlock();
             
             if (MicrowaveButter.Instance.gameObject.activeSelf)
                 MicrowaveButter.Instance.Microwaved();

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 980875ab39c8fdb4abac5475274c9531
+guid: 1309edbb4c7e87f4fbfeac7fb3fbf9f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3696230216672976474
-    second: kuhlschrank_hintergrund_entwurf_0
+      213: -69420449735790384
+    second: Mikrowelle_base_entwurf_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kuhlschrank_hintergrund_entwurf_0
+      name: Mikrowelle_base_entwurf_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5e9bd07cc5ab4330800000000000000
-      internalID: 3696230216672976474
+      spriteID: 0d0b951087e590ff0800000000000000
+      internalID: -69420449735790384
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kuhlschrank_hintergrund_entwurf_0: 3696230216672976474
+      Mikrowelle_base_entwurf_0: -69420449735790384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

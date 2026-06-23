@@ -2,12 +2,12 @@
 
 namespace FlorianMan.DetailedObject.MicrowaveObject
 {
-    public class MicrowaveClose : MonoBehaviour
+    public class MicrowaveStart : MonoBehaviour
     {
-        public static MicrowaveClose Instance{get; private set;}
+        public static MicrowaveStart Instance {get; private set;}
 
         private bool _locked;
-        
+
         private void Awake()
         {
             Instance = this;
@@ -16,11 +16,13 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
         private void OnMouseDown()
         {
             if (_locked) return;
+            if(MicrowaveDoor.Instance.DoorIsOpen()) return;
             
-            Microwave.Instance.Hide();
+            Microwave.Instance.StartMicrowave();
         }
         
         public void Lock() => _locked = true;
+        
         public void Unlock() => _locked = false;
     }
 }
