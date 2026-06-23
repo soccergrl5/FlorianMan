@@ -1,4 +1,5 @@
-﻿using TreeEditor;
+﻿using FlorianMan.DetailedObject.RecordPlayerObject;
+using TreeEditor;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.LowLevel;
 
@@ -14,7 +15,7 @@ namespace FlorianMan.Inventory.Buttons
         {
             if (Item == null) return;
 
-            if (RecordPlayer.RecordPlayer.Instance.RecordIsAtRightPosition(Item.transform.position, _isHint))
+            if (RecordPlayer.Instance.RecordIsAtRightPosition(Item.transform.position, _isHint))
             {
                 InventoryManager.Instance.RemoveItem(InventoryItems.MusicVinylRecord);
             

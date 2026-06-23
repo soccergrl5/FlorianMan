@@ -1,3 +1,7 @@
+using FlorianMan.DetailedObject.FridgeObject;
+using FlorianMan.DetailedObject.MicrowaveObject;
+using FlorianMan.DetailedObject.RecordPlayerObject;
+using FlorianMan.DetailedObject.TelephoneObject;
 using UnityEngine;
 
 namespace FlorianMan.DetailedObject
@@ -11,19 +15,19 @@ namespace FlorianMan.DetailedObject
             switch(currentObject)
             {
                 case DetailedObjects.Telephone:
-                    Telephone.Telephone.Instance.Show();
+                    Telephone.Instance.Show();
                     break;
                 
                 case DetailedObjects.Microwave:
-                    Microwave.Microwave.Instance.Show();
+                    Microwave.Instance.Show();
                     break;
                 
                 case DetailedObjects.Fridge:
-                    Fridge.Fridge.Instance.Show();
+                    Fridge.Instance.Show();
                     break;
                 
                 case DetailedObjects.RecordPlayer:
-                    RecordPlayer.RecordPlayer.Instance.Show();
+                    RecordPlayer.Instance.Show();
                     break;
             }
         }

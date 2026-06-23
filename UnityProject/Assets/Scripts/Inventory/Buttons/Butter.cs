@@ -1,4 +1,5 @@
-﻿using UnityEngine.EventSystems;
+﻿using FlorianMan.DetailedObject.MicrowaveObject;
+using UnityEngine.EventSystems;
 
 namespace FlorianMan.Inventory.Buttons
 {
@@ -8,7 +9,7 @@ namespace FlorianMan.Inventory.Buttons
         {
             if (Item == null) return;
 
-            if (Microwave.Microwave.Instance.ButterIsAtRightPosition(Item.transform.position))
+            if (Microwave.Instance.ButterIsAtRightPosition(Item.transform.position))
             {
                 InventoryManager.Instance.RemoveItem(InventoryItems.Butter);
             
