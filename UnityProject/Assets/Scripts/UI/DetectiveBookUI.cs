@@ -23,14 +23,14 @@ namespace FlorianMan.UI
             
             button.onClick.AddListener(() =>
             {
-                if (book.activeSelf) Hide();
-                else Show();
+                if (book.activeSelf) HideBook();
+                else ShowBook();
             });
 
             turnButtons[0].onClick.AddListener(PreviousPage);
             turnButtons[1].onClick.AddListener(NextPage);
             
-            Hide();
+            HideBook();
         }
 
         private void Start()
@@ -48,7 +48,7 @@ namespace FlorianMan.UI
         /// <summary>
         /// Hide the Detective Book
         /// </summary>
-        private void Hide()
+        private void HideBook()
         {
             book.SetActive(false);
         }
@@ -56,9 +56,19 @@ namespace FlorianMan.UI
         /// <summary>
         /// Show the Detective Book
         /// </summary>
-        private void Show()
+        private void ShowBook()
         {
             book.SetActive(true);
+        }
+        
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+        
+        public void Show()
+        {
+            gameObject.SetActive(true);
         }
 
         /// <summary>

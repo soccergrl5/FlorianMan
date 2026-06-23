@@ -34,6 +34,16 @@ namespace FlorianMan.UI
                 RoomManager.Instance.ChangeToRoom(Rooms.Basement);
             });
         }
+        
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+        
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
 
         /// <summary>
         /// Disable the Room Change Buttons

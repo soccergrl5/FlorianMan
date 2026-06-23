@@ -30,9 +30,9 @@ namespace FlorianMan.Telephone
         {
             gameObject.SetActive(true);
             
-            RoomPlanUI.Instance.Disable();
-            DetectiveBookUI.Instance.Disable();
-            OpenClockUI.Instance.Disable();
+            RoomPlanUI.Instance.Hide();
+            DetectiveBookUI.Instance.Hide();
+            OpenClockUI.Instance.Hide();
             
             TurnablePart.Instance.UnlockTelephone();
         }
@@ -46,9 +46,9 @@ namespace FlorianMan.Telephone
             
             gameObject.SetActive(false);
             
-            RoomPlanUI.Instance.Enable();
-            DetectiveBookUI.Instance.Enable();
-            OpenClockUI.Instance.Enable();
+            RoomPlanUI.Instance.Show();
+            DetectiveBookUI.Instance.Show();
+            OpenClockUI.Instance.Show();
         }
 
         public void AddDial(string number)

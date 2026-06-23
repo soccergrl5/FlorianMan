@@ -77,5 +77,15 @@ namespace FlorianMan.UI
         {
             openButton.interactable = true;
         }
+        
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+        
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

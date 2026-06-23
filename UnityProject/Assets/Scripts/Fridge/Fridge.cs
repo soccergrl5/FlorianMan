@@ -44,9 +44,9 @@ namespace FlorianMan.Fridge
         {
             gameObject.SetActive(false);
             
-            RoomPlanUI.Instance.Enable();
-            DetectiveBookUI.Instance.Enable();
-            OpenClockUI.Instance.Enable();
+            RoomPlanUI.Instance.Show();
+            DetectiveBookUI.Instance.Show();
+            OpenClockUI.Instance.Show();
         }
 
         /// <summary>
@@ -56,9 +56,9 @@ namespace FlorianMan.Fridge
         {
             gameObject.SetActive(true);
             
-            RoomPlanUI.Instance.Disable();
-            DetectiveBookUI.Instance.Disable();
-            OpenClockUI.Instance.Disable();
+            RoomPlanUI.Instance.Hide();
+            DetectiveBookUI.Instance.Hide();
+            OpenClockUI.Instance.Hide();
             
             CheckFridgeSettings();
         }
