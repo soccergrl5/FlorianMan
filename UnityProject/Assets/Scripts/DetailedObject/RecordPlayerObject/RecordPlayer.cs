@@ -16,6 +16,8 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         [SerializeField] private AudioClip[] audioClipsMusic;
         [SerializeField] private AudioClip[] audioClipsHint;
 
+        [SerializeField] private GameObject vinylPosition;
+
         private int _recordAtMorning = 0;
         private int _recordAtEvening = 1;
 
@@ -216,7 +218,7 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             if (!gameObject.activeSelf) return false;
             if (ActiveRecord.Instance.gameObject.activeSelf) return false;
             
-            Vector3 positionRecord = ActiveRecord.Instance.gameObject.transform.position;
+            Vector3 positionRecord = vinylPosition.transform.position;
             float radius           = 1f;
 
             if (position.x < positionRecord.x + radius

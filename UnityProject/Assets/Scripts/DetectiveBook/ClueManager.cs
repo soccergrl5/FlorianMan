@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using FlorianMan.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace FlorianMan.DetectiveBook
 {
@@ -10,6 +11,8 @@ namespace FlorianMan.DetectiveBook
         
         private List<Clues> _foundClues = new ();
 
+        private const int TotalCluesAmount = 20;
+        
         private void Awake()
         {
             Instance = this;
@@ -24,6 +27,19 @@ namespace FlorianMan.DetectiveBook
             _foundClues.Add(clue);
             
             DetectiveBookUI.Instance.RevealClue(clue);
+            
+            CheckForAllClues();
+        }
+
+        /// <summary>
+        /// Check if all Clues are found
+        /// </summary>
+        private void CheckForAllClues()
+        {
+            if (_foundClues.Count == TotalCluesAmount)
+            {
+                SceneManager.LoadScene("EndScene");
+            }
         }
     }
 }
