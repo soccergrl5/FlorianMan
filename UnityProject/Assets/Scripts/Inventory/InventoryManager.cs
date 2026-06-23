@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using FlorianMan.Inventory.Buttons;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace FlorianMan.Inventory
 {
@@ -82,5 +80,7 @@ namespace FlorianMan.Inventory
         {
             _items.Remove(item);
         }
+        
+        public bool InventoryContains(InventoryItems item) => _items.Contains(item);
     }
 }
