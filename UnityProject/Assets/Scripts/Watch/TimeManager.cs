@@ -10,7 +10,7 @@ namespace FlorianMan.Watch
         private Times _currentTime;
         private int _unlockedTimes;
         
-        public static event EventHandler OnTimeChanged; 
+        public event EventHandler OnTimeChanged; 
 
         private void Awake()
         {

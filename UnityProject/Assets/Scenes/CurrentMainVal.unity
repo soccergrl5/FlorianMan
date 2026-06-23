@@ -145,13 +145,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28236812}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.048, y: -0.337, z: -1}
-  m_LocalScale: {x: 0.09760249, y: 0.09617833, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.001, y: 0, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1268384046}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &28236814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,14 +168,14 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.048, y: -0.337, z: 0}
-  eveningPos: {x: -0.048, y: -0.337, z: 0}
-  afternoonPos: {x: -0.048, y: -0.337, z: 0}
-  noonPos: {x: -0.048, y: -0.337, z: 0}
+  morningPos: {x: -0.169, y: -0.137, z: 0}
+  eveningPos: {x: -0.19, y: -0.15, z: 0}
+  afternoonPos: {x: -0.169, y: -0.137, z: 0}
+  noonPos: {x: -0.169, y: -0.137, z: 0}
   isVisibleInMorning: 1
-  isVisibleInEvening: 0
-  isVisibleInAfternoon: 0
-  isVisibleInNoon: 0
+  isVisibleInEvening: 1
+  isVisibleInAfternoon: 1
+  isVisibleInNoon: 1
   timeAffectedObject: {fileID: 28236814}
 --- !u!212 &28236815
 SpriteRenderer:
@@ -221,8 +221,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.62352943, g: 0.8588236, b: 0.5764706, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -843,7 +843,6 @@ GameObject:
   - component: {fileID: 147212601}
   - component: {fileID: 147212604}
   - component: {fileID: 147212605}
-  - component: {fileID: 147212606}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -987,103 +986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4d42600a08463db9f4a50085e6444d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &147212606
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147212600}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: baa4e8179525ea0479a4488c47794dad, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &153078694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2724,8 +2626,8 @@ Transform:
   m_GameObject: {fileID: 361326956}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.315, y: 0.239, z: -1}
-  m_LocalScale: {x: 0.6264377, y: 1.573906, z: 1}
+  m_LocalPosition: {x: -0.32, y: -0.273, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 642542721}
@@ -2742,14 +2644,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  eveningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  afternoonSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  noonSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: 0.301, y: 0.233, z: 0}
-  eveningPos: {x: 0.301, y: 0.233, z: 0}
-  afternoonPos: {x: -0.376, y: -0.269, z: 0}
-  noonPos: {x: 0.301, y: 0.233, z: 0}
+  morningSprite: {fileID: 21300000, guid: 678e07380549544ef9884c1817c65ae8, type: 3}
+  eveningSprite: {fileID: 21300000, guid: 5c81e841f99f744f997dfa12ce9c2a82, type: 3}
+  afternoonSprite: {fileID: 21300000, guid: b533c652136df4744a089524507a44c6, type: 3}
+  noonSprite: {fileID: 21300000, guid: 19370790a791d4fc99ee3830251366f8, type: 3}
+  morningPos: {x: -0.273, y: -0.273, z: 0}
+  eveningPos: {x: -0.273, y: -0.273, z: 0}
+  afternoonPos: {x: -2.5, y: -0.273, z: 0}
+  noonPos: {x: -2.5, y: -0.273, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -2799,8 +2701,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.6784314, g: 0.454902, b: 0.9686275, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4520,7 +4422,7 @@ Transform:
   m_Children:
   - {fileID: 1199130706}
   - {fileID: 361326957}
-  - {fileID: 1605506909}
+  - {fileID: 926923461}
   - {fileID: 2048149160}
   m_Father: {fileID: 808343529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5863,11 +5765,11 @@ Transform:
   m_GameObject: {fileID: 926923460}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.068, y: 0.335, z: -1}
-  m_LocalScale: {x: 0.19869, y: -0.23711796, z: 1}
+  m_LocalPosition: {x: 0.007, y: -0.24, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1268384046}
+  m_Father: {fileID: 642542721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &926923462
 MonoBehaviour:
@@ -5881,14 +5783,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  eveningSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  afternoonSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  noonSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  morningPos: {x: -0.068, y: 0.335, z: 0}
-  eveningPos: {x: -0.068, y: 0.335, z: 0}
-  afternoonPos: {x: -0.068, y: 0.335, z: 0}
-  noonPos: {x: -0.068, y: 0.335, z: 0}
+  morningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  morningPos: {x: 0.007, y: -0.24, z: 0}
+  eveningPos: {x: 0.007, y: -0.24, z: 0}
+  afternoonPos: {x: 0.007, y: -0.24, z: 0}
+  noonPos: {x: 0.007, y: -0.24, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -5939,7 +5841,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.6668002, g: 0.899371, b: 0.5741267, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8039,8 +7941,8 @@ Transform:
   m_GameObject: {fileID: 1262903176}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.296, y: -0.35, z: -1}
-  m_LocalScale: {x: 0.022276865, y: 0.041048467, z: 1}
+  m_LocalPosition: {x: -0.395, y: -0.4, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1268384046}
@@ -8089,8 +7991,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0.90099996, g: 0.85132223, b: 0.15583318, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8112,14 +8014,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  eveningSprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  afternoonSprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  noonSprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  morningPos: {x: -0.296, y: -0.35, z: 0}
-  eveningPos: {x: -0.296, y: -0.35, z: 0}
-  afternoonPos: {x: -0.296, y: -0.35, z: 0}
-  noonPos: {x: -0.296, y: -0.35, z: 0}
+  morningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  morningPos: {x: -0.395, y: -0.4, z: 0}
+  eveningPos: {x: -0.395, y: -0.4, z: 0}
+  afternoonPos: {x: -0.395, y: -0.4, z: 0}
+  noonPos: {x: -0.395, y: -0.4, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -8152,8 +8054,8 @@ Transform:
   m_GameObject: {fileID: 1267578403}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32, y: -0.263, z: -1}
-  m_LocalScale: {x: 0.14707033, y: 0.2166221, z: 1}
+  m_LocalPosition: {x: -0.37, y: 0.115, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1268384046}
@@ -8170,14 +8072,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  eveningSprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  afternoonSprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  noonSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  morningPos: {x: 0.339, y: -0.228, z: 0}
-  eveningPos: {x: 0.339, y: -0.228, z: 0}
-  afternoonPos: {x: -0.269, y: -0.297, z: 0}
-  noonPos: {x: 0.339, y: -0.228, z: 0}
+  morningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  morningPos: {x: -0.395, y: -0.4, z: 0}
+  eveningPos: {x: -0.37, y: 0.115, z: 0}
+  afternoonPos: {x: -0.37, y: 0.115, z: 0}
+  noonPos: {x: -0.37, y: 0.115, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -8227,7 +8129,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8269,11 +8171,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 569775657}
-  - {fileID: 1479560892}
-  - {fileID: 926923461}
-  - {fileID: 1267578404}
   - {fileID: 1262903177}
+  - {fileID: 1479560892}
+  - {fileID: 1605506909}
   - {fileID: 28236813}
+  - {fileID: 1267578404}
   - {fileID: 2495991385706364201}
   m_Father: {fileID: 808343529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9936,8 +9838,8 @@ Transform:
   m_GameObject: {fileID: 1479560891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 0.267, z: -1}
-  m_LocalScale: {x: 0.089998625, y: -0.08732077, z: 1}
+  m_LocalPosition: {x: -0.4, y: -0.148, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1268384046}
@@ -9954,14 +9856,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  eveningSprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  afternoonSprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  noonSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  morningPos: {x: -0.12, y: 0.267, z: 0}
-  eveningPos: {x: -0.12, y: 0.267, z: 0}
-  afternoonPos: {x: -0.12, y: 0.267, z: 0.12}
-  noonPos: {x: -0.12, y: 0.267, z: 0}
+  morningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  morningPos: {x: -0.4, y: -0.148, z: 0}
+  eveningPos: {x: -0.4, y: -0.148, z: 0}
+  afternoonPos: {x: -0.4, y: -0.148, z: 0}
+  noonPos: {x: -0.4, y: -0.148, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 0
@@ -10012,7 +9914,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.5597484, g: 0.5597484, b: 0.5597484, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10892,8 +10794,8 @@ Transform:
   m_GameObject: {fileID: 1547401174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.325, y: -0.171, z: -1}
-  m_LocalScale: {x: 0.4409368, y: 0.66430414, z: 1}
+  m_LocalPosition: {x: -0.332, y: -0.341, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 164202220}
@@ -10910,14 +10812,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  eveningSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  afternoonSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  noonSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: 0.325, y: -0.171, z: 0}
-  eveningPos: {x: 0.325, y: -0.171, z: 0}
-  afternoonPos: {x: 0.325, y: -0.171, z: 0}
-  noonPos: {x: 0.325, y: -0.171, z: 0}
+  morningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  morningPos: {x: -0.332, y: -0.341, z: 0}
+  eveningPos: {x: -0.332, y: -0.341, z: 0}
+  afternoonPos: {x: -0.332, y: -0.341, z: 0}
+  noonPos: {x: -0.332, y: -0.341, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -10967,8 +10869,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.93710685, g: 0.8321879, b: 0.2799532, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11529,7 +11431,7 @@ Transform:
   m_GameObject: {fileID: 1580806921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.164, y: -0.139, z: -1}
+  m_LocalPosition: {x: -0.285, y: -0.139, z: -1}
   m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11554,7 +11456,7 @@ MonoBehaviour:
   morningPos: {x: -0.285, y: -0.139, z: 0}
   eveningPos: {x: -0.285, y: -0.139, z: 0}
   afternoonPos: {x: -0.285, y: -0.139, z: 0}
-  noonPos: {x: 0.164, y: -0.139, z: 0}
+  noonPos: {x: -2.5, y: -0.139, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -11604,8 +11506,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.9957533, g: 1, b: 0.702, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11763,11 +11665,11 @@ Transform:
   m_GameObject: {fileID: 1605506908}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.349, y: 0.21502, z: -1}
-  m_LocalScale: {x: 0.08837731, y: -0.13966548, z: 1}
+  m_LocalPosition: {x: -0.174, y: -0.391, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 642542721}
+  m_Father: {fileID: 1268384046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1605506910
 MonoBehaviour:
@@ -11785,10 +11687,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.349, y: 0.21502, z: 0}
-  eveningPos: {x: -0.349, y: 0.21502, z: 0}
-  afternoonPos: {x: -0.349, y: 0.21502, z: 0}
-  noonPos: {x: -0.349, y: 0.21502, z: 0}
+  morningPos: {x: -0.174, y: -0.391, z: 0}
+  eveningPos: {x: -0.174, y: -0.391, z: 0}
+  afternoonPos: {x: -0.174, y: -0.391, z: 0}
+  noonPos: {x: -0.174, y: -0.391, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -11839,7 +11741,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.45640987, g: 0.21122578, b: 0.754717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12483,8 +12385,8 @@ Transform:
   m_GameObject: {fileID: 1738060174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.249, y: -0.111, z: -1}
-  m_LocalScale: {x: 0.33035657, y: 0.4841683, z: 1}
+  m_LocalPosition: {x: 0.242, y: -0.146, z: -1}
+  m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1632525474}
@@ -12505,10 +12407,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: 0.249, y: -0.111, z: 0}
-  eveningPos: {x: 0.249, y: -0.111, z: 0}
-  afternoonPos: {x: 0.249, y: -0.111, z: 0}
-  noonPos: {x: 0.249, y: -0.111, z: 0}
+  morningPos: {x: 0, y: 0, z: 0}
+  eveningPos: {x: 0, y: 0, z: 0}
+  afternoonPos: {x: 0, y: 0, z: 0}
+  noonPos: {x: 0, y: 0, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -12558,7 +12460,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f75c34a5bc525545916fb8367422dd0, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12773,7 +12675,7 @@ Transform:
   m_GameObject: {fileID: 1766070268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.051, y: -0.379, z: -1}
+  m_LocalPosition: {x: -0.051, y: -0.232, z: -1}
   m_LocalScale: {x: 0.19869, y: 0.23813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12795,10 +12697,10 @@ MonoBehaviour:
   eveningSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   afternoonSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   noonSprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -0.051, y: -0.379, z: 0}
-  eveningPos: {x: -0.051, y: -0.379, z: 0}
-  afternoonPos: {x: -0.051, y: -0.379, z: 0}
-  noonPos: {x: -0.051, y: -0.379, z: 0}
+  morningPos: {x: 0, y: 0, z: 0}
+  eveningPos: {x: 0, y: 0, z: 0}
+  afternoonPos: {x: 0, y: 0, z: 0}
+  noonPos: {x: 0, y: 0, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -12848,8 +12750,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.7106918, g: 0.5378754, b: 0.07375096, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

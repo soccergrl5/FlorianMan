@@ -24,7 +24,7 @@ public class TimeAffected : MonoBehaviour
     {
         //Instantiates the array and the states for each time
         InitializeStates();
-        TimeManager.OnTimeChanged += OnTimeChangedSubscriber;
+        TimeManager.Instance.OnTimeChanged += OnTimeChangedSubscriber;
         
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }

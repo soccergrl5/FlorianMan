@@ -6,7 +6,6 @@ using UnityEngine;
 public class InventoryActivated : MonoBehaviour
 {
     private TimeAffected _timeAffected;
-
     public void Start()
     {
         _timeAffected = GetComponent<TimeAffected>();
@@ -26,6 +25,6 @@ public class InventoryActivated : MonoBehaviour
             default: Debug.Log("Invalid Inventory Item in InventoryActivated"); break;
         }
         gameObject.SetActive(false);
-           
+        //bugfix
     }
 }
