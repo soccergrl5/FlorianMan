@@ -1,6 +1,9 @@
-﻿using FlorianMan.Inventory;
+﻿using System;
+using FlorianMan.Inventory;
 using FlorianMan.UI;
+using FlorianMan.Watch;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace FlorianMan.DetailedObject.RecordPlayerObject
 {
@@ -13,6 +16,9 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         [SerializeField] private AudioClip[] audioClipsMusic;
         [SerializeField] private AudioClip[] audioClipsHint;
 
+        private int _recordAtMorning = 0;
+        private int _recordAtEvening = 1;
+
         private int _activeRecord; //0: No Record, 1: Music, 2: Hint
 
         private void Awake()
@@ -24,7 +30,14 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
 
         private void Start()
         {
+            TimeManager.Instance.OnTimeChanged += HandleTimeChanged;
+            
             Hide();
+        }
+        
+        private void OnDestroy()
+        {
+            TimeManager.Instance.OnTimeChanged -= HandleTimeChanged;
         }
 
         /// <summary>
@@ -91,14 +104,74 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             Invoke(nameof(ReleaseBackwardButton), audioSource.clip.length);
         }
 
+        /// <summary>
+        /// Release the Forward Button after the Record finished Playing
+        /// </summary>
         private void ReleaseForwardButton()
         {
             ForwardButton.Instance.Unlock();
         }
         
+        /// <summary>
+        /// Release the Backward Button after the Record finished Playing
+        /// </summary>
         private void ReleaseBackwardButton()
         {
             BackwardsButton.Instance.Unlock();
+        }
+
+        /// <summary>
+        /// Handle the Change of the Time
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HandleTimeChanged(object sender, EventArgs e)
+        {
+            Times currentTime = TimeManager.Instance.GetCurrentTime();
+            
+            audioSource.Stop();
+
+            if (currentTime == Times.Afternoon || currentTime == Times.Noon) return;
+            
+            if (currentTime == Times.Morning)
+            {
+                _activeRecord = _recordAtMorning;
+                
+                /*if (_recordAtMorning == 1 || _recordAtMorning == 2)
+                {
+                    _activeRecord = _recordAtMorning;
+                    ActiveRecord.Instance.PlaceRecord();
+                    PlayForward();
+                }
+                else
+                {
+                    _activeRecord = 0;
+                    ActiveRecord.Instance.RemoveRecord();
+                }
+                return;*/
+            }
+            else _activeRecord = _recordAtEvening;
+
+            
+            switch (_activeRecord)
+            {
+                case 0:
+                    //_activeRecord = 0;
+                    ActiveRecord.Instance.RemoveRecord();
+                    break;
+                
+                case 1:
+                    //_activeRecord = 1;
+                    ActiveRecord.Instance.PlaceRecord();
+                    PlayForward();
+                    break;
+                
+                case 2:
+                    //_activeRecord = 2;
+                    ActiveRecord.Instance.PlaceRecord();
+                    PlayForward();
+                    break;
+            }
         }
 
         /// <summary>
@@ -109,12 +182,25 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             if (_activeRecord == 0) return;
             
             audioSource.Stop();
-            
+
             if (_activeRecord == 1) InventoryManager.Instance.AddItem(InventoryItems.MusicVinylRecord);
+
             if (_activeRecord == 2) InventoryManager.Instance.AddItem(InventoryItems.HintVinylRecord);
             
             ForwardButton.Instance.Unlock();
             BackwardsButton.Instance.Unlock();
+            
+            Times currentTime = TimeManager.Instance.GetCurrentTime();
+            if (currentTime == Times.Morning) _recordAtMorning = 0;
+            else if (currentTime == Times.Evening)
+            {
+                if (_activeRecord == 1)
+                    _recordAtEvening = 0;
+                else if (InventoryManager.Instance.InventoryContains(InventoryItems.MusicVinylRecord))
+                    _recordAtEvening = 0;
+                else if (_recordAtMorning == 1) _recordAtEvening = 0;
+                else _recordAtEvening = 1;
+            }
             
             _activeRecord = 0;
         }
@@ -140,11 +226,23 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             {
                 _activeRecord = isHintRecord ? 2 : 1;
                 ActiveRecord.Instance.PlaceRecord();
+                CreateAccordingRecordHistory();
 
                 return true;
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Create the according History for which Record is laying on the Record Player
+        /// </summary>
+        private void CreateAccordingRecordHistory()
+        {
+            Times time = TimeManager.Instance.GetCurrentTime();
+            
+            if (time == Times.Evening) _recordAtEvening = _activeRecord;
+            else if (time == Times.Morning) _recordAtMorning = _activeRecord;
         }
     }
 }

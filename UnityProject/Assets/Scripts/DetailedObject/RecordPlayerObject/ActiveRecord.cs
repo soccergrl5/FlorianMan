@@ -21,6 +21,14 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             gameObject.SetActive(true);
         }
 
+        /// <summary>
+        /// Remove the Graphic if there is no Record Placed
+        /// </summary>
+        public void RemoveRecord()
+        {
+            gameObject.SetActive(false);
+        }
+
         private void OnMouseDown()
         {
             RecordPlayer.Instance.ReleaseRecord();
