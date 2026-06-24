@@ -126,7 +126,6 @@ namespace FlorianMan.DetectiveBook
                     break;
                 
                 case TextBoxes.ShurikensInFloor:
-                case TextBoxes.CorpseWithShurikens:
                     AddClue(Clues.ThrowingStarsInCorps);
                     break;
                 
