@@ -1,8 +1,6 @@
 ﻿using FlorianMan.DetailedObject.RecordPlayerObject;
-using TreeEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem.LowLevel;
 
 namespace FlorianMan.Inventory.Buttons
 {

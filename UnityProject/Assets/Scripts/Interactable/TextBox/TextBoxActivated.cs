@@ -2,7 +2,7 @@ using FlorianMan.UI;
 using FlorianMan.Watch;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class TextBoxActivated : MonoBehaviour
 {
     private Times _currentTime;
@@ -17,10 +17,5 @@ public class TextBoxActivated : MonoBehaviour
     void OnMouseDown()
     {
         TextBoxesUI.Instance.ActivateTextBox(_textBox);
-    }
-
-    void OnMouseLeave()
-    {
-        //ToDO: Method Deactivate Text Box is missing
     }
 }

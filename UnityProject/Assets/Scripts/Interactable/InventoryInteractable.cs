@@ -25,6 +25,7 @@ public class InventoryActivated : MonoBehaviour
             default: Debug.Log("Invalid Inventory Item in InventoryActivated"); break;
         }
         gameObject.SetActive(false);
-        //bugfix
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        
     }
 }

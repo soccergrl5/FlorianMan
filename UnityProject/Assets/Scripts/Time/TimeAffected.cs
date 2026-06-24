@@ -15,6 +15,8 @@ public class TimeAffected : MonoBehaviour
     [SerializeField] private bool isVisibleInMorning, isVisibleInEvening, isVisibleInAfternoon, isVisibleInNoon;
 
     private SpriteRenderer _spriteRenderer;
+    private BoxCollider _boxCollider;
+    private bool _noBoxCollider;
     
     [SerializeField] private TimeAffected timeAffectedObject;
 
@@ -25,6 +27,15 @@ public class TimeAffected : MonoBehaviour
         TimeManager.Instance.OnTimeChanged += OnTimeChangedSubscriber;
         
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _boxCollider = GetComponentInParent<BoxCollider>();
+        if (_boxCollider == null)
+        {
+            _noBoxCollider = true;
+        }
+        else
+        {
+            _noBoxCollider = false;
+        }
     }
     
     
@@ -34,6 +45,13 @@ public class TimeAffected : MonoBehaviour
         _spriteRenderer.sprite = _currentState.GetSprite();
         GetComponentInParent<Transform>().SetLocalPositionAndRotation(_currentState.GetPosition(), Quaternion.identity);
         _spriteRenderer.enabled = _currentState.GetIsActive();
+        if (!_noBoxCollider && _currentState.GetIsActive())
+        {
+            _boxCollider.enabled = true;
+        } else if (!_noBoxCollider && !_currentState.GetIsActive())
+        {
+            _boxCollider.enabled = false;
+        }
     }
 
     //Instantiates the array and the states for each time
@@ -96,7 +114,6 @@ public class TimeAffected : MonoBehaviour
                 break;
             default: throw new ArgumentOutOfRangeException();
         }
-
     }
 
     public ObjectState getCurrentState()
