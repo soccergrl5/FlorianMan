@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FlorianMan.MainMenu;
+using UnityEngine;
 
 namespace FlorianMan.UI
 {
@@ -8,6 +9,8 @@ namespace FlorianMan.UI
         
         private SubtitleUI[] _textBoxes;
 
+        private bool _showSubtitles;
+
         private void Awake()
         {
             Instance = this;
@@ -16,6 +19,13 @@ namespace FlorianMan.UI
         private void Start()
         {
             _textBoxes = GetComponentsInChildren<SubtitleUI>(true);
+            
+            CheckSettings();
+        }
+
+        public void CheckSettings()
+        {
+            _showSubtitles = PlayerPrefs.GetInt(Settings.KeySubtitles, 0) == 1;
         }
 
         /// <summary>
@@ -24,6 +34,8 @@ namespace FlorianMan.UI
         /// <param name="subtitles">Subtitles to show</param>
         public void ShowSubtitles(Subtitles subtitles)
         {
+            if (!_showSubtitles) return;
+            
             _textBoxes[(int)subtitles].Show();
         }
     }
