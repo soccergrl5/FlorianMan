@@ -121,6 +121,9 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             
             CancelInvoke();
             Invoke(nameof(ReleaseBackwardButton), audioSource.clip.length);
+            
+            if (_activeRecord == 2)
+                SubtitlesUI.Instance.ShowSubtitles(Subtitles.CryssAngelVinyl);
         }
 
         /// <summary>

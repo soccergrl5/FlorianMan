@@ -61,7 +61,7 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             float length = _audioSource.clip.length;
             _audioSource.Play();
             
-            Invoke(nameof(EndMicrowaving), length);
+            Invoke(nameof(EndMicrowaving), 6.2f);
         }
 
         /// <summary>

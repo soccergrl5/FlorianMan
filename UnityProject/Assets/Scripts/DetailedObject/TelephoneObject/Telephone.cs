@@ -97,8 +97,8 @@ namespace FlorianMan.DetailedObject.TelephoneObject
                 
                 _audioSource.clip = call811;
                 
-                float duration = _audioSource.clip.length;
-                Invoke(nameof(UnlockTurnablePart), duration);
+                Invoke(nameof(UnlockTurnablePart), 29.0f);
+                SubtitlesUI.Instance.ShowSubtitles(Subtitles.Call811);
                 
                 _audioSource.Play();
                 
