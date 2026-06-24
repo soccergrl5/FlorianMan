@@ -964,6 +964,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7897683186763278297, guid: 1d1a8c65734a64b44beb3bbed1b2dc74, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8010402398816462519, guid: 1d1a8c65734a64b44beb3bbed1b2dc74, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1057,7 +1061,8 @@ PrefabInstance:
       value: SettingsUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1637951768738796243, guid: 1d1a8c65734a64b44beb3bbed1b2dc74, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1a8c65734a64b44beb3bbed1b2dc74, type: 3}

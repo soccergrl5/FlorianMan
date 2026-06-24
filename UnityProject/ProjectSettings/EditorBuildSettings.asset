@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 59845d672b8cab3c3ba22d1468c0004e
   - enabled: 1
-    path: Assets/Scenes/soccergrl.unity
-    guid: 092e03c803295554a92a77515ea937cc
+    path: Assets/Scenes/CurrentMain.unity
+    guid: 4a5b8fccf37ad3cfabac13b4f363f397
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 9e17034e021550b4691b1e53c1439d27
