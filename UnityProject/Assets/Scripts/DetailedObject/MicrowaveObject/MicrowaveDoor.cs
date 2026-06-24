@@ -25,6 +25,9 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             
             door.SetActive(!_doorIsOpen);
             doorOpen.SetActive(_doorIsOpen);
+            
+            if (_doorIsOpen) Microwave.Instance.PlayOpenSound();
+            else Microwave.Instance.PlayCloseSound();
         }
         
         public bool DoorIsOpen() => _doorIsOpen;

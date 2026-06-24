@@ -4429,6 +4429,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inside: {fileID: 1798478274}
+  turnedOn: {fileID: 8300000, guid: 98a4c9739c2fb9f43b8a02dc4dd0a390, type: 3}
+  open: {fileID: 8300000, guid: 09708a25a4ac82a4ea77d414595434e1, type: 3}
+  close: {fileID: 8300000, guid: d40439fa8ac1fc141a6b9ddd87f23c5f, type: 3}
 --- !u!82 &519904386
 AudioSource:
   m_ObjectHideFlags: 0

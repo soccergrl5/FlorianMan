@@ -8,6 +8,10 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
         public static Microwave Instance {get; private set;}
 
         [SerializeField] private GameObject inside;
+
+        [SerializeField] private AudioClip turnedOn;
+        [SerializeField] private AudioClip open;
+        [SerializeField] private AudioClip close;
         
         private AudioSource _audioSource;
 
@@ -60,7 +64,7 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             MicrowaveStart.Instance.Lock();
             CloseDetailViewUI.Instance.LockButton();
             
-            float length = _audioSource.clip.length;
+            _audioSource.clip = turnedOn;
             _audioSource.Play();
             
             Invoke(nameof(EndMicrowaving), 6.2f);
@@ -104,6 +108,18 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             }
             
             return false;
+        }
+
+        public void PlayOpenSound()
+        {
+            _audioSource.clip = open;
+            _audioSource.Play();
+        }
+
+        public void PlayCloseSound()
+        {
+            _audioSource.clip = close;
+            _audioSource.Play();
         }
     }
 }
