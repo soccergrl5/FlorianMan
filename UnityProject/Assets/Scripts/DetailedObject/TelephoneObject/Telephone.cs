@@ -44,11 +44,13 @@ namespace FlorianMan.DetailedObject.TelephoneObject
             RoomPlanUI.Instance.Hide();
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
+            
+            CloseDetailViewUI.Instance.OpenCloseButton(DetailedObjects.Telephone);
 
             if (_phoneRingingAfternoon)
             {
                 TurnablePart.Instance.LockTelephone();
-                TelephoneBackground.Instance.Lock();
+                CloseDetailViewUI.Instance.LockButton();
 
                 _audioSource.clip = circularSawHint;
                 
@@ -93,7 +95,7 @@ namespace FlorianMan.DetailedObject.TelephoneObject
             if (_dialedNumber == "811")
             {
                 TurnablePart.Instance.LockTelephone();
-                TelephoneBackground.Instance.Lock();
+                CloseDetailViewUI.Instance.LockButton();
                 
                 _audioSource.clip = call811;
                 
@@ -112,7 +114,7 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         private void UnlockTurnablePart()
         {
             TurnablePart.Instance.UnlockTelephone();
-            TelephoneBackground.Instance.Unlock();
+            CloseDetailViewUI.Instance.UnlockButton();
 
             if (_phoneRingingAfternoon)
             {

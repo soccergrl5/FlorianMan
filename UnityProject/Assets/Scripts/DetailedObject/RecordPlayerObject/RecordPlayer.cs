@@ -59,6 +59,8 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             RoomPlanUI.Instance.Hide();
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
+            
+            CloseDetailViewUI.Instance.OpenCloseButton(DetailedObjects.RecordPlayer);
 
             if (TimeManager.Instance.GetCurrentTime() == Times.Evening && !_inspectedPlayerAfterArrival)
             {

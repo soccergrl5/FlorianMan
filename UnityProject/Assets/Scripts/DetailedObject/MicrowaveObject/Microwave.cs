@@ -46,6 +46,8 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
             
+            CloseDetailViewUI.Instance.OpenCloseButton(DetailedObjects.Microwave);
+            
             TextBoxesUI.Instance.ActivateTextBox(TextBoxes.Microwave);
         }
 
@@ -56,7 +58,7 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
         {
             MicrowaveDoor.Instance.LockDoor();
             MicrowaveStart.Instance.Lock();
-            MicrowaveClose.Instance.Lock();
+            CloseDetailViewUI.Instance.LockButton();
             
             float length = _audioSource.clip.length;
             _audioSource.Play();
@@ -71,7 +73,7 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
         {
             MicrowaveDoor.Instance.UnlockDoor();
             MicrowaveStart.Instance.Unlock();
-            MicrowaveClose.Instance.Unlock();
+            CloseDetailViewUI.Instance.UnlockButton();
             
             if (MicrowaveButter.Instance.gameObject.activeSelf)
                 MicrowaveButter.Instance.Microwaved();

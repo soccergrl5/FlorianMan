@@ -63,6 +63,8 @@ namespace FlorianMan.DetailedObject.FridgeObject
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
             
+            CloseDetailViewUI.Instance.OpenCloseButton(DetailedObjects.Fridge);
+            
             CheckFridgeSettings();
         }
 
