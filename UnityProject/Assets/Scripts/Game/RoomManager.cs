@@ -30,14 +30,14 @@ namespace FlorianMan.Game
 
             if (TimeManager.Instance.GetCurrentTime() == Times.Afternoon && !_noticedMissingBody)
             {
-                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomAfternoon);
+                OpenClockUI.Instance.ShowLivingRoomAfternoon();
                 _noticedMissingBody = true;
             }
             else if (TimeManager.Instance.GetCurrentTime() == Times.Noon &&
                      ClueManager.Instance.ContainsClue(Clues.BananaPeelBehindChair) && !_noticedMissingBananaPeel)
             {
-                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomNoonKnowingBananaPeelChair);
-                _noticedMissingBody = true;
+                OpenClockUI.Instance.ShowLivingRoomNoon();
+                _noticedMissingBananaPeel = true;
             }
         }
 

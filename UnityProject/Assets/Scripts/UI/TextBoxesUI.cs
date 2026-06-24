@@ -21,6 +21,8 @@ namespace FlorianMan.UI
 
         public void ActivateTextBox(TextBoxes type)
         {
+            if (type == TextBoxes.Empty) return;
+            
             _textBoxes[(int)type].Show();
         }
     }

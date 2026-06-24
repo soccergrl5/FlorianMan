@@ -58,5 +58,7 @@
         PieceOfButterUnreachable,
         PieceOfButterReachable,
         Finger,
+        
+        Empty,
     }
 }

@@ -19,6 +19,8 @@ namespace FlorianMan.UI
         
         private bool _openTextboxRecordPlayerArrivalSameRoom;
         private bool _openTextboxRecordPlayerArrivalOtherRoom;
+        private bool _openTextboxLivingRoomAfternoon;
+        private bool _openTextboxLivingRoomNoon;
         
         private void Awake()
         {
@@ -43,7 +45,8 @@ namespace FlorianMan.UI
                         else if (!_openedOnce)
                         {
                             TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning1);
-                            _openedOnce = true;
+                            _openedOnce    = true;
+                            _firstCogwheel = true;
                         }
                     }
                 }
@@ -62,6 +65,18 @@ namespace FlorianMan.UI
                     {
                         TextBoxesUI.Instance.ActivateTextBox(TextBoxes.RecordPlayerArrivalOtherRoom);
                         _openTextboxRecordPlayerArrivalOtherRoom = false;
+                    }
+
+                    if (_openTextboxLivingRoomAfternoon && TimeManager.Instance.GetCurrentTime() == Times.Afternoon)
+                    {
+                        TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomAfternoon);
+                        _openTextboxLivingRoomAfternoon = false;
+                    }
+
+                    if (_openTextboxLivingRoomNoon && TimeManager.Instance.GetCurrentTime() == Times.Noon)
+                    {
+                        TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomNoonKnowingBananaPeelChair);
+                        _openTextboxLivingRoomNoon = false;
                     }
                 }
             });
@@ -108,5 +123,7 @@ namespace FlorianMan.UI
         
         public void ShowRecordPlayerSameRoomBoxOnClose() => _openTextboxRecordPlayerArrivalSameRoom = true;
         public void ShowRecordPlayerOtherRoomBoxOnClose() => _openTextboxRecordPlayerArrivalOtherRoom = true;
+        public void ShowLivingRoomAfternoon() => _openTextboxLivingRoomAfternoon = true;
+        public void ShowLivingRoomNoon() => _openTextboxLivingRoomNoon = true;
     }
 }
