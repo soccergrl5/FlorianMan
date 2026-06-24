@@ -101,7 +101,6 @@ namespace FlorianMan.DetailedObject.FridgeObject
             if (_doorIsOpen && TimeManager.Instance.GetCurrentTime() == Times.Noon)
             {
                 TextBoxesUI.Instance.ActivateTextBox(TextBoxes.FridgeFreezeButter);
-                ClueManager.Instance.AddClue(Clues.ButterFreezeInFridge);
             }
             else if (_doorIsOpen && _setColdList[(int)TimeManager.Instance.GetCurrentTime()] && !_switchedMode)
                 TextBoxesUI.Instance.ActivateTextBox(TextBoxes.FridgeFreeze);

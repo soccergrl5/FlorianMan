@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FlorianMan.Inventory.Buttons;
+using FlorianMan.UI;
 using UnityEngine;
 
 namespace FlorianMan.Inventory
@@ -85,6 +86,29 @@ namespace FlorianMan.Inventory
             _items.Remove(item);
         }
         
+        /// <summary>
+        /// Check if the Inventory Contains the given Item
+        /// </summary>
+        /// <param name="item">Item to check</param>
+        /// <returns>True if the item is in the Inventory, false otherwise</returns>
         public bool InventoryContains(InventoryItems item) => _items.Contains(item);
+
+        public void TextboxTriggersItem(TextBoxes textBox)
+        {
+            switch (textBox)
+            {
+                case TextBoxes.ToyOnShelfMorning:
+                    AddItem(InventoryItems.Cogwheel1);
+                    break;
+                
+                case TextBoxes.PieceOfButterReachable:
+                    AddItem(InventoryItems.Butter);
+                    break;
+                
+                case TextBoxes.CryssAngleVinyl:
+                    AddItem(InventoryItems.HintVinylRecord);
+                    break;
+            }
+        }
     }
 }

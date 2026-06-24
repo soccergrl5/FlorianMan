@@ -1,4 +1,6 @@
 ﻿using System;
+using FlorianMan.DetectiveBook;
+using FlorianMan.Inventory;
 using UnityEngine;
 
 namespace FlorianMan.UI
@@ -24,6 +26,9 @@ namespace FlorianMan.UI
             if (type == TextBoxes.Empty) return;
             
             _textBoxes[(int)type].Show();
+            
+            ClueManager.Instance.TextboxTriggersClue(type);
+            InventoryManager.Instance.TextboxTriggersItem(type);
         }
     }
 }
