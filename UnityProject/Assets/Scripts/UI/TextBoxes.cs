@@ -3,10 +3,10 @@
     public enum TextBoxes
     {
         //General
-        PocketWatchMorning1,
-        PocketWatchMorning2,
-        RecordPlayerArrivalSameRoom,
-        RecordPlayerArrivalOtherRoom,
+        PocketWatchMorning1,                        // First Time opening Clock
+        PocketWatchMorning2,                        // Open Clock with Cogwheel in Inventory
+        RecordPlayerArrivalSameRoom,                // On Evening Arrival in Same Room as Record Player
+        RecordPlayerArrivalOtherRoom,               // On Evening Arrival in Other Room than Record Player
         TelephoneRinging,
         TelephoneResponse,
         EnterLivingRoomAfternoon,
@@ -43,12 +43,12 @@
         
         //Bedroom
         Bed,
-        RecordPlayerMorning,
-        RecordPlayerEvening,
-        MusicVinylOut,
-        CryssAngleVinylIn,
-        CryssAngleVinylForward,
-        CryssAngleVinylBackwards,
+        RecordPlayerMorning,                        // Every Interaction with Record Player at Morning
+        RecordPlayerEvening,                        // First Interaction with Record Player at Evening
+        MusicVinylOut,                              // First Time Releasing the Music Vinyl from the Record Player
+        CryssAngleVinylIn,                          // First Time placing the Cryss Angle Vinyl
+        CryssAngleVinylForward,                     // First Time playing the Cryss Angle Vinyl Forward
+        CryssAngleVinylBackwards,                   // First Time playing the Cryss Angle Vinyl Backwards
         InvitationLetter,
         NoteInBedroom,
         

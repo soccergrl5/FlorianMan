@@ -1,4 +1,6 @@
-﻿using FlorianMan.UI;
+﻿using System;
+using FlorianMan.UI;
+using FlorianMan.Watch;
 using UnityEngine;
 
 namespace FlorianMan.DetailedObject.TelephoneObject
@@ -10,6 +12,8 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         private AudioSource _audioSource;
 
         private string _dialedNumber = "";
+        
+        private bool _phoneRingedAfternoon = false;
 
         private void Awake()
         {
@@ -21,6 +25,8 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         private void Start()
         {
             Hide();
+
+            TimeManager.Instance.OnTimeChanged += HandleTimeChaged;
         }
 
         /// <summary>
@@ -73,6 +79,26 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         {
             TurnablePart.Instance.UnlockTelephone();
             TelephoneBackground.Instance.Unlock();
+        }
+
+        private void HandleTimeChaged(object sender, EventArgs e)
+        {
+            if (TimeManager.Instance.GetCurrentTime() != Times.Afternoon)
+            {
+                CancelInvoke();
+                return;
+            }
+            
+            if (_phoneRingedAfternoon) return;
+            
+            Invoke(nameof(RingPhone), 10f);
+        }
+
+        private void RingPhone()
+        {
+            _phoneRingedAfternoon = true;
+            
+            Debug.Log("RingPhone");
         }
     }
 }

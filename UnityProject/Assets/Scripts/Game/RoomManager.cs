@@ -25,5 +25,7 @@ namespace FlorianMan.Game
 
             CameraMovement.Instance.MoveToNewRoom(_currentRoom);
         }
+        
+        public Rooms GetCurrentRoom() => _currentRoom;
     }
 }

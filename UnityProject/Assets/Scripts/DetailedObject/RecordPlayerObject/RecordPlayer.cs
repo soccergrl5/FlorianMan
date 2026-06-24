@@ -1,4 +1,5 @@
 ﻿using System;
+using FlorianMan.Game;
 using FlorianMan.Inventory;
 using FlorianMan.UI;
 using FlorianMan.Watch;
@@ -23,6 +24,12 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
 
         private int _activeRecord; //0: No Record, 1: Music, 2: Hint
 
+        private bool _inspectedPlayerAfterArrival;
+        private bool _releasedMusicVinyl;
+        private bool _placedHintRecord;
+        private bool _playedHintRecordForward;
+        private bool _playedHintRecordBackwards;
+        
         private void Awake()
         {
             Instance = this;
@@ -52,6 +59,16 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             RoomPlanUI.Instance.Hide();
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
+
+            if (TimeManager.Instance.GetCurrentTime() == Times.Evening && !_inspectedPlayerAfterArrival)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.RecordPlayerEvening);
+                _inspectedPlayerAfterArrival = true;
+            }
+            else if (TimeManager.Instance.GetCurrentTime() == Times.Morning)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.RecordPlayerMorning);
+            }
         }
 
         /// <summary>
@@ -112,6 +129,12 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         private void ReleaseForwardButton()
         {
             ForwardButton.Instance.Unlock();
+
+            if (_activeRecord == 2 && !_playedHintRecordForward)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.CryssAngleVinylForward);
+                _playedHintRecordForward = true;
+            }
         }
         
         /// <summary>
@@ -120,6 +143,12 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         private void ReleaseBackwardButton()
         {
             BackwardsButton.Instance.Unlock();
+
+            if (_activeRecord == 2 && !_playedHintRecordBackwards)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.CryssAngleVinylBackwards);
+                _playedHintRecordBackwards = true;
+            }
         }
 
         /// <summary>
@@ -148,6 +177,14 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
                     ActiveRecord.Instance.PlaceRecord(_activeRecord);
                     PlayForward();
                     break;
+            }
+
+            if (currentTime == Times.Evening && !_inspectedPlayerAfterArrival)
+            {
+                if (RoomManager.Instance.GetCurrentRoom() == Rooms.Bedroom) 
+                    OpenClockUI.Instance.ShowRecordPlayerSameRoomBoxOnClose();
+                else
+                    OpenClockUI.Instance.ShowRecordPlayerOtherRoomBoxOnClose();
             }
         }
 
@@ -180,6 +217,12 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             }
             
             _activeRecord = 0;
+
+            if (currentTime == Times.Evening && !_releasedMusicVinyl)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.MusicVinylOut);
+                _releasedMusicVinyl = true;
+            }
         }
 
         /// <summary>
@@ -205,6 +248,12 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
                 ActiveRecord.Instance.PlaceRecord(_activeRecord);
                 CreateAccordingRecordHistory();
 
+                if (_activeRecord == 2 && !_placedHintRecord)
+                {
+                    TextBoxesUI.Instance.ActivateTextBox(TextBoxes.CryssAngleVinylIn);
+                    _placedHintRecord = true;
+                }
+                
                 return true;
             }
 

@@ -27,6 +27,8 @@ namespace FlorianMan.UI
             gameObject.SetActive(true);
             
             textboxes[0].gameObject.SetActive(true);
+            
+            InputBlockage.Instance.BlockInput();
         }
 
         private void NextTextbox()
@@ -38,6 +40,7 @@ namespace FlorianMan.UI
             {
                 _currentTextbox = 0;
                 Hide();
+                InputBlockage.Instance.UnblockInput();
                 return;
             }
             
