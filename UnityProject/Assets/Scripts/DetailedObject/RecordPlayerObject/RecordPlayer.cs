@@ -4,7 +4,6 @@ using FlorianMan.Inventory;
 using FlorianMan.UI;
 using FlorianMan.Watch;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace FlorianMan.DetailedObject.RecordPlayerObject
 {

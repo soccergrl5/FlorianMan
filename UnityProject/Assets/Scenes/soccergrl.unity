@@ -1014,6 +1014,7 @@ GameObject:
   - component: {fileID: 147212604}
   - component: {fileID: 147212605}
   - component: {fileID: 147212606}
+  - component: {fileID: 147212607}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1255,6 +1256,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &147212607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147212600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5806e9c432242c3aafd907911437ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &153078694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7205,7 +7218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1779304295809846958, guid: e9c8670add3b9aa4ba4b3073128bde08, type: 3}
       propertyPath: m_text
-      value: There's a cogwheel frozen in a cube.
+      value: There's the piece of butter from the basement.
       objectReference: {fileID: 0}
     - target: {fileID: 7714203482248242320, guid: e9c8670add3b9aa4ba4b3073128bde08, type: 3}
       propertyPath: m_Name
@@ -13423,7 +13436,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1779304295809846958, guid: e9c8670add3b9aa4ba4b3073128bde08, type: 3}
       propertyPath: m_text
-      value: It's missing a Finger!
+      value: Its right hand is missing a finger.
       objectReference: {fileID: 0}
     - target: {fileID: 7714203482248242320, guid: e9c8670add3b9aa4ba4b3073128bde08, type: 3}
       propertyPath: m_Name
@@ -13809,7 +13822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2405515075905155331, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
-      value: There's a recipe attached to it.
+      value: It's for a cake
       objectReference: {fileID: 0}
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
@@ -13821,11 +13834,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
-      value: A normal looking fridge.
+      value: There's a recipe lying here.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7460494344027093054, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+    - {fileID: 7963834888551793722, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
@@ -13844,7 +13858,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1779304295809846958, guid: e9c8670add3b9aa4ba4b3073128bde08, type: 3}
       propertyPath: m_text
-      value: How can I melt it?
+      value: It's completely frozen.
       objectReference: {fileID: 0}
     - target: {fileID: 7714203482248242320, guid: e9c8670add3b9aa4ba4b3073128bde08, type: 3}
       propertyPath: m_Name
