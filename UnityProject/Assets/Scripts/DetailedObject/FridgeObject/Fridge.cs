@@ -75,13 +75,11 @@ namespace FlorianMan.DetailedObject.FridgeObject
 
             if (_setColdList[(int)time])
             {
-                FridgeButtonCold.Instance.Lock();
-                FridgeButtonWarm.Instance.Unlock();
+                FridgeTurnKnob.Instance.SnapToColdSetting();
             }
             else
             {
-                FridgeButtonWarm.Instance.Lock();
-                FridgeButtonCold.Instance.Unlock();
+                FridgeTurnKnob.Instance.SnapToWarmSetting();
             }
             
             if (_isColdList[(int)time]) FridgeInside.Instance.ColdInside();
@@ -111,8 +109,6 @@ namespace FlorianMan.DetailedObject.FridgeObject
         /// </summary>
         public void WarmButtonPressed()
         {
-            FridgeButtonCold.Instance.Unlock();
-
             Times time = TimeManager.Instance.GetCurrentTime();
 
             switch (time)
@@ -158,8 +154,6 @@ namespace FlorianMan.DetailedObject.FridgeObject
         /// </summary>
         public void ColdButtonPressed()
         {
-            FridgeButtonWarm.Instance.Unlock();
-            
             Times time = TimeManager.Instance.GetCurrentTime();
 
             switch (time)
@@ -196,5 +190,7 @@ namespace FlorianMan.DetailedObject.FridgeObject
                     break;
             }
         }
+
+        public bool CheckIfSetCold() => _setColdList[(int)TimeManager.Instance.GetCurrentTime()];
     }
 }
