@@ -1,19 +1,16 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace FlorianMan.DetectiveBook
 {
     public class ClueUIElement : MonoBehaviour
     {
-        [SerializeField] private TMP_Text clueText;
+        [SerializeField] private GameObject clue;
+        [SerializeField] private GameObject clueCover;
 
-        /// <summary>
-        /// Set the Text on the Clue in the Book
-        /// </summary>
-        /// <param name="text">The Text that is visible</param>
-        public void SetClueText(string text)
+        public void RevealClue()
         {
-            clueText.text = text;
+            clue.SetActive(true);
+            clueCover.SetActive(false);
         }
     }
 }

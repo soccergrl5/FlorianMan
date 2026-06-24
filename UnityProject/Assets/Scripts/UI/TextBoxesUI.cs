@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FlorianMan.DetectiveBook;
 using FlorianMan.Inventory;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace FlorianMan.UI
         
         private TextBoxUI[] _textBoxes;
 
+        private HashSet<TextBoxes> _revealedBoxes = new ();
+        
         private void Awake()
         {
             Instance = this;
@@ -29,6 +32,10 @@ namespace FlorianMan.UI
             
             ClueManager.Instance.TextboxTriggersClue(type);
             InventoryManager.Instance.TextboxTriggersItem(type);
+            
+            _revealedBoxes.Add(type);
         }
+        
+        public bool CheckIfTextWasShown(TextBoxes type) => _revealedBoxes.Contains(type);
     }
 }

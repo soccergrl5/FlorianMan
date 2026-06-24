@@ -141,7 +141,7 @@ namespace FlorianMan.UI
                 }
 
                 ClueUIElement clueText = pages[i].GetComponentsInChildren<ClueUIElement>()[clueNumber];
-                clueText.SetClueText(clue.ToString());
+                clueText.RevealClue();
                 break;
             }
         }
