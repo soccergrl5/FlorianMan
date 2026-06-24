@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847bc12cd232acf4a89d860e3b5529c1, type: 3}
+  m_Name: TripelConfig
+  m_EditorClassIdentifier: 
+  _throwingStars: {fileID: 0}
+  _ceilingFan: {fileID: 0}
+  _chair: {fileID: 0}
+  _bananaPeel: {fileID: 0}
+  _corpse: {fileID: 0}
+  _toy: {fileID: 0}
+  _telephone: {fileID: 0}
+  _bananas: {fileID: 0}
+  _emergencyCallNote: {fileID: 0}
+  _ceilingFanRemoteControl: {fileID: 0}
+  _butter: {fileID: 0}
+  _finger: {fileID: 0}
+  _buzzSaw: {fileID: 0}
+  _shelf: {fileID: 0}
+  _fridge: {fileID: 0}
+  _ravioliCan: {fileID: 0}
+  _microwave: {fileID: 0}
+  _recordPlayer: {fileID: 0}
+  _bed: {fileID: 0}
+  _invitationLetter: {fileID: 0}

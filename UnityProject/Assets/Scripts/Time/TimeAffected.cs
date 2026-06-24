@@ -1,8 +1,6 @@
 using System;
 using FlorianMan.Watch;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 
 public class TimeAffected : MonoBehaviour
 {
