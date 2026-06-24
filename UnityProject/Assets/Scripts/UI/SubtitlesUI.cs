@@ -20,6 +20,11 @@ namespace FlorianMan.UI
         {
             _textBoxes = GetComponentsInChildren<SubtitleUI>(true);
             
+            CheckSettings();
+        }
+
+        public void CheckSettings()
+        {
             _showSubtitles = PlayerPrefs.GetInt(Settings.KeySubtitles, 0) == 1;
         }
 

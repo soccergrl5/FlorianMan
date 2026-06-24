@@ -37,6 +37,8 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             RoomPlanUI.Instance.Show();
             DetectiveBookUI.Instance.Show();
             OpenClockUI.Instance.Show();
+            PauseUI.Instance.Show();
+            HintUI.Instance.Show();
         }
 
         /// <summary>
@@ -49,6 +51,8 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             RoomPlanUI.Instance.Hide();
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
+            PauseUI.Instance.Hide();
+            HintUI.Instance.Hide();
             
             CloseDetailViewUI.Instance.OpenCloseButton(DetailedObjects.Microwave);
             

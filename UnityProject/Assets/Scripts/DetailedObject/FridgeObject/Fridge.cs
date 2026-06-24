@@ -50,6 +50,8 @@ namespace FlorianMan.DetailedObject.FridgeObject
             RoomPlanUI.Instance.Show();
             DetectiveBookUI.Instance.Show();
             OpenClockUI.Instance.Show();
+            PauseUI.Instance.Show();
+            HintUI.Instance.Show();
         }
 
         /// <summary>
@@ -62,6 +64,8 @@ namespace FlorianMan.DetailedObject.FridgeObject
             RoomPlanUI.Instance.Hide();
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
+            PauseUI.Instance.Hide();
+            HintUI.Instance.Hide();
             
             CloseDetailViewUI.Instance.OpenCloseButton(DetailedObjects.Fridge);
             

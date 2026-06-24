@@ -38,5 +38,15 @@ namespace FlorianMan.UI
                     break;
             }
         }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
     }
 }
