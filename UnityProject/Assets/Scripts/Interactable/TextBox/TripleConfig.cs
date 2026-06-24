@@ -101,7 +101,7 @@ public class TripelConfig : MonoBehaviour
         //TripleHandler.instance.Add(Times.Afternoon, , recordPlayer);
         //TripleHandler.instance.Add(Times.Noon, , recordPlayer);
 
-        TripleHandler.instance.Add(Times.Morning, TextBoxes.Bed, bed);
+        TripleHandler.instance.Add(Times.Morning, TextBoxes.BananaPeelNextToCorpse, bed);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.Bed, bed);
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.Bed, bed);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.Bed, bed);

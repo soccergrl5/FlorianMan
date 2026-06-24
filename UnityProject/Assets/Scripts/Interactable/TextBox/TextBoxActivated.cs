@@ -16,11 +16,11 @@ public class TextBoxActivated : MonoBehaviour
     }
     void OnMouseDown()
     {
-        //TodDo
+        TextBoxesUI.Instance.ActivateTextBox(_textBox);
     }
 
     void OnMouseLeave()
     {
-        //Textbox wieder deaktivieren
+        //ToDO: Method Deactivate Text Box is missing
     }
 }
