@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FlorianMan.DetectiveBook;
 using FlorianMan.UI;
 using FlorianMan.Watch;
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace FlorianMan.DetailedObject.FridgeObject
         private readonly List<bool> _setColdList = new();
         
         private bool _doorIsOpen;
+
+        private bool _switchedMode;
 
         private void Awake()
         {
@@ -94,6 +97,14 @@ namespace FlorianMan.DetailedObject.FridgeObject
             
             if (_doorIsOpen) doorOpen.SetActive(true);
             else doorClose.SetActive(true);
+
+            if (_doorIsOpen && TimeManager.Instance.GetCurrentTime() == Times.Noon)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.FridgeFreezeButter);
+                ClueManager.Instance.AddClue(Clues.ButterFreezeInFridge);
+            }
+            else if (_doorIsOpen && _setColdList[(int)TimeManager.Instance.GetCurrentTime()] && !_switchedMode)
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.FridgeFreeze);
         }
 
         /// <summary>
@@ -138,6 +149,9 @@ namespace FlorianMan.DetailedObject.FridgeObject
                     _setColdList[0] = false;
                     break;
             }
+            
+            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.FridgeRegulator);
+            _switchedMode = true;
         }
 
         /// <summary>

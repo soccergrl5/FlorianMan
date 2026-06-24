@@ -45,6 +45,8 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             RoomPlanUI.Instance.Hide();
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
+            
+            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.Microwave);
         }
 
         /// <summary>

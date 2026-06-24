@@ -1,4 +1,7 @@
-﻿using FlorianMan.UI;
+﻿using System;
+using FlorianMan.DetectiveBook;
+using FlorianMan.UI;
+using FlorianMan.Watch;
 using UnityEngine;
 
 namespace FlorianMan.DetailedObject.TelephoneObject
@@ -6,10 +9,16 @@ namespace FlorianMan.DetailedObject.TelephoneObject
     public class Telephone : MonoBehaviour
     {
         public static Telephone Instance {get; private set;}
+
+        [SerializeField] private AudioClip call811;
+        [SerializeField] private AudioClip circularSawHint;
         
         private AudioSource _audioSource;
 
         private string _dialedNumber = "";
+        
+        private bool _phoneRingedAfternoon = false;
+        private bool _phoneRingingAfternoon = false;
 
         private void Awake()
         {
@@ -21,6 +30,8 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         private void Start()
         {
             Hide();
+
+            TimeManager.Instance.OnTimeChanged += HandleTimeChaged;
         }
 
         /// <summary>
@@ -33,8 +44,28 @@ namespace FlorianMan.DetailedObject.TelephoneObject
             RoomPlanUI.Instance.Hide();
             DetectiveBookUI.Instance.Hide();
             OpenClockUI.Instance.Hide();
+
+            if (_phoneRingingAfternoon)
+            {
+                TurnablePart.Instance.LockTelephone();
+                TelephoneBackground.Instance.Lock();
+
+                _audioSource.clip = circularSawHint;
+                
+                float duration = _audioSource.clip.length;
+                Invoke(nameof(UnlockTurnablePart), duration);
+                
+                _audioSource.Play();
+                
+                return;
+            }
             
             TurnablePart.Instance.UnlockTelephone();
+            
+            if (TimeManager.Instance.GetCurrentTime() != Times.Morning)
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.OldTelephoneMurderDay);
+            else if (!ClueManager.Instance.ContainsClue(Clues.EmergencyNoteUnderShelf))
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.OldTelephoneMorning);
         }
 
         /// <summary>
@@ -51,6 +82,10 @@ namespace FlorianMan.DetailedObject.TelephoneObject
             OpenClockUI.Instance.Show();
         }
 
+        /// <summary>
+        /// Add the Dial to the Number to call
+        /// </summary>
+        /// <param name="number">Dial to add</param>
         public void AddDial(string number)
         {
             _dialedNumber += number;
@@ -59,6 +94,8 @@ namespace FlorianMan.DetailedObject.TelephoneObject
             {
                 TurnablePart.Instance.LockTelephone();
                 TelephoneBackground.Instance.Lock();
+                
+                _audioSource.clip = call811;
                 
                 float duration = _audioSource.clip.length;
                 Invoke(nameof(UnlockTurnablePart), duration);
@@ -69,10 +106,44 @@ namespace FlorianMan.DetailedObject.TelephoneObject
             }
         }
 
+        /// <summary>
+        /// Unlock the Turnable Part after a call
+        /// </summary>
         private void UnlockTurnablePart()
         {
             TurnablePart.Instance.UnlockTelephone();
             TelephoneBackground.Instance.Unlock();
+
+            if (_phoneRingingAfternoon)
+            {
+                _phoneRingingAfternoon = false;
+                _phoneRingedAfternoon = true;
+                
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.TelephoneResponse);
+            }
+        }
+
+        private void HandleTimeChaged(object sender, EventArgs e)
+        {
+            if (TimeManager.Instance.GetCurrentTime() != Times.Afternoon)
+            {
+                CancelInvoke();
+                return;
+            }
+            
+            if (_phoneRingedAfternoon) return;
+            
+            Invoke(nameof(RingPhone), 10f);
+        }
+
+        /// <summary>
+        /// Ring the Phone in the Afternoon
+        /// </summary>
+        private void RingPhone()
+        {
+            _phoneRingingAfternoon = true;
+            
+            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.TelephoneRinging);
         }
     }
 }

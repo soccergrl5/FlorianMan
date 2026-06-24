@@ -1,3 +1,7 @@
+using System;
+using FlorianMan.DetectiveBook;
+using FlorianMan.UI;
+using FlorianMan.Watch;
 using UnityEngine;
 
 namespace FlorianMan.Game
@@ -8,13 +12,35 @@ namespace FlorianMan.Game
         
         private Rooms _currentRoom;
 
+        private bool _noticedMissingBody;
+        private bool _noticedMissingBananaPeel;
+
         private void Awake()
         {
             Instance = this;
 
             _currentRoom = Rooms.LivingRoom;
+
+            TimeManager.Instance.OnTimeChanged += HandleTimeChanged;
         }
-        
+
+        private void HandleTimeChanged(object sender, EventArgs e)
+        {
+            if (_currentRoom != Rooms.LivingRoom) return;
+
+            if (TimeManager.Instance.GetCurrentTime() == Times.Afternoon && !_noticedMissingBody)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomAfternoon);
+                _noticedMissingBody = true;
+            }
+            else if (TimeManager.Instance.GetCurrentTime() == Times.Noon &&
+                     ClueManager.Instance.ContainsClue(Clues.BananaPeelBehindChair) && !_noticedMissingBananaPeel)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomNoonKnowingBananaPeelChair);
+                _noticedMissingBody = true;
+            }
+        }
+
         /// <summary>
         /// Change to another Room
         /// </summary>
@@ -24,6 +50,22 @@ namespace FlorianMan.Game
             _currentRoom = nextRoom;
 
             CameraMovement.Instance.MoveToNewRoom(_currentRoom);
+
+            if (_currentRoom != Rooms.LivingRoom) return;
+
+            if (TimeManager.Instance.GetCurrentTime() == Times.Afternoon && !_noticedMissingBody)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomAfternoon);
+                _noticedMissingBody = true;
+            }
+            else if (TimeManager.Instance.GetCurrentTime() == Times.Noon &&
+                     ClueManager.Instance.ContainsClue(Clues.BananaPeelBehindChair) && !_noticedMissingBananaPeel)
+            {
+                TextBoxesUI.Instance.ActivateTextBox(TextBoxes.EnterLivingRoomNoonKnowingBananaPeelChair);
+                _noticedMissingBody = true;
+            }
         }
+        
+        public Rooms GetCurrentRoom() => _currentRoom;
     }
 }

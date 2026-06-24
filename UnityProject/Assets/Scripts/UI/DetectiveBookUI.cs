@@ -29,12 +29,12 @@ namespace FlorianMan.UI
 
             turnButtons[0].onClick.AddListener(PreviousPage);
             turnButtons[1].onClick.AddListener(NextPage);
-            
-            HideBook();
         }
 
         private void Start()
         {
+            HideBook();
+            
             _amountCluesOnPage = new int[pages.Length];
 
             for (int i = 0; i < _amountCluesOnPage.Length; i++)
@@ -51,6 +51,8 @@ namespace FlorianMan.UI
         private void HideBook()
         {
             book.SetActive(false);
+            
+            InputBlockage.Instance.UnblockInput();
         }
 
         /// <summary>
@@ -59,6 +61,8 @@ namespace FlorianMan.UI
         private void ShowBook()
         {
             book.SetActive(true);
+            
+            InputBlockage.Instance.BlockInput();
         }
         
         public void Hide()

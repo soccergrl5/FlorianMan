@@ -1,4 +1,5 @@
-﻿using FlorianMan.Watch;
+﻿using FlorianMan.Inventory;
+using FlorianMan.Watch;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,12 @@ namespace FlorianMan.UI
         [SerializeField] private Button turnButton;
 
         private bool _clockVisible;
+
+        private bool _openedOnce;
+        private bool _firstCogwheel;
+        
+        private bool _openTextboxRecordPlayerArrivalSameRoom;
+        private bool _openTextboxRecordPlayerArrivalOtherRoom;
         
         private void Awake()
         {
@@ -28,13 +35,34 @@ namespace FlorianMan.UI
 
                     if (TimeManager.Instance.GetUnlockedTimes() == 1)
                     {
-                        TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning1);
+                        if (!_firstCogwheel && InventoryManager.Instance.InventoryContains(InventoryItems.Cogwheel1))
+                        {
+                            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning2);
+                            _firstCogwheel = true;
+                        }
+                        else if (!_openedOnce)
+                        {
+                            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning1);
+                            _openedOnce = true;
+                        }
                     }
                 }
                 else
                 {
                     Watch.Watch.Instance.Hide();
                     HideTurnButton();
+
+                    if (_openTextboxRecordPlayerArrivalSameRoom && TimeManager.Instance.GetCurrentTime() == Times.Evening)
+                    {
+                        TextBoxesUI.Instance.ActivateTextBox(TextBoxes.RecordPlayerArrivalSameRoom);
+                        _openTextboxRecordPlayerArrivalSameRoom = false;
+                    }
+
+                    if (_openTextboxRecordPlayerArrivalOtherRoom && TimeManager.Instance.GetCurrentTime() == Times.Evening)
+                    {
+                        TextBoxesUI.Instance.ActivateTextBox(TextBoxes.RecordPlayerArrivalOtherRoom);
+                        _openTextboxRecordPlayerArrivalOtherRoom = false;
+                    }
                 }
             });
 
@@ -61,31 +89,24 @@ namespace FlorianMan.UI
         {
             turnButton.gameObject.SetActive(true);
         }
-
-        /// <summary>
-        /// Disable the Open Clock Button
-        /// </summary>
-        public void Disable()
-        {
-            openButton.interactable = false;
-        }
-
-        /// <summary>
-        /// Enable the Open Clock Button
-        /// </summary>
-        public void Enable()
-        {
-            openButton.interactable = true;
-        }
         
+        /// <summary>
+        /// Hide the Open Clock UI
+        /// </summary>
         public void Hide()
         {
             gameObject.SetActive(false);
         }
         
+        /// <summary>
+        /// Show the Open Clock UI
+        /// </summary>
         public void Show()
         {
             gameObject.SetActive(true);
         }
+        
+        public void ShowRecordPlayerSameRoomBoxOnClose() => _openTextboxRecordPlayerArrivalSameRoom = true;
+        public void ShowRecordPlayerOtherRoomBoxOnClose() => _openTextboxRecordPlayerArrivalOtherRoom = true;
     }
 }

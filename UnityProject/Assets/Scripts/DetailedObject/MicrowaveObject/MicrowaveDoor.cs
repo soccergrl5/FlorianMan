@@ -5,6 +5,7 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
     public class MicrowaveDoor : MonoBehaviour
     {
         [SerializeField] private GameObject door;
+        [SerializeField] private GameObject doorOpen;
         
         public static MicrowaveDoor Instance {get; private set;}
         
@@ -23,6 +24,7 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             _doorIsOpen = !_doorIsOpen;
             
             door.SetActive(!_doorIsOpen);
+            doorOpen.SetActive(_doorIsOpen);
         }
         
         public bool DoorIsOpen() => _doorIsOpen;
