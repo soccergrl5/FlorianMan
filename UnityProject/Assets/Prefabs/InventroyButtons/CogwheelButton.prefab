@@ -227,3 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8358885022139451841, guid: 0214c9c6888d97b4f89797145b0a94cc, type: 3}
+  cogwheelPrefabs:
+  - {fileID: 8358885022139451841, guid: 0214c9c6888d97b4f89797145b0a94cc, type: 3}
+  - {fileID: 8358885022139451841, guid: 929ff53bbe48fdd41a2d2f383d51b8f7, type: 3}
+  - {fileID: 8358885022139451841, guid: a37df64e398a4234391c62e13f956377, type: 3}

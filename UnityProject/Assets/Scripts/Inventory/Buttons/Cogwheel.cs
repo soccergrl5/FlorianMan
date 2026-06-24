@@ -1,9 +1,12 @@
-﻿using UnityEngine.EventSystems;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace FlorianMan.Inventory.Buttons
 {
     public class Cogwheel : InventoryButton
     {
+        [SerializeField] private GameObject[] cogwheelPrefabs;
+        
         private int _cogwheelNumber;
         
         public override void OnPointerUp(PointerEventData eventData)
@@ -25,6 +28,11 @@ namespace FlorianMan.Inventory.Buttons
             }
         }
         
-        public void SetCogwheelNumber(int cogwheelNumber) => _cogwheelNumber = cogwheelNumber;
+        public void SetCogwheelNumber(int cogwheelNumber)
+        {
+            _cogwheelNumber = cogwheelNumber;
+            
+            prefab = cogwheelPrefabs[_cogwheelNumber - 1];
+        }
     }
 }

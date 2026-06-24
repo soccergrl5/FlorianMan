@@ -24,6 +24,10 @@ namespace FlorianMan.Inventory
             Instance = this;
             
             _audioSource = GetComponent<AudioSource>();
+            
+            AddItem(InventoryItems.Cogwheel1);
+            AddItem(InventoryItems.Cogwheel2);
+            AddItem(InventoryItems.Cogwheel3);
         }
 
         /// <summary>
