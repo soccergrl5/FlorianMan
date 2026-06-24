@@ -12,8 +12,9 @@ namespace FlorianMan.DetailedObject.TelephoneObject
 
         [SerializeField] private AudioClip call811;
         [SerializeField] private AudioClip circularSawHint;
+        [SerializeField] private AudioClip ringing;
         
-        private AudioSource _audioSource;
+        [SerializeField] private AudioSource audioSource;
 
         private string _dialedNumber = "";
         
@@ -23,8 +24,6 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         private void Awake()
         {
             Instance = this;
-            
-            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -54,12 +53,14 @@ namespace FlorianMan.DetailedObject.TelephoneObject
                 TurnablePart.Instance.LockTelephone();
                 CloseDetailViewUI.Instance.LockButton();
 
-                _audioSource.clip = circularSawHint;
+                audioSource.clip = circularSawHint;
+                audioSource.loop = false;
                 
-                float duration = _audioSource.clip.length;
-                Invoke(nameof(UnlockTurnablePart), duration);
+                SubtitlesUI.Instance.ShowSubtitles(Subtitles.CallCircularSaw);
                 
-                _audioSource.Play();
+                Invoke(nameof(UnlockTurnablePart), 6.7f);
+                
+                audioSource.Play();
                 
                 return;
             }
@@ -101,12 +102,12 @@ namespace FlorianMan.DetailedObject.TelephoneObject
                 TurnablePart.Instance.LockTelephone();
                 CloseDetailViewUI.Instance.LockButton();
                 
-                _audioSource.clip = call811;
+                audioSource.clip = call811;
                 
                 Invoke(nameof(UnlockTurnablePart), 29.0f);
                 SubtitlesUI.Instance.ShowSubtitles(Subtitles.Call811);
                 
-                _audioSource.Play();
+                audioSource.Play();
                 
                 _dialedNumber = "";
             }
@@ -133,6 +134,7 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         {
             if (TimeManager.Instance.GetCurrentTime() != Times.Afternoon)
             {
+                audioSource.Stop();
                 CancelInvoke();
                 return;
             }
@@ -150,6 +152,10 @@ namespace FlorianMan.DetailedObject.TelephoneObject
             _phoneRingingAfternoon = true;
             
             TextBoxesUI.Instance.ActivateTextBox(TextBoxes.TelephoneRinging);
+            
+            audioSource.clip = ringing;
+            audioSource.loop = true;
+            audioSource.Play();
         }
     }
 }
