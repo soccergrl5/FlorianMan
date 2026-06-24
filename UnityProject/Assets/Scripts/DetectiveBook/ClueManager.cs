@@ -24,6 +24,8 @@ namespace FlorianMan.DetectiveBook
         /// <param name="clue"></param>
         public void AddClue(Clues clue)
         {
+            if (_foundClues.Contains(clue)) return;
+            
             _foundClues.Add(clue);
             
             DetectiveBookUI.Instance.RevealClue(clue);
@@ -41,5 +43,12 @@ namespace FlorianMan.DetectiveBook
                 SceneManager.LoadScene("EndScene");
             }
         }
+        
+        /// <summary>
+        /// Check if a Clue is already found
+        /// </summary>
+        /// <param name="clue">The Clue to Check</param>
+        /// <returns>True if the Clue was found, false otherwise</returns>
+        public bool ContainsClue(Clues clue) => _foundClues.Contains(clue);
     }
 }

@@ -7,10 +7,10 @@
         PocketWatchMorning2,                        // Open Clock with Cogwheel in Inventory
         RecordPlayerArrivalSameRoom,                // On Evening Arrival in Same Room as Record Player
         RecordPlayerArrivalOtherRoom,               // On Evening Arrival in Other Room than Record Player
-        TelephoneRinging,
-        TelephoneResponse,
-        EnterLivingRoomAfternoon,
-        EnterLivingRoomNoonKnowingBananaPeelChair,
+        TelephoneRinging,                           // In the Afternoon, when the Telephone starts ringing
+        TelephoneResponse,                          // In the Afternoon, after listening to the incoming call
+        EnterLivingRoomAfternoon,                   // First Time entering Living Room Afternoon
+        EnterLivingRoomNoonKnowingBananaPeelChair,  // First Time entering Living Room Noon, with Clue BananaPeelBehindChair
         
         //Living Room
         BodyOutline,
@@ -23,8 +23,8 @@
         CeilingFanSwitchOnNormal,
         CeilingFanBroken,
         CeilingFanWorking,
-        OldTelephoneMorning,
-        OldTelephoneMurderDay,
+        OldTelephoneMorning,                        // Interaction when Emergency Note was not found
+        OldTelephoneMurderDay,                      // Every Interaction on the Day of Murder
         NoteUnderneathShelf,
         ToyOnShelfMorning,
         ToyOnShelfMurderDay,
@@ -32,14 +32,14 @@
         
         //Kitchen
         CakeRecipe,
-        FridgeFreeze,
-        FridgeRegulator,
-        FridgeFreezeButter,
+        FridgeFreeze,                               // Every Open Fridge interaction, before switching mode once
+        FridgeRegulator,                            // Every Time putting the Fridge in Warm Mode
+        FridgeFreezeButter,                         // Open Fridge on Noon
         RavioliCanMorning,
         RavioliCanMurderDay,
         Bananas4,
         Bananas5,
-        Microwave,
+        Microwave,                                  // Every Interaction with Microwave
         
         //Bedroom
         Bed,

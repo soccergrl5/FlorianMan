@@ -6829,7 +6829,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 6dc58047e872c9847aff0ec8c995e59c, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6927,6 +6927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b70439eb204e65bd2296ddbd2d9c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  call811: {fileID: 8300000, guid: 6dc58047e872c9847aff0ec8c995e59c, type: 3}
+  circularSawHint: {fileID: 8300000, guid: 6dc58047e872c9847aff0ec8c995e59c, type: 3}
 --- !u!1001 &805380395
 PrefabInstance:
   m_ObjectHideFlags: 0

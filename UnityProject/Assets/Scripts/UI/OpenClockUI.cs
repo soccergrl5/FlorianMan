@@ -35,16 +35,15 @@ namespace FlorianMan.UI
 
                     if (TimeManager.Instance.GetUnlockedTimes() == 1)
                     {
-                        if (!_openedOnce)
-                        {
-                            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning1);
-                            _openedOnce = true;
-                        }
-
                         if (!_firstCogwheel && InventoryManager.Instance.InventoryContains(InventoryItems.Cogwheel1))
                         {
                             TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning2);
                             _firstCogwheel = true;
+                        }
+                        else if (!_openedOnce)
+                        {
+                            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning1);
+                            _openedOnce = true;
                         }
                     }
                 }
@@ -53,13 +52,13 @@ namespace FlorianMan.UI
                     Watch.Watch.Instance.Hide();
                     HideTurnButton();
 
-                    if (_openTextboxRecordPlayerArrivalSameRoom)
+                    if (_openTextboxRecordPlayerArrivalSameRoom && TimeManager.Instance.GetCurrentTime() == Times.Evening)
                     {
                         TextBoxesUI.Instance.ActivateTextBox(TextBoxes.RecordPlayerArrivalSameRoom);
                         _openTextboxRecordPlayerArrivalSameRoom = false;
                     }
 
-                    if (_openTextboxRecordPlayerArrivalOtherRoom)
+                    if (_openTextboxRecordPlayerArrivalOtherRoom && TimeManager.Instance.GetCurrentTime() == Times.Evening)
                     {
                         TextBoxesUI.Instance.ActivateTextBox(TextBoxes.RecordPlayerArrivalOtherRoom);
                         _openTextboxRecordPlayerArrivalOtherRoom = false;
