@@ -16,6 +16,6 @@ public class TextBoxActivated : MonoBehaviour
     }
     void OnMouseDown()
     {
-        TextBoxesUI.Instance.ActivateTextBox(_textBox);
+        TextBoxesUI.Instance.ActivateTextBox(TripleHandler.instance.GetTextBoxByTimeAndObject(TimeManager.Instance.GetCurrentTime(), this));
     }
 }

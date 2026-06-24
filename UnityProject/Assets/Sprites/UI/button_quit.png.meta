@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1f4d705f999944c4ab5bf66491e52e00
+guid: c2ad429da917d8344be0a5f95b3eb1b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5054621897322321157
-    second: Wohnzimmer_Entwurf_0
+      213: -9107819558717482692
+    second: button_quit_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wohnzimmer_Entwurf_0
+      name: button_quit_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2560
-        height: 1440
+        x: 473
+        y: 513
+        width: 1612
+        height: 414
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 505dec7c5df952640800000000000000
-      internalID: 5054621897322321157
+      spriteID: c391a4cdd568a9180800000000000000
+      internalID: -9107819558717482692
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wohnzimmer_Entwurf_0: 5054621897322321157
+      button_quit_0: -9107819558717482692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

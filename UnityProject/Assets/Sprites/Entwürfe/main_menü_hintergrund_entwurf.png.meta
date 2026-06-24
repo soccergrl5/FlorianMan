@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1f4d705f999944c4ab5bf66491e52e00
+guid: 5ba55b1b56d4798488e7f1772633438c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5054621897322321157
-    second: Wohnzimmer_Entwurf_0
+      213: -5945246132493615659
+    second: "main_men\xFC_hintergrund_entwurf_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wohnzimmer_Entwurf_0
+      name: "main_men\xFC_hintergrund_entwurf_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 505dec7c5df952640800000000000000
-      internalID: 5054621897322321157
+      spriteID: 5ddf37a442e3e7da0800000000000000
+      internalID: -5945246132493615659
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wohnzimmer_Entwurf_0: 5054621897322321157
+      "main_men\xFC_hintergrund_entwurf_0": -5945246132493615659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

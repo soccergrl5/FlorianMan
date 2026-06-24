@@ -94,14 +94,20 @@ namespace FlorianMan.Inventory
             switch (textBox)
             {
                 case TextBoxes.ToyOnShelfMorning:
+                    if (InventoryContains(InventoryItems.Cogwheel1)) break;
+                    
                     AddItem(InventoryItems.Cogwheel1);
                     break;
                 
                 case TextBoxes.PieceOfButterReachable:
+                    if (InventoryContains(InventoryItems.Butter)) break;
+                    
                     AddItem(InventoryItems.Butter);
                     break;
                 
                 case TextBoxes.CryssAngleVinyl:
+                    if (InventoryContains(InventoryItems.HintVinylRecord)) break;
+                    
                     AddItem(InventoryItems.HintVinylRecord);
                     break;
             }
