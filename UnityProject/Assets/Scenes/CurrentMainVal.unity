@@ -3469,6 +3469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   call811: {fileID: 8300000, guid: 6dc58047e872c9847aff0ec8c995e59c, type: 3}
   circularSawHint: {fileID: 8300000, guid: 6dc58047e872c9847aff0ec8c995e59c, type: 3}
+  ringing: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &359072701
 GameObject:
   m_ObjectHideFlags: 0
@@ -7083,6 +7085,7 @@ GameObject:
   - component: {fileID: 706675345}
   - component: {fileID: 706675347}
   - component: {fileID: 706675346}
+  - component: {fileID: 706675348}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -7099,7 +7102,7 @@ Transform:
   m_GameObject: {fileID: 706675344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.254, y: -0.274, z: -1}
+  m_LocalPosition: {x: -0.382, y: -0.272, z: -1}
   m_LocalScale: {x: 0.14707033, y: 0.2166221, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7121,10 +7124,10 @@ MonoBehaviour:
   eveningSprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   afternoonSprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   noonSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  morningPos: {x: -0.254, y: -0.274, z: 0}
-  eveningPos: {x: 0.339, y: -0.228, z: 0}
-  afternoonPos: {x: 0.339, y: -0.228, z: 0}
-  noonPos: {x: 0.339, y: -0.228, z: 0}
+  morningPos: {x: 0.361, y: -0.26, z: 0}
+  eveningPos: {x: 0.361, y: -0.228, z: 0}
+  afternoonPos: {x: -0.245, y: -0.288, z: -0.9}
+  noonPos: {x: 0.361, y: -0.26, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -7185,6 +7188,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &706675348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706675344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28d7671511fb5a4ca6f41fa40f80167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisObject: {fileID: 706675346}
+  afternoonPosition: {x: -0.382, y: -0.272}
 --- !u!224 &709616781 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 627703247238511144, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
@@ -8830,7 +8847,7 @@ GameObject:
   - component: {fileID: 902398238}
   - component: {fileID: 902398237}
   m_Layer: 0
-  m_Name: Shelf
+  m_Name: CryssAngelVinyl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8881,7 +8898,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6392157, g: 0.7686275, b: 0.48235297, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8900,8 +8917,8 @@ Transform:
   m_GameObject: {fileID: 902398232}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21055, y: -0.02382, z: -0.9}
-  m_LocalScale: {x: 1.243444, y: 2.747258, z: 1}
+  m_LocalPosition: {x: -0.157, y: -0.036, z: -0.9}
+  m_LocalScale: {x: 0.27655438, y: 0.48832512, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2134025616}
@@ -14700,7 +14717,7 @@ MonoBehaviour:
   butter: {fileID: 1246182873}
   finger: {fileID: 1041310116}
   buzzSaw: {fileID: 1234791612}
-  shelf: {fileID: 902398237}
+  cryssAngelVinyl: {fileID: 0}
   ravioliCan: {fileID: 153501036}
   bed: {fileID: 1632861648}
   invitationLetter: {fileID: 1440251094}
@@ -17673,6 +17690,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1732599228}
+  text: {fileID: 0}
+  textBox: {fileID: 0}
+  background: {fileID: 0}
 --- !u!1 &1573128002
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using FlorianMan.UI;
 using FlorianMan.Watch;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TripelConfig : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class TripelConfig : MonoBehaviour
     [SerializeField] private TextBoxActivated butter;
     [SerializeField] private TextBoxActivated finger;
     [SerializeField] private TextBoxActivated buzzSaw;
-    [SerializeField] private TextBoxActivated shelf;
+    [SerializeField] private TextBoxActivated cryssAngelVinyl;
     [SerializeField] private TextBoxActivated ravioliCan;
     [SerializeField] private TextBoxActivated bed;
     [SerializeField] private TextBoxActivated invitationLetter;
@@ -79,10 +80,10 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.Empty, buzzSaw);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.Empty, buzzSaw);
 
-        TripleHandler.instance.Add(Times.Morning, TextBoxes.CryssAngleVinyl, shelf);
-        TripleHandler.instance.Add(Times.Evening, TextBoxes.CryssAngleVinyl, shelf);
-        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.CryssAngleVinyl, shelf);
-        TripleHandler.instance.Add(Times.Noon, TextBoxes.CryssAngleVinyl, shelf);
+        TripleHandler.instance.Add(Times.Morning, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
+        TripleHandler.instance.Add(Times.Evening, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
+        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
+        TripleHandler.instance.Add(Times.Noon, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
 
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.RavioliCanMorning, ravioliCan);
