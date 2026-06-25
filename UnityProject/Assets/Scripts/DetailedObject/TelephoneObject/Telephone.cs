@@ -110,6 +110,8 @@ namespace FlorianMan.DetailedObject.TelephoneObject
                 audioSource.Play();
                 
                 _dialedNumber = "";
+                
+                ToyInteractable.Instance.ChangeMorningLine();
             }
         }
 

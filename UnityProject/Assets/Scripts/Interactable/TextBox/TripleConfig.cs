@@ -42,7 +42,7 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.BananaPeelBehindChair, bananaPeel);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.Empty , bananaPeel);
 
-        TripleHandler.instance.Add(Times.Morning, TextBoxes.ToyOnShelfMorning, toy);
+        TripleHandler.instance.Add(Times.Morning, TextBoxes.ToyBeforeCall, toy);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.ToyOnShelfMurderDay, toy);
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.ToyOnShelfMurderDay, toy);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.ToyOnShelfMurderDay, toy);

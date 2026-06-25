@@ -26,6 +26,7 @@
         OldTelephoneMorning,                        // Interaction when Emergency Note was not found
         OldTelephoneMurderDay,                      // Every Interaction on the Day of Murder
         NoteUnderneathShelf,
+        ToyBeforeCall,
         ToyOnShelfMorning,
         ToyOnShelfMurderDay,
         CryssAngleVinyl,
