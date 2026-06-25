@@ -4600,6 +4600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseButton: {fileID: 1331154646}
+  quitButton: {fileID: 0}
   panel: {fileID: 1704993242}
   settings: {fileID: 801841175}
 --- !u!1 &354653850
@@ -6819,6 +6820,7 @@ GameObject:
   - component: {fileID: 464730937}
   - component: {fileID: 464730936}
   - component: {fileID: 464730939}
+  - component: {fileID: 464730940}
   m_Layer: 0
   m_Name: Butter
   m_TagString: Untagged
@@ -6979,6 +6981,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdbc793bb216c3469eb45664c1d5225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &464730940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464730934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e291776e60fc4898e8045ae7313ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisObjectTextBoxActivated: {fileID: 464730939}
 --- !u!1 &473575285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8593,7 +8608,7 @@ Transform:
   m_GameObject: {fileID: 615252273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.357, y: -0.288, z: -1}
+  m_LocalPosition: {x: 0.331, y: -0.258, z: -1}
   m_LocalScale: {x: 0.14707033, y: 0.2166221, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8615,7 +8630,7 @@ MonoBehaviour:
   eveningSprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   afternoonSprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   noonSprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  morningPos: {x: -0.254, y: -0.228, z: 0}
+  morningPos: {x: 0.339, y: -0.228, z: 0}
   eveningPos: {x: 0.339, y: -0.228, z: 0}
   afternoonPos: {x: -0.254, y: -0.228, z: 0}
   noonPos: {x: 0.339, y: -0.228, z: 0}
@@ -8738,7 +8753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisObject: {fileID: 615252275}
-  afternoonPosition: {x: -0.357, y: -0.288}
+  afternoonPosition: {x: -0.357, y: -0.228}
 --- !u!1 &619332285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8839,6 +8854,7 @@ GameObject:
   - component: {fileID: 636528739}
   - component: {fileID: 636528738}
   - component: {fileID: 636528741}
+  - component: {fileID: 636528742}
   m_Layer: 0
   m_Name: Toy
   m_TagString: Untagged
@@ -8999,6 +9015,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdbc793bb216c3469eb45664c1d5225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &636528742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636528736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa42ee93ad0f204cbbaa66a4eb760c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toy: {fileID: 636528741}
 --- !u!1001 &656955312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12224,6 +12253,7 @@ MonoBehaviour:
   turnButtons:
   - {fileID: 490782457}
   - {fileID: 1612735290}
+  revealStoryButton: {fileID: 0}
 --- !u!114 &1010062922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25105,6 +25135,7 @@ GameObject:
   - component: {fileID: 2061251131}
   - component: {fileID: 2061251130}
   - component: {fileID: 2061251129}
+  - component: {fileID: 2061251133}
   m_Layer: 0
   m_Name: CryssAngelVinyl
   m_TagString: Untagged
@@ -25240,6 +25271,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2031998671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061251133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061251128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee66144a334e2747a2ac1ed1e3e671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisObjectTextBoxActivated: {fileID: 2061251129}
 --- !u!1001 &2077260917
 PrefabInstance:
   m_ObjectHideFlags: 0
