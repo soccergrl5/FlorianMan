@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace FlorianMan.Inventory.Buttons
 {
     public class Cogwheel : InventoryButton
     {
         [SerializeField] private GameObject[] cogwheelPrefabs;
+        
+        [SerializeField] private Image cogwheelIcon;
+        [SerializeField] private Sprite[] cogwheelSprites;
         
         private int _cogwheelNumber;
         
@@ -32,7 +36,8 @@ namespace FlorianMan.Inventory.Buttons
         {
             _cogwheelNumber = cogwheelNumber;
             
-            prefab = cogwheelPrefabs[_cogwheelNumber - 1];
+            prefab              = cogwheelPrefabs[_cogwheelNumber - 1];
+            cogwheelIcon.sprite = cogwheelSprites[_cogwheelNumber - 1];
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using Button = UnityEngine.UI.Button;
+using Slider = UnityEngine.UI.Slider;
 
 namespace FlorianMan.MainMenu
 {
@@ -16,6 +16,9 @@ namespace FlorianMan.MainMenu
         [SerializeField] private Button subtitlesButton;
 
         [SerializeField] private Button close;
+
+        [SerializeField] private Sprite subtitlesOn;
+        [SerializeField] private Sprite subtitlesOff;
 
         private float _volume = 1;
         private bool _subtitles = true;
@@ -38,7 +41,7 @@ namespace FlorianMan.MainMenu
             _subtitles = PlayerPrefs.GetInt(KeySubtitles, 0) == 1;
             
             volumeSlider.value                                      = _volume;
-            subtitlesButton.GetComponentInChildren<TMP_Text>().text = _subtitles ? "ON" : "OFF";
+            subtitlesButton.gameObject.GetComponent<Image>().sprite = _subtitles ? subtitlesOn : subtitlesOff;
         }
 
         public void Show()
@@ -62,7 +65,7 @@ namespace FlorianMan.MainMenu
             _subtitles = !_subtitles;
             PlayerPrefs.SetInt(KeySubtitles, _subtitles ? 1 : 0);
             
-            subtitlesButton.GetComponentInChildren<TMP_Text>().text = _subtitles ? "ON" : "OFF";
+            subtitlesButton.GetComponent<Image>().sprite = _subtitles ? subtitlesOn : subtitlesOff;
         }
     }
 }

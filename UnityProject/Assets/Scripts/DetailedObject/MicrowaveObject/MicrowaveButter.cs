@@ -7,6 +7,8 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
     {
         public static MicrowaveButter Instance {get; private set;}
 
+        [SerializeField] private Sprite unfrozenButter;
+
         private bool _microwaved;
 
         private void Awake()
@@ -33,6 +35,11 @@ namespace FlorianMan.DetailedObject.MicrowaveObject
             Hide();
         }
         
-        public void Microwaved() => _microwaved = true;
+        public void Microwaved()
+        {
+            _microwaved = true;
+            
+            GetComponent<SpriteRenderer>().sprite = unfrozenButter;
+        }
     }
 }

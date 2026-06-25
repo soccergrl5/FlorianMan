@@ -1,7 +1,6 @@
 using FlorianMan.UI;
 using FlorianMan.Watch;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TripelConfig : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class TripelConfig : MonoBehaviour
     [SerializeField] private TextBoxActivated bed;
     [SerializeField] private TextBoxActivated invitationLetter;
     [SerializeField] private TextBoxActivated recordPlayer;
+    [SerializeField] private TextBoxActivated cakeRecipe;
 
 
     private void Awake()
@@ -48,7 +48,7 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Morning, TextBoxes.Bananas4, bananas);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.Bananas4, bananas);
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.Bananas4, bananas);
-        TripleHandler.instance.Add(Times.Noon, TextBoxes.ToyOnShelfMorning, bananas);
+        TripleHandler.instance.Add(Times.Noon, TextBoxes.Bananas5, bananas);
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.BodyOutline, corpse);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.CorpseWithShurikens, corpse);
@@ -61,7 +61,7 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Noon, TextBoxes.CeilingFanSwitchOnNormal, ceilingFanRemoteControl);
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.NoteUnderneathShelf, emergencyCallNote);
-        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.NoteInBedroom, emergencyCallNote);
+        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.Empty, emergencyCallNote);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.NoteInBedroom, emergencyCallNote);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.NoteInBedroom, emergencyCallNote);
 
@@ -82,8 +82,8 @@ public class TripelConfig : MonoBehaviour
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
-        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
-        TripleHandler.instance.Add(Times.Noon, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
+        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.Empty, cryssAngelVinyl);
+        TripleHandler.instance.Add(Times.Noon, TextBoxes.Empty, cryssAngelVinyl);
 
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.RavioliCanMorning, ravioliCan);
@@ -100,6 +100,11 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Evening, TextBoxes.InvitationLetter, invitationLetter);
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.InvitationLetter, invitationLetter);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.InvitationLetter, invitationLetter);
+        
+        TripleHandler.instance.Add(Times.Morning, TextBoxes.RecordPlayerMorning, recordPlayer);
+        TripleHandler.instance.Add(Times.Evening, TextBoxes.RecordPlayerEvening, recordPlayer);
+        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.Empty, recordPlayer);
+        TripleHandler.instance.Add(Times.Noon, TextBoxes.Empty, recordPlayer);
         
         TripleHandler.instance.Add(Times.Morning, TextBoxes.RecordPlayerMorning, recordPlayer);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.RecordPlayerEvening, recordPlayer);
