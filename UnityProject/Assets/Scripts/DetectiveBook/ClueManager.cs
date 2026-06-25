@@ -52,6 +52,12 @@ namespace FlorianMan.DetectiveBook
         public bool ContainsClue(Clues clue) => _foundClues.Contains(clue);
 
         /// <summary>
+        /// Check if the Detective Book only contains the Clues from the Story
+        /// </summary>
+        /// <returns></returns>
+        public bool OnlyContainsStoryClues() => _foundClues.Count == 3;
+
+        /// <summary>
         /// Check if the Displayed Textbox also activates a clue in the detective book
         /// </summary>
         /// <param name="textbox">Type of the shown textbox</param>
