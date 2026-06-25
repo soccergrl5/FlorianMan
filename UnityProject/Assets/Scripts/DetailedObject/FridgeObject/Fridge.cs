@@ -98,9 +98,17 @@ namespace FlorianMan.DetailedObject.FridgeObject
         public void DoorInteraction()
         {
             _doorIsOpen = !_doorIsOpen;
-            
-            if (_doorIsOpen) doorOpen.SetActive(true);
-            else doorClose.SetActive(true);
+
+            if (_doorIsOpen)
+            {
+                doorOpen.SetActive(true);
+                CloseDetailViewUI.Instance.LockButton();
+            }
+            else
+            {
+                doorClose.SetActive(true);
+                CloseDetailViewUI.Instance.UnlockButton();
+            }
 
             if (_doorIsOpen && TimeManager.Instance.GetCurrentTime() == Times.Noon)
             {

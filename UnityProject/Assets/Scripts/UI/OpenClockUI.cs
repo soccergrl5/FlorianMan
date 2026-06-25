@@ -125,5 +125,17 @@ namespace FlorianMan.UI
         public void ShowRecordPlayerOtherRoomBoxOnClose() => _openTextboxRecordPlayerArrivalOtherRoom = true;
         public void ShowLivingRoomAfternoon() => _openTextboxLivingRoomAfternoon = true;
         public void ShowLivingRoomNoon() => _openTextboxLivingRoomNoon = true;
+
+        public void Disable()
+        {
+            openButton.interactable = false;
+            turnButton.interactable = false;
+        }
+
+        public void Enable()
+        {
+            openButton.interactable = true;
+            turnButton.interactable = true;
+        }
     }
 }

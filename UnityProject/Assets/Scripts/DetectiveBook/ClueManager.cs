@@ -40,7 +40,7 @@ namespace FlorianMan.DetectiveBook
         {
             if (_foundClues.Count == TotalCluesAmount)
             {
-                SceneManager.LoadScene("EndScene");
+                DetectiveBookUI.Instance.ActivateRevealStoryButton();
             }
         }
         

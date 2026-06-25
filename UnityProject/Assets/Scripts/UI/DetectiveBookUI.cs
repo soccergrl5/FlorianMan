@@ -1,5 +1,6 @@
 ﻿using FlorianMan.DetectiveBook;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace FlorianMan.UI
@@ -13,6 +14,7 @@ namespace FlorianMan.UI
         [SerializeField] private GameObject book;
 
         [SerializeField] private Button[] turnButtons;
+        [SerializeField] private Button revealStoryButton;
 
         private int[] _amountCluesOnPage;
         private int _visualPage;
@@ -26,9 +28,15 @@ namespace FlorianMan.UI
                 if (book.activeSelf) HideBook();
                 else ShowBook();
             });
+            revealStoryButton.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("EndScene");
+            });
 
             turnButtons[0].onClick.AddListener(PreviousPage);
             turnButtons[1].onClick.AddListener(NextPage);
+            
+            revealStoryButton.gameObject.SetActive(false);
         }
 
         private void Start()
@@ -145,5 +153,7 @@ namespace FlorianMan.UI
                 break;
             }
         }
+        
+        public void ActivateRevealStoryButton() => revealStoryButton.gameObject.SetActive(true);
     }
 }

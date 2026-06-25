@@ -386,6 +386,16 @@ namespace FlorianMan.UI
             gameObject.SetActive(true);
         }
 
+        public void Disable()
+        {
+            button.interactable = false;
+        }
+
+        public void Enable()
+        {
+            button.interactable = true;
+        }
+
         private void HideTextbox()
         {
             textBox.SetActive(false);
