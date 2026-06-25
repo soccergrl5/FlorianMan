@@ -12,6 +12,7 @@
         TelephoneResponse,                          // In the Afternoon, after listening to the incoming call
         EnterLivingRoomAfternoon,                   // First Time entering Living Room Afternoon
         EnterLivingRoomNoonKnowingBananaPeelChair,  // First Time entering Living Room Noon, with Clue BananaPeelBehindChair
+        DetectiveBook,
         
         //Living Room
         BodyOutline,

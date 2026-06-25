@@ -26,7 +26,13 @@ namespace FlorianMan.UI
             button.onClick.AddListener(() =>
             {
                 if (book.activeSelf) HideBook();
-                else ShowBook();
+                else
+                {
+                    ShowBook();
+                    
+                    if (!TextBoxesUI.Instance.CheckIfTextWasShown(TextBoxes.DetectiveBook))
+                        TextBoxesUI.Instance.ActivateTextBox(TextBoxes.DetectiveBook);
+                }
             });
             revealStoryButton.onClick.AddListener(() =>
             {
