@@ -14,7 +14,7 @@ namespace FlorianMan.MainMenu
         {
             playButton.onClick.AddListener(() =>
             {
-                SceneManager.LoadScene("CurrentMain");
+                SceneManager.LoadScene("LocalNews");
             });
             
             settingsButton.onClick.AddListener(() =>

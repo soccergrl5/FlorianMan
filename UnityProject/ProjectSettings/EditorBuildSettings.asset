@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 59845d672b8cab3c3ba22d1468c0004e
   - enabled: 1
+    path: Assets/Scenes/LocalNews.unity
+    guid: 814fe8f765dec274db4409a368a846c4
+  - enabled: 1
     path: Assets/Scenes/CurrentMain.unity
     guid: 4a5b8fccf37ad3cfabac13b4f363f397
   - enabled: 1
