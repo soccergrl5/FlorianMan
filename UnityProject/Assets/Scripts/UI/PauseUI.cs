@@ -1,6 +1,7 @@
 ﻿using FlorianMan.Game;
 using FlorianMan.MainMenu;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace FlorianMan.UI
@@ -10,6 +11,7 @@ namespace FlorianMan.UI
         public static PauseUI Instance {get; private set;}
         
         [SerializeField] private Button pauseButton;
+        [SerializeField] private Button quitButton;
         [SerializeField] private GameObject panel;
 
         [SerializeField] private Button settings;
@@ -33,6 +35,11 @@ namespace FlorianMan.UI
                     AudioManager.Instance.CheckSettings();
                     SubtitlesUI.Instance.CheckSettings();
                 }
+            });
+
+            quitButton.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("MainMenu");
             });
             
             settings.onClick.AddListener(() =>
