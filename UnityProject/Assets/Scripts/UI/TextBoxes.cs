@@ -5,6 +5,7 @@
         //General
         PocketWatchMorning1,                        // First Time opening Clock
         PocketWatchMorning2,                        // Open Clock with Cogwheel in Inventory
+        PocketWatchMorning3,                        // Open Clock with Cogwheel but without knowing first line
         RecordPlayerArrivalSameRoom,                // On Evening Arrival in Same Room as Record Player
         RecordPlayerArrivalOtherRoom,               // On Evening Arrival in Other Room than Record Player
         TelephoneRinging,                           // In the Afternoon, when the Telephone starts ringing

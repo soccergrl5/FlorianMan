@@ -13,9 +13,6 @@ namespace FlorianMan.UI
         [SerializeField] private Button turnButton;
 
         private bool _clockVisible;
-
-        private bool _openedOnce;
-        private bool _firstCogwheel;
         
         private bool _openTextboxRecordPlayerArrivalSameRoom;
         private bool _openTextboxRecordPlayerArrivalOtherRoom;
@@ -37,16 +34,21 @@ namespace FlorianMan.UI
 
                     if (TimeManager.Instance.GetUnlockedTimes() == 1)
                     {
-                        if (!_firstCogwheel && InventoryManager.Instance.InventoryContains(InventoryItems.Cogwheel1))
-                        {
-                            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning2);
-                            _firstCogwheel = true;
-                        }
-                        else if (!_openedOnce)
+                        if (!TextBoxesUI.Instance.CheckIfTextWasShown(TextBoxes.PocketWatchMorning2) &&
+                            !TextBoxesUI.Instance.CheckIfTextWasShown(TextBoxes.PocketWatchMorning3) &&
+                            !InventoryManager.Instance.InventoryContains(InventoryItems.Cogwheel1))
                         {
                             TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning1);
-                            _openedOnce    = true;
-                            _firstCogwheel = true;
+                        }
+                        else if (!TextBoxesUI.Instance.CheckIfTextWasShown(TextBoxes.PocketWatchMorning1) &&
+                                 InventoryManager.Instance.InventoryContains(InventoryItems.Cogwheel1))
+                        {
+                            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning3);
+                        }
+                        else if (TextBoxesUI.Instance.CheckIfTextWasShown(TextBoxes.PocketWatchMorning1) &&
+                                 InventoryManager.Instance.InventoryContains(InventoryItems.Cogwheel1))
+                        {
+                            TextBoxesUI.Instance.ActivateTextBox(TextBoxes.PocketWatchMorning2);
                         }
                     }
                 }
