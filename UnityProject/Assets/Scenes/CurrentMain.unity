@@ -1650,7 +1650,7 @@ GameObject:
   - component: {fileID: 135022619}
   - component: {fileID: 135022618}
   m_Layer: 0
-  m_Name: CryssAngelVinyl
+  m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13075,7 +13075,7 @@ MonoBehaviour:
   butter: {fileID: 1260984017}
   finger: {fileID: 164141860}
   buzzSaw: {fileID: 1866290468}
-  cryssAngelVinyl: {fileID: 135022618}
+  shelf: {fileID: 135022618}
   ravioliCan: {fileID: 1952631704}
   bed: {fileID: 1752392561}
   invitationLetter: {fileID: 321460299}
