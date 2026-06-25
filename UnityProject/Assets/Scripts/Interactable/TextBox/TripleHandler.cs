@@ -9,7 +9,7 @@ public class TripleHandler
     
     public static TripleHandler instance { get; } = new TripleHandler();
 
-    private readonly Dictionary<(Times, TextBoxActivated), TextBoxTimeObjectTripel> _byTimeAndObject = new();
+    private Dictionary<(Times, TextBoxActivated), TextBoxTimeObjectTripel> _byTimeAndObject = new();
     
     public void Add(Times time, TextBoxes textbox, TextBoxActivated gameObject)
     {
@@ -26,6 +26,12 @@ public class TripleHandler
 
         Debug.LogWarning($"Kein Tripel gefunden für Time={time}, Object={gameObject}");
         return default;
+    }
+
+    public void Remove(Times time, TextBoxActivated gameObject)
+    {
+        var empty = new TextBoxTimeObjectTripel(time, TextBoxes.Empty, gameObject);
+        _byTimeAndObject[(time, gameObject)] = empty;
     }
 }
 

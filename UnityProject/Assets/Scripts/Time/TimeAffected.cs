@@ -42,6 +42,7 @@ public class TimeAffected : MonoBehaviour
 
     private void Update()
     {
+        _currentState = GetTimeMatchingState();
         _spriteRenderer.sprite = _currentState.GetSprite();
         GetComponentInParent<Transform>().SetLocalPositionAndRotation(_currentState.GetPosition(), Quaternion.identity);
         _spriteRenderer.enabled = _currentState.GetIsActive();
@@ -89,6 +90,22 @@ public class TimeAffected : MonoBehaviour
         } 
     }
 
+    private ObjectState GetTimeMatchingState()
+    {
+        Times currentTime = TimeManager.Instance.GetCurrentTime();
+        ObjectState returnState;
+        switch (currentTime)
+        {
+            case Times.Morning: returnState = _morningState; break;
+            case Times.Evening: returnState = _eveningState; break;
+            case Times.Afternoon: returnState = _afternoonState; break;
+            case Times.Noon: returnState = _noonState; break;
+            default: throw new ArgumentOutOfRangeException();
+        }
+
+        return returnState;
+    }
+
     public void setVisibilityInThisTimeAndAllTimesPrior(bool visibility)
     {
         Times time = TimeManager.Instance.GetCurrentTime();
@@ -116,9 +133,39 @@ public class TimeAffected : MonoBehaviour
         }
     }
 
+    public void SetIsActiveForAllTimes(bool visibility)
+    {
+        _morningState.SetIsActive(visibility);
+        _eveningState.SetIsActive(visibility);
+        _afternoonState.SetIsActive(visibility);
+        _noonState.SetIsActive(visibility);
+    }
+
     public ObjectState getCurrentState()
     {
         return _currentState;
+    }
+
+    public ObjectState getMorningState()
+    {
+        return _morningState;
+    }
+
+    public ObjectState getAfternoonState()
+    {
+        return _afternoonState;
+    }
+
+    public void setMorningPosition(Vector2 position)
+    {
+        morningPos = position;
+        _morningState.SetPosition(position);
+    }
+
+    public void setAfternoonPosition(Vector2 position)
+    {
+        afternoonPos = position;
+        _afternoonState.SetPosition(position);
     }
 }
 

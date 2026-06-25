@@ -1,9 +1,12 @@
 using FlorianMan.UI;
 using FlorianMan.Watch;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TripelConfig : MonoBehaviour
 {
+    public static TripelConfig Instance {get; private set;}
+
     [SerializeField] private TextBoxActivated throwingStars;
     [SerializeField] private TextBoxActivated ceilingFan;
     [SerializeField] private TextBoxActivated bananaPeel;
