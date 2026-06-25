@@ -60,8 +60,8 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Noon, TextBoxes.CeilingFanSwitchOnNormal, ceilingFanRemoteControl);
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.NoteUnderneathShelf, emergencyCallNote);
-        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.Empty, emergencyCallNote);
-        TripleHandler.instance.Add(Times.Evening, TextBoxes.NoteInBedroom, emergencyCallNote);
+        TripleHandler.instance.Add(Times.Evening, TextBoxes.Empty, emergencyCallNote);
+        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.NoteInBedroom, emergencyCallNote);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.NoteInBedroom, emergencyCallNote);
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.PieceOfButterUnreachable, butter);
