@@ -336,6 +336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicVinylOut
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -1001,6 +1005,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShurikensHangingOnCeiling
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1472649276981668183, guid: 507fc636d5f9eb64093c1ae00ba2d320, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: There are shurikens attached to the ceiling fan.
@@ -2441,6 +2453,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RavioliCanMorning
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4707333078363759014, guid: ca9e9f76310e37f4798d9fb7f1f7a605, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: A closed can of raviolis.
@@ -3510,8 +3530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: 0}
+  m_AnchoredPosition: {x: -1.3175049, y: -1.432}
+  m_SizeDelta: {x: -94.5446, y: -48.6869}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190198082
 MonoBehaviour:
@@ -3716,6 +3736,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: CeilingFanSwitchOnNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
@@ -4093,10 +4117,10 @@ RectTransform:
   - {fileID: 1723369319}
   - {fileID: 582010204}
   - {fileID: 1080050342}
-  - {fileID: 492081944}
   - {fileID: 481128930}
   - {fileID: 357755918}
   - {fileID: 631386864}
+  - {fileID: 492081944}
   - {fileID: 1148241346}
   - {fileID: 301542598}
   - {fileID: 551994850}
@@ -4344,6 +4368,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8970135631248998081, guid: 2fe15f20dc02a5247a4916c5755f942f, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: This bed looks comfortable.
@@ -4554,6 +4586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finger
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: There's a finger lying here.
@@ -4675,6 +4711,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bananas5
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3663841427947676917, guid: 52abaae8a27a5d34c81ff7a90b2b0c04, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: Hold on.
@@ -4886,8 +4930,8 @@ Transform:
   m_GameObject: {fileID: 321460295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3091, y: 0.26503, z: -2}
-  m_LocalScale: {x: 0.079351716, y: 0.21781437, z: 1}
+  m_LocalPosition: {x: 0.2933, y: 0.3455, z: -2}
+  m_LocalScale: {x: 0.010151961, y: 0.01199436, z: 0.061518237}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1007841021}
@@ -4930,13 +4974,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 10.18, y: 9.42}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.18, y: 9.42}
   m_EdgeRadius: 0
 --- !u!212 &321460298
 SpriteRenderer:
@@ -4982,7 +5026,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 3196959665173255915, guid: df1a9a1b8269f6a458a16e6bd122bffe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5278,8 +5322,8 @@ Transform:
   m_GameObject: {fileID: 347721099}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.301, y: 0.233, z: -1}
-  m_LocalScale: {x: 0.6264377, y: 1.573906, z: 1}
+  m_LocalPosition: {x: 0.2959, y: 0.213, z: -1}
+  m_LocalScale: {x: 0.010258294, y: 0.010258294, z: 0.016381154}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1007841021}
@@ -5320,9 +5364,9 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.0027027354, y: 0.0024500452}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 10.18, y: 9.42}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5342,14 +5386,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  eveningSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  afternoonSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  noonSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  morningPos: {x: -2.5834, y: -0.119, z: 0}
-  eveningPos: {x: -2.5834, y: -0.28, z: 0}
-  afternoonPos: {x: 0.301, y: 0.233, z: 0}
-  noonPos: {x: 0.301, y: 0.233, z: 0}
+  morningSprite: {fileID: -5518943929119824749, guid: c119462a01ba32948a961baab62de506, type: 3}
+  eveningSprite: {fileID: -5518943929119824749, guid: c119462a01ba32948a961baab62de506, type: 3}
+  afternoonSprite: {fileID: -5518943929119824749, guid: c119462a01ba32948a961baab62de506, type: 3}
+  noonSprite: {fileID: -5518943929119824749, guid: c119462a01ba32948a961baab62de506, type: 3}
+  morningPos: {x: -2.7051, y: -0.244, z: 0}
+  eveningPos: {x: -2.7051, y: -0.244, z: 0}
+  afternoonPos: {x: 0.2959, y: 0.213, z: 0}
+  noonPos: {x: 0.2959, y: 0.213, z: 0}
   isVisibleInMorning: 1
   isVisibleInEvening: 1
   isVisibleInAfternoon: 1
@@ -5399,8 +5443,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.6784314, g: 0.454902, b: 0.9686275, a: 1}
+  m_Sprite: {fileID: -5518943929119824749, guid: c119462a01ba32948a961baab62de506, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5695,6 +5739,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bananas4
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7679222789072704531, guid: f2b4e25cc358d9745a10c1357efde859, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: Four bananas lying here.
@@ -5822,6 +5874,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RavioliCanMurderDay
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4707333078363759014, guid: ca9e9f76310e37f4798d9fb7f1f7a605, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: The knife is still stuck in there.
@@ -6195,6 +6255,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvitationLetter
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3196959665173255915, guid: df1a9a1b8269f6a458a16e6bd122bffe, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: It's an invitation for said birthday party.
@@ -6790,6 +6858,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: CeilingFanSwitchOnUltra
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
@@ -7451,6 +7523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OldTelephoneMorning
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -7638,6 +7714,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: CryssAngleVinylIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
@@ -8460,8 +8540,8 @@ Transform:
   m_GameObject: {fileID: 502196876}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.351, y: -0.8, z: 0}
-  m_LocalScale: {x: 1.2984, y: 9.3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7069913, y: 0.7069913, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 614554288}
@@ -8512,17 +8592,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -7.098295, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 25.6, y: 14.4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.312866, y: 14.4}
   m_EdgeRadius: 0
 --- !u!212 &502196880
 SpriteRenderer:
@@ -8568,8 +8648,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.16545035, g: 0.16545035, b: 0.20754719, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6d404152adca4c04da2e4489d82aaf49, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8744,6 +8824,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToyOnShelfMurderDay
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8793565020033723935, guid: 594920a16d917884186d9fa519a608a4, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: Seems like it sits here just fine without its cogwheel.
@@ -9426,8 +9514,8 @@ Transform:
   m_GameObject: {fileID: 556569937}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.8, z: 0}
-  m_LocalScale: {x: 8, y: 9.3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7069913, y: 0.7069913, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 614554288}
@@ -9478,17 +9566,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.19800234, y: 0.15098977}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 25.6, y: 14.4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.779725, y: 13.504938}
   m_EdgeRadius: 0
 --- !u!212 &556569941
 SpriteRenderer:
@@ -9534,8 +9622,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.16545035, g: 0.16545035, b: 0.20754719, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5b1a6622e91c46e4e9ba8a5d9533cb67, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10226,15 +10314,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07413671, g: 0.11193706, b: 0.9245283, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: -907191675025022241, guid: aae23a5a52a13824ea93e71baba62511, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10242,7 +10330,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.4
 --- !u!222 &581064901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10337,6 +10425,81 @@ Transform:
   - {fileID: 7722262}
   m_Father: {fileID: 1638202851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &597370072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 597370073}
+  - component: {fileID: 597370075}
+  - component: {fileID: 597370074}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &597370073
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597370072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1390887779}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 156}
+  m_SizeDelta: {x: 942.2094, y: 550.55}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &597370074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597370072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8769962375831650688, guid: 95c106cb1cab2a44fb66e8f5ac105322, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &597370075
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597370072}
+  m_CullTransparentMesh: 1
 --- !u!1 &614554287
 GameObject:
   m_ObjectHideFlags: 0
@@ -11272,7 +11435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &763406894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12685,6 +12848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FridgeRegulator
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -13177,6 +13344,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: OldTelephoneMurderDay
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
@@ -13816,10 +13987,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: NoteUnderneathShelf
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7963834888551793722, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: Textbox2
       objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5518943929119824749, guid: c119462a01ba32948a961baab62de506, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: There's a note sticking out underneath the shelf.
@@ -14256,6 +14435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CryssAngleVinylForward
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -14501,6 +14684,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NoteInBedroom
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5518943929119824749, guid: c119462a01ba32948a961baab62de506, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: Now it is here.
@@ -15726,6 +15917,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PieceOfButterReachable
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: Was he trying to cut it with this saw??
@@ -16866,6 +17065,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CryssAngleVinyl
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3986973973290141598, guid: 85c1ced820b49e146b7eb07b15f7b3bc, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: This vinyl looks out of place.
@@ -17801,6 +18008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CakeRecipe
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -17813,7 +18024,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 7460494344027093054, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
     - {fileID: 7963834888551793722, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 627703247238511144, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 597370073}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
 --- !u!224 &1390887779 stripped
@@ -17831,7 +18045,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1400788429}
   - component: {fileID: 1400788433}
-  - component: {fileID: 1400788432}
   - component: {fileID: 1400788431}
   - component: {fileID: 1400788430}
   m_Layer: 0
@@ -17850,7 +18063,7 @@ Transform:
   m_GameObject: {fileID: 1400788428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2659, y: -0.176, z: -1}
+  m_LocalPosition: {x: 0.2661, y: -0.2121, z: -1}
   m_LocalScale: {x: 0.006, y: 0.0089928005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17902,43 +18115,18 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.400116, y: -1.9591999}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 25.6, y: 14.4}
+    oldSize: {x: 10.18, y: 9.42}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.7576313, y: 8.559577}
+  m_Size: {x: 10.18, y: 9.42}
   m_EdgeRadius: 0
---- !u!114 &1400788432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400788428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  morningSprite: {fileID: 21300000, guid: 2bea6bec052c40944a83e33641b0565e, type: 3}
-  eveningSprite: {fileID: 21300000, guid: 2bea6bec052c40944a83e33641b0565e, type: 3}
-  afternoonSprite: {fileID: 21300000, guid: 2bea6bec052c40944a83e33641b0565e, type: 3}
-  noonSprite: {fileID: 21300000, guid: 2bea6bec052c40944a83e33641b0565e, type: 3}
-  morningPos: {x: 0.325, y: -0.171, z: 0}
-  eveningPos: {x: 0.325, y: -0.171, z: 0}
-  afternoonPos: {x: 0.325, y: -0.171, z: 0}
-  noonPos: {x: 0.325, y: -0.171, z: 0}
-  isVisibleInMorning: 1
-  isVisibleInEvening: 1
-  isVisibleInAfternoon: 1
-  isVisibleInNoon: 1
-  timeAffectedObject: {fileID: 1400788432}
 --- !u!212 &1400788433
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17983,8 +18171,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2bea6bec052c40944a83e33641b0565e, type: 3}
-  m_Color: {r: 0.9372549, g: 0.27843142, b: 0.3369374, a: 1}
+  m_Sprite: {fileID: 8769962375831650688, guid: 95c106cb1cab2a44fb66e8f5ac105322, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18102,6 +18290,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaPeelBehindChair
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3944743420904620681, guid: 7b4446aa24b485240808ab3185334544, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: The banana peel? Behind the chair?
@@ -18498,6 +18694,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CeilingFanWorking
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2284363503065205368, guid: f822f313e65f4454aa74e36392fcc337, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: The fan!
@@ -18625,6 +18829,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShurikensInFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1395378998871268843, guid: 1dbe4b3204c2475408a37d7e7b1b3082, type: 3}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: Are those ... shurikens sticking in the floor?
@@ -18743,6 +18963,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: RecordPlayerEvening
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
@@ -19301,6 +19525,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PieceOfButterUnreachable
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4700403802747074126, guid: 7ae51c0a30797fb448474155cbeb9f71, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: There's some piece of butter lying.
@@ -20185,6 +20417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FridgeFreezeButter
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -20358,6 +20594,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: RecordPlayerMorning
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
@@ -20873,7 +21113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ef4bb21e57253fc4e908357c3102b247, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 140689e02a517e745aed9f1f59c4e859, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -21247,6 +21487,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: CircularSawFreshBlood
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
@@ -22022,6 +22266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CryssAngleVinylBackwards
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -22214,8 +22462,8 @@ Transform:
   m_GameObject: {fileID: 1752392557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.058, y: -0.13, z: -2}
-  m_LocalScale: {x: 2, y: 2, z: 0.07826614}
+  m_LocalPosition: {x: 0.091, y: -0.1, z: -2}
+  m_LocalScale: {x: 0.017966252, y: 0.017966252, z: 0.00070276257}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1007841021}
@@ -22254,17 +22502,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0032469146, y: -0.010306671}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 20, y: 13.440001}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1442307, y: 0.14797595}
+  m_Size: {x: 20, y: 13.440001}
   m_EdgeRadius: 0
 --- !u!212 &1752392560
 SpriteRenderer:
@@ -22310,7 +22558,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -8970135631248998081, guid: 2fe15f20dc02a5247a4916c5755f942f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23458,6 +23706,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaPeelNextToCorpse
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3944743420904620681, guid: 7b4446aa24b485240808ab3185334544, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: A leftover banana peel.
@@ -23958,6 +24214,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: Microwave
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
@@ -24483,6 +24743,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CeilingFanBroken
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2355114377303594925, guid: de033b67d22fdab4b8493bc2a40bb945, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: It's broken.
@@ -24602,6 +24870,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToyOnShelfMorning
       objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8888010471097262076, guid: 88736577d939b7d45948525a3ddd8601, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: This toy has a fitting cogwheel in its back.
@@ -24716,6 +24992,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: CircularSawDryBlood
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
@@ -25228,6 +25508,10 @@ PrefabInstance:
     - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Name
       value: FridgeFreeze
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457897391813656010, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6972960324193753905, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_Color.a
