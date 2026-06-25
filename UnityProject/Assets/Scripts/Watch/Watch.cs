@@ -1,4 +1,5 @@
 ﻿using FlorianMan.UI;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 namespace FlorianMan.Watch
@@ -46,6 +47,7 @@ namespace FlorianMan.Watch
             
             RoomPlanUI.Instance.Disable();
             DetectiveBookUI.Instance.Disable();
+            HintUI.Instance.Disable();
         }
 
         /// <summary>
@@ -57,6 +59,7 @@ namespace FlorianMan.Watch
             
             RoomPlanUI.Instance.Enable();
             DetectiveBookUI.Instance.Enable();
+            HintUI.Instance.Enable();
         }
 
         /// <summary>

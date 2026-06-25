@@ -40,7 +40,7 @@ namespace FlorianMan.DetectiveBook
         {
             if (_foundClues.Count == TotalCluesAmount)
             {
-                SceneManager.LoadScene("EndScene");
+                DetectiveBookUI.Instance.ActivateRevealStoryButton();
             }
         }
         
@@ -50,6 +50,12 @@ namespace FlorianMan.DetectiveBook
         /// <param name="clue">The Clue to Check</param>
         /// <returns>True if the Clue was found, false otherwise</returns>
         public bool ContainsClue(Clues clue) => _foundClues.Contains(clue);
+
+        /// <summary>
+        /// Check if the Detective Book only contains the Clues from the Story
+        /// </summary>
+        /// <returns></returns>
+        public bool OnlyContainsStoryClues() => _foundClues.Count == 3;
 
         /// <summary>
         /// Check if the Displayed Textbox also activates a clue in the detective book

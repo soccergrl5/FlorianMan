@@ -168,6 +168,7 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         {
             Times currentTime = TimeManager.Instance.GetCurrentTime();
             
+            CancelInvoke();
             audioSource.Stop();
 
             if (currentTime == Times.Afternoon || currentTime == Times.Noon) return;
@@ -183,7 +184,6 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
                 case 1:
                 case 2:
                     ActiveRecord.Instance.PlaceRecord(_activeRecord);
-                    PlayForward();
                     break;
             }
 
@@ -194,6 +194,11 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
                 else
                     OpenClockUI.Instance.ShowRecordPlayerOtherRoomBoxOnClose();
             }
+            
+            if (currentTime == Times.Evening && !TextBoxesUI.Instance.CheckIfTextWasShown(TextBoxes.MusicVinylOut))
+            {
+                PlayForward();
+            }
         }
 
         /// <summary>
@@ -203,10 +208,10 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         {
             if (_activeRecord == 0) return;
             
+            CancelInvoke();
             audioSource.Stop();
 
             if (_activeRecord == 1) InventoryManager.Instance.AddItem(InventoryItems.MusicVinylRecord);
-
             if (_activeRecord == 2) InventoryManager.Instance.AddItem(InventoryItems.HintVinylRecord);
             
             ForwardButton.Instance.Unlock();
@@ -214,15 +219,7 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             
             Times currentTime = TimeManager.Instance.GetCurrentTime();
             if (currentTime == Times.Morning) _recordAtMorning = 0;
-            else if (currentTime == Times.Evening)
-            {
-                if (_activeRecord == 1)
-                    _recordAtEvening = 0;
-                else if (InventoryManager.Instance.InventoryContains(InventoryItems.MusicVinylRecord))
-                    _recordAtEvening = 0;
-                else if (_recordAtMorning == 1) _recordAtEvening = 0;
-                else _recordAtEvening = 1;
-            }
+            else if (currentTime == Times.Evening) _recordAtEvening = 0;
             
             _activeRecord = 0;
 

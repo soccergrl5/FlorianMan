@@ -1,4 +1,5 @@
-﻿using FlorianMan.MainMenu;
+﻿using System.Collections.Generic;
+using FlorianMan.MainMenu;
 using UnityEngine;
 
 namespace FlorianMan.UI
@@ -10,6 +11,8 @@ namespace FlorianMan.UI
         private SubtitleUI[] _textBoxes;
 
         private bool _showSubtitles;
+        
+        private List<Subtitles> _shownSubtitles = new ();
 
         private void Awake()
         {
@@ -34,9 +37,13 @@ namespace FlorianMan.UI
         /// <param name="subtitles">Subtitles to show</param>
         public void ShowSubtitles(Subtitles subtitles)
         {
+            _shownSubtitles.Add(subtitles);
+            
             if (!_showSubtitles) return;
             
             _textBoxes[(int)subtitles].Show();
         }
+        
+        public bool ShownTheSubtitle(Subtitles subtitles) => _shownSubtitles.Contains(subtitles);
     }
 }

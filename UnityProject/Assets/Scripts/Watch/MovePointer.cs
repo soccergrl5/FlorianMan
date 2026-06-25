@@ -1,4 +1,5 @@
 using System;
+using FlorianMan.UI;
 using UnityEngine;
 
 namespace FlorianMan.Watch
@@ -110,6 +111,8 @@ namespace FlorianMan.Watch
                 _moving        = true;
                 _lockedBack    = false;
                 _lockedForward = false;
+                
+                OpenClockUI.Instance.Disable();
             }
             
             //Special Cases
@@ -159,6 +162,7 @@ namespace FlorianMan.Watch
                     _moving  = false;
                     
                     ResetToDefaultTransform();
+                    OpenClockUI.Instance.Enable();
                 }
                 
                 if (status == 2) _lockedBack = true;
@@ -174,6 +178,7 @@ namespace FlorianMan.Watch
                     _moving  = false;
                     
                     ResetToDefaultTransform();
+                    OpenClockUI.Instance.Enable();
                 }
                 
                 if (status == 2) _lockedForward = true;
