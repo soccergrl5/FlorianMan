@@ -9,6 +9,8 @@ public class ChairInteractable : MonoBehaviour
     
     public void OnMouseDown()
     {
+        _currentTime = TimeManager.Instance.GetCurrentTime();
+        
         if (_currentTime.Equals(Times.Afternoon))
         {
             thisObject.setAfternoonPosition(afternoonPosition);
