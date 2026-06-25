@@ -30,7 +30,7 @@ namespace FlorianMan.UI
             });
             revealStoryButton.onClick.AddListener(() =>
             {
-                SceneManager.LoadScene("EndScene");
+                SceneManager.LoadScene("RevealStory");
             });
 
             turnButtons[0].onClick.AddListener(PreviousPage);

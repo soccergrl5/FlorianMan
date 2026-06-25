@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CurrentMain.unity
     guid: 4a5b8fccf37ad3cfabac13b4f363f397
   - enabled: 1
+    path: Assets/Scenes/RevealStory.unity
+    guid: 75b081c81222580449e3dbecf0416617
+  - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 9e17034e021550b4691b1e53c1439d27
   m_configObjects:
