@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 11cd2b28a5f103543a055ae95b14dd71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4488534732488967444
+    second: "Wohnzimmer_Fr\xFCh_Vordergrund_0"
+  - first:
+      213: 4458275889458976300
+    second: "Wohnzimmer_Fr\xFCh_Vordergrund_1"
+  - first:
+      213: 8906209104742937167
+    second: "Wohnzimmer_Fr\xFCh_Vordergrund_2"
+  - first:
+      213: -2107563699526251708
+    second: "Wohnzimmer_Fr\xFCh_Vordergrund_3"
+  - first:
+      213: -1568309336740321560
+    second: "Wohnzimmer_Fr\xFCh_Vordergrund_4"
+  - first:
+      213: 2479075871411508093
+    second: "Wohnzimmer_Fr\xFCh_Vordergrund_5"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Wohnzimmer_Fr\xFCh_Vordergrund_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1129
+        width: 263
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4150204de8a7a4e30800000000000000
+      internalID: 4488534732488967444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Wohnzimmer_Fr\xFCh_Vordergrund_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 711
+        width: 247
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2614edec4afedd30800000000000000
+      internalID: 4458275889458976300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Wohnzimmer_Fr\xFCh_Vordergrund_2"
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 914
+        width: 186
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f427d8f5ef5399b70800000000000000
+      internalID: 8906209104742937167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Wohnzimmer_Fr\xFCh_Vordergrund_3"
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 249
+        width: 226
+        height: 842
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bca3c4bfd60c2e0800000000000000
+      internalID: -2107563699526251708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Wohnzimmer_Fr\xFCh_Vordergrund_4"
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 591
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e62aada7fe3c3ae0800000000000000
+      internalID: -1568309336740321560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Wohnzimmer_Fr\xFCh_Vordergrund_5"
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 0
+        width: 1142
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7399bece52776220800000000000000
+      internalID: 2479075871411508093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Wohnzimmer_Fr\xFCh_Vordergrund_0": 4488534732488967444
+      "Wohnzimmer_Fr\xFCh_Vordergrund_1": 4458275889458976300
+      "Wohnzimmer_Fr\xFCh_Vordergrund_2": 8906209104742937167
+      "Wohnzimmer_Fr\xFCh_Vordergrund_3": -2107563699526251708
+      "Wohnzimmer_Fr\xFCh_Vordergrund_4": -1568309336740321560
+      "Wohnzimmer_Fr\xFCh_Vordergrund_5": 2479075871411508093
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
