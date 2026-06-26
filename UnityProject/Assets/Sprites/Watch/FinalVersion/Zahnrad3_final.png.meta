@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dd3e850823f086541ba7f2bfa5aadda8
+guid: 0f544d3ada2a1cd4188ea6799ded7d8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 386582615869021851
-    second: "k\xFCche_0"
+      213: -2501689519717768892
+    second: Zahnrad3_final_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "k\xFCche_0"
+      name: Zahnrad3_final_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2560
-        height: 1440
+        x: 829
+        y: 265
+        width: 935
+        height: 936
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9ed63747da6d5500800000000000000
-      internalID: 386582615869021851
+      spriteID: 441a7e6e2a6384dd0800000000000000
+      internalID: -2501689519717768892
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "k\xFCche_0": 386582615869021851
+      Zahnrad3_final_0: -2501689519717768892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

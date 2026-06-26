@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 80353f26393f4654eaf69d3af8e8c512
+guid: 1b65033e6e3943948ab11be2c7b401a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8789035500062518396
-    second: kuchen_rezept_0
+      213: 421645215566639376
+    second: zahnrad_in_eis_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kuchen_rezept_0
+      name: zahnrad_in_eis_0
       rect:
         serializedVersion: 2
-        x: 741
-        y: 161
-        width: 947
-        height: 1116
+        x: 599
+        y: 394
+        width: 1325
+        height: 603
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 483d97c67c2170680800000000000000
-      internalID: -8789035500062518396
+      spriteID: 011b71fe61cf9d500800000000000000
+      internalID: 421645215566639376
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kuchen_rezept_0: -8789035500062518396
+      zahnrad_in_eis_0: 421645215566639376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

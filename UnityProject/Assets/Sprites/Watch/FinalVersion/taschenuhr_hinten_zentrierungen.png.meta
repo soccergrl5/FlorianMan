@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 80353f26393f4654eaf69d3af8e8c512
+guid: cd59c7fce40a6bc42a70893deb4d5f4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8789035500062518396
-    second: kuchen_rezept_0
+      213: -8359397438692269376
+    second: taschenuhr_hinten_zentrierungen_0
+  - first:
+      213: -1832854400663185656
+    second: taschenuhr_hinten_zentrierungen_1
+  - first:
+      213: -3651881823017482708
+    second: taschenuhr_hinten_zentrierungen_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kuchen_rezept_0
+      name: taschenuhr_hinten_zentrierungen_0
       rect:
         serializedVersion: 2
-        x: 741
-        y: 161
-        width: 947
-        height: 1116
+        x: 1488
+        y: 910
+        width: 56
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 483d97c67c2170680800000000000000
-      internalID: -8789035500062518396
+      spriteID: 0c2ef6ac1547dfb80800000000000000
+      internalID: -8359397438692269376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taschenuhr_hinten_zentrierungen_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 633
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807957b22a46096e0800000000000000
+      internalID: -1832854400663185656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taschenuhr_hinten_zentrierungen_2
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 358
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26465994d8e15dc0800000000000000
+      internalID: -3651881823017482708
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kuchen_rezept_0: -8789035500062518396
+      taschenuhr_hinten_zentrierungen_0: -8359397438692269376
+      taschenuhr_hinten_zentrierungen_1: -1832854400663185656
+      taschenuhr_hinten_zentrierungen_2: -3651881823017482708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
