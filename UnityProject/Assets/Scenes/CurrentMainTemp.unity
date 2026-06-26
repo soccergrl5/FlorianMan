@@ -13957,7 +13957,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4339902628868037209, guid: 0c015b51444aedf4fb62a2893ae32f29, type: 3}
+  m_Sprite: {fileID: -4939581537530203270, guid: e985cb38e9856b34d96efca12885bd98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14263,7 +14263,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -4939581537530203270, guid: e985cb38e9856b34d96efca12885bd98, type: 3}
   m_Color: {r: 0.16037738, g: 0.09607513, b: 0.09607513, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16027,7 +16027,7 @@ Transform:
   m_GameObject: {fileID: 1260984012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.274, y: -0.381, z: -0.71}
+  m_LocalPosition: {x: 0.1097, y: -0.331, z: -0.71}
   m_LocalScale: {x: 0.0032718412, y: 0.0046916553, z: 0.022985522}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16095,7 +16095,7 @@ MonoBehaviour:
   eveningSprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
   afternoonSprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
   noonSprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
-  morningPos: {x: 0.2795, y: -0.378, z: 0}
+  morningPos: {x: 0.1097, y: -0.331, z: 0}
   eveningPos: {x: 0.2865, y: -0.1456, z: 0}
   afternoonPos: {x: 0.2865, y: -0.1456, z: 0}
   noonPos: {x: -3.78912, y: -0.11308, z: 0}
