@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1dbe4b3204c2475408a37d7e7b1b3082
+guid: 2b10212bbd323ad458e027d442d633a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1395378998871268843
-    second: Wurfsterne_boden_entwurf_0
+      213: -1450592097195865360
+    second: mikrowelle_button_start_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wurfsterne_boden_entwurf_0
+      name: mikrowelle_button_start_0
       rect:
         serializedVersion: 2
-        x: 707
-        y: 399
-        width: 1080
-        height: 637
+        x: 1843
+        y: 834
+        width: 242
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bed13c27ec16d5310800000000000000
-      internalID: 1395378998871268843
+      spriteID: 0fac6a45c267edbe0800000000000000
+      internalID: -1450592097195865360
       vertices: []
       indices: 
       edges: []
@@ -125,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wurfsterne_boden_entwurf_0: 1395378998871268843
+      mikrowelle_button_start_0: -1450592097195865360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

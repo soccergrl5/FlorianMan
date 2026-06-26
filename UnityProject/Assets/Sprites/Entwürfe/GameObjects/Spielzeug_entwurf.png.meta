@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f822f313e65f4454aa74e36392fcc337
+guid: 5e937f2b4c0d93f43a47fe6f590038cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2284363503065205368
-    second: deckenventilator_entwurf_0
+      213: 6435887344538602975
+    second: Spielzeug_entwurf_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: deckenventilator_entwurf_0
+      name: Spielzeug_entwurf_0
       rect:
         serializedVersion: 2
-        x: 366
-        y: 373
-        width: 1742
-        height: 649
+        x: 1036
+        y: 252
+        width: 575
+        height: 882
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8857eed3f7f4c40e0800000000000000
-      internalID: -2284363503065205368
+      spriteID: fddc7a9e07dd05950800000000000000
+      internalID: 6435887344538602975
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      deckenventilator_entwurf_0: -2284363503065205368
+      Spielzeug_entwurf_0: 6435887344538602975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

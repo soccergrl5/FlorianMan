@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: de033b67d22fdab4b8493bc2a40bb945
+guid: 1dbe4b3204c2475408a37d7e7b1b3082
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2355114377303594925
-    second: deckenventilator_kaputt_0
+      213: 1395378998871268843
+    second: Wurfsterne_boden_entwurf_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: deckenventilator_kaputt_0
+      name: Wurfsterne_boden_entwurf_0
       rect:
         serializedVersion: 2
-        x: 366
-        y: 68
-        width: 1586
-        height: 954
+        x: 707
+        y: 399
+        width: 1080
+        height: 637
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da798985c0c0fa020800000000000000
-      internalID: 2355114377303594925
+      spriteID: bed13c27ec16d5310800000000000000
+      internalID: 1395378998871268843
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      deckenventilator_kaputt_0: 2355114377303594925
+      Wurfsterne_boden_entwurf_0: 1395378998871268843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 507fc636d5f9eb64093c1ae00ba2d320
+guid: dd413d371cfc0e649b4af463eae8c5db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1472649276981668183
-    second: "Wurfsterne_h\xE4ngend_entwurf_0"
-  - first:
-      213: 7621581402456163494
-    second: "Wurfsterne_h\xE4ngend_entwurf_1"
-  - first:
-      213: 681262278866497919
-    second: "Wurfsterne_h\xE4ngend_entwurf_2"
+      213: 3019702176453845720
+    second: telefon_vordergrund_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Wurfsterne_h\xE4ngend_entwurf_0"
+      name: telefon_vordergrund_0
       rect:
         serializedVersion: 2
-        x: 791
-        y: 752
-        width: 280
-        height: 410
+        x: 1679
+        y: 529
+        width: 224
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a695c6f849109be0800000000000000
-      internalID: -1472649276981668183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Wurfsterne_h\xE4ngend_entwurf_1"
-      rect:
-        serializedVersion: 2
-        x: 992
-        y: 252
-        width: 379
-        height: 949
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a48f1897eb45c960800000000000000
-      internalID: 7621581402456163494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Wurfsterne_h\xE4ngend_entwurf_2"
-      rect:
-        serializedVersion: 2
-        x: 1461
-        y: 506
-        width: 312
-        height: 716
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f71f5b2ee64547900800000000000000
-      internalID: 681262278866497919
+      spriteID: 8d26103612328e920800000000000000
+      internalID: 3019702176453845720
       vertices: []
       indices: 
       edges: []
@@ -175,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Wurfsterne_h\xE4ngend_entwurf_0": -1472649276981668183
-      "Wurfsterne_h\xE4ngend_entwurf_1": 7621581402456163494
-      "Wurfsterne_h\xE4ngend_entwurf_2": 681262278866497919
+      telefon_vordergrund_0: 3019702176453845720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe51a221e7aaf184b81eadd6bc838512
+guid: ca9e9f76310e37f4798d9fb7f1f7a605
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4462950241805866229
-    second: Umrandung_entwurf_0
+      213: -4707333078363759014
+    second: ravioli_entwurf_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Umrandung_entwurf_0
+      name: ravioli_entwurf_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2560
-        height: 1440
+        x: 1036
+        y: 228
+        width: 631
+        height: 915
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0beaea966a6012c0800000000000000
-      internalID: -4462950241805866229
+      spriteID: a5e9ea871813caeb0800000000000000
+      internalID: -4707333078363759014
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Umrandung_entwurf_0: -4462950241805866229
+      ravioli_entwurf_0: -4707333078363759014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

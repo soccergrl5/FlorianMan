@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e937f2b4c0d93f43a47fe6f590038cc
+guid: f1d0d1bdb81177b459a631edeaf35cbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6435887344538602975
-    second: Spielzeug_entwurf_0
+      213: -6340070306964893716
+    second: "mikrowelle_t\xFCr_zu_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spielzeug_entwurf_0
+      name: "mikrowelle_t\xFCr_zu_0"
       rect:
         serializedVersion: 2
-        x: 1036
-        y: 252
-        width: 575
-        height: 882
+        x: 424
+        y: 187
+        width: 1401
+        height: 1044
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fddc7a9e07dd05950800000000000000
-      internalID: 6435887344538602975
+      spriteID: cef0b5e95ab8308a0800000000000000
+      internalID: -6340070306964893716
       vertices: []
       indices: 
       edges: []
@@ -125,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spielzeug_entwurf_0: 6435887344538602975
+      "mikrowelle_t\xFCr_zu_0": -6340070306964893716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
