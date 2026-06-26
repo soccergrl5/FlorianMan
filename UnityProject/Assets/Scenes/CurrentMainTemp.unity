@@ -7317,6 +7317,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7676260622584035025, guid: 2fa5adcb73f625d4a80d865ce7f0b0ae, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: This must be where the body was lying.
@@ -9310,7 +9314,7 @@ Transform:
   m_GameObject: {fileID: 549292428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6348, y: 3.89, z: 10}
+  m_LocalPosition: {x: 1.6348, y: 3.89, z: 8.31}
   m_LocalScale: {x: 0.7497868, y: 0.7497868, z: 0.7497868}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9351,7 +9355,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.40500003
 --- !u!114 &549292431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9408,15 +9412,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3cf8ae89579fd29479f4269d09600e16, type: 3}
-  m_Color: {r: 0, g: 0.0028624802, b: 0.49056602, a: 1}
+  m_Sprite: {fileID: -9044021037871161145, guid: 81991acbd6b7aae40b17e3f3bb6209d9, type: 3}
+  m_Color: {r: 0.9968553, g: 0.9968805, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.81000006, y: 0.79}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &551994849
@@ -15430,6 +15434,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635414408399795549, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5151576750248955892, guid: 3a139f7a4d8944e4a8976bff6be212ca, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
       value: Looks like the police have already found him.
@@ -16015,8 +16027,8 @@ Transform:
   m_GameObject: {fileID: 1260984012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2865, y: -0.1456133, z: -0.71}
-  m_LocalScale: {x: 0.004999681, y: 0.00716929, z: 0.035124574}
+  m_LocalPosition: {x: 0.274, y: -0.381, z: -0.71}
+  m_LocalScale: {x: 0.0032718412, y: 0.0046916553, z: 0.022985522}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1029482892}
@@ -16059,13 +16071,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.870001, y: 8.74}
-    newSize: {x: 10.870001, y: 8.74}
+    oldSize: {x: 12.120001, y: 7.88}
+    newSize: {x: 12.120001, y: 7.88}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.870001, y: 8.74}
+  m_Size: {x: 12.120001, y: 7.88}
   m_EdgeRadius: 0
 --- !u!114 &1260984015
 MonoBehaviour:
@@ -16079,11 +16091,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
+  morningSprite: {fileID: 4700403802747074126, guid: 7ae51c0a30797fb448474155cbeb9f71, type: 3}
   eveningSprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
   afternoonSprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
-  noonSprite: {fileID: 4700403802747074126, guid: 7ae51c0a30797fb448474155cbeb9f71, type: 3}
-  morningPos: {x: 0.2865, y: -0.14561328, z: 0}
+  noonSprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
+  morningPos: {x: 0.2795, y: -0.378, z: 0}
   eveningPos: {x: 0.2865, y: -0.1456, z: 0}
   afternoonPos: {x: 0.2865, y: -0.1456, z: 0}
   noonPos: {x: -3.78912, y: -0.11308, z: 0}
@@ -16136,12 +16148,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6422094987964826497, guid: 65a3e0915db16f54bb00f3ff1368f5b1, type: 3}
+  m_Sprite: {fileID: 4700403802747074126, guid: 7ae51c0a30797fb448474155cbeb9f71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.870001, y: 8.74}
+  m_Size: {x: 12.120001, y: 7.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16503,8 +16515,8 @@ Transform:
   m_GameObject: {fileID: 1272870618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0611, y: -0.338, z: -2}
-  m_LocalScale: {x: 0.20801, y: 0.20801, z: 0.208}
+  m_LocalPosition: {x: -0.08, y: -0.359, z: -2}
+  m_LocalScale: {x: 0.014308677, y: 0.026821489, z: 0.014309274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 116309819}
@@ -16543,17 +16555,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.8048892, y: -0.16768503}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 19.2, y: 5.44}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.621666, y: 4.6439734}
   m_EdgeRadius: 0
 --- !u!212 &1272870621
 SpriteRenderer:
@@ -16599,8 +16611,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.18867922, g: 0.18422924, b: 0.18422924, a: 0.8235294}
+  m_Sprite: {fileID: -7676260622584035025, guid: 2fa5adcb73f625d4a80d865ce7f0b0ae, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16634,12 +16646,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384f4841b3e8ec845a3e8494347231f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  morningSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  eveningSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  morningSprite: {fileID: -7676260622584035025, guid: 2fa5adcb73f625d4a80d865ce7f0b0ae, type: 3}
+  eveningSprite: {fileID: 5151576750248955892, guid: 3a139f7a4d8944e4a8976bff6be212ca, type: 3}
   afternoonSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   noonSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  morningPos: {x: -0.047, y: -0.264, z: 0}
-  eveningPos: {x: -0.047, y: -0.264, z: 0}
+  morningPos: {x: -0.071, y: -0.342, z: 0}
+  eveningPos: {x: -0.071, y: -0.342, z: 0}
   afternoonPos: {x: 0, y: 0, z: 0}
   noonPos: {x: 0, y: 0, z: 0}
   isVisibleInMorning: 1
