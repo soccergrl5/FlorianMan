@@ -59,10 +59,10 @@ public class TimeAffected : MonoBehaviour
     private void InitializeStates()
     {
         
-        morningPos.Set(morningPos.x, morningPos.y, -1);
-        eveningPos.Set(eveningPos.x, eveningPos.y, -1);
-        afternoonPos.Set(afternoonPos.x, afternoonPos.y, -1);
-        noonPos.Set(noonPos.x, noonPos.y, -1);
+        morningPos.Set(morningPos.x, morningPos.y, morningPos.z);
+        eveningPos.Set(eveningPos.x, eveningPos.y, eveningPos.z);
+        afternoonPos.Set(afternoonPos.x, afternoonPos.y, afternoonPos.z);
+        noonPos.Set(noonPos.x, noonPos.y, noonPos.z);
         
         _morningState = new ObjectState(morningSprite, morningPos, isVisibleInMorning);
         _eveningState = new ObjectState(eveningSprite, eveningPos, isVisibleInEvening);
@@ -162,7 +162,7 @@ public class TimeAffected : MonoBehaviour
         _morningState.SetPosition(position);
     }
 
-    public void setAfternoonPosition(Vector2 position)
+    public void setAfternoonPosition(Vector3 position)
     {
         afternoonPos = position;
         _afternoonState.SetPosition(position);
