@@ -8,6 +8,7 @@ namespace FlorianMan.DetailedObject.FridgeObject
         public static FrozenCogwheel Instance {get; private set;}
         
         [SerializeField] private Sprite cogwheelSprite;
+        [SerializeField] private Sprite frozenCogwheel;
 
         private bool _isFrozen = true;
         
@@ -30,7 +31,7 @@ namespace FlorianMan.DetailedObject.FridgeObject
         public void Freeze()
         {
             _isFrozen = true;
-            GetComponent<SpriteRenderer>().sprite = null;
+            GetComponent<SpriteRenderer>().sprite = frozenCogwheel;
         }
 
         /// <summary>
