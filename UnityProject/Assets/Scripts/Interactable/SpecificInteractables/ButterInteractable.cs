@@ -1,4 +1,3 @@
-using System;
 using FlorianMan.Watch;
 using UnityEngine;
 
@@ -11,7 +10,7 @@ public class ButterInteractable : MonoBehaviour
     
     void Start()
     {
-        spriteRenderer = GetComponentInParent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
     }
 
@@ -21,6 +20,8 @@ public class ButterInteractable : MonoBehaviour
         {
             spriteRenderer.enabled = false;
             collider.enabled = false;
+            
+            GetComponent<TimeAffected>().SetInvisibleForAfternoon();
         }
     }
 }

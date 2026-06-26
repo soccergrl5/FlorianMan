@@ -167,6 +167,12 @@ public class TimeAffected : MonoBehaviour
         afternoonPos = position;
         _afternoonState.SetPosition(position);
     }
+
+    public void SetInvisibleForAfternoon()
+    {
+        isVisibleInAfternoon = false;
+        _afternoonState.SetIsActive(false);
+    }
 }
 
 

@@ -12,7 +12,7 @@ public class VinylInteractable : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        spriteRenderer = GetComponentInParent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
     }
 

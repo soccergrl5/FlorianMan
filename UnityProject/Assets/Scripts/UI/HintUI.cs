@@ -321,7 +321,7 @@ namespace FlorianMan.UI
                     else if (!ClueManager.Instance.ContainsClue(Clues.CeilingFanSwitchOnUltra))
                     {
                         text.text = _showFirstHint[31]
-                            ? "How did the Ceiling Fan Broke? Does it have a Remote Control?"
+                            ? "How did the Ceiling Fan Break? Does it have a Remote Control?"
                             : "A Remote Control in The Living Room, that is set to \"Ultra\"";
                         _showFirstHint[31] = false;
                     }
