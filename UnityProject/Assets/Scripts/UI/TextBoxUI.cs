@@ -13,22 +13,31 @@ namespace FlorianMan.UI
         private void Awake()
         {
             backgroundButton.onClick.AddListener(NextTextbox);
-            
+        }
+
+        private void Start()
+        {
             Hide();
         }
 
         private void Hide()
         {
             gameObject.SetActive(false);
+            
+            InputBlockage.Instance.UnblockInput();
         }
 
         public void Show()
         {
             gameObject.SetActive(true);
             
+            _currentTextbox = 0;
+            
             textboxes[0].gameObject.SetActive(true);
             
             InputBlockage.Instance.BlockInput();
+            
+            Invoke(nameof(ActivateButton), 0.1f);
         }
 
         private void NextTextbox()
@@ -38,13 +47,18 @@ namespace FlorianMan.UI
 
             if (_currentTextbox == textboxes.Length)
             {
-                _currentTextbox = 0;
                 Hide();
-                InputBlockage.Instance.UnblockInput();
+                
+                backgroundButton.interactable = false;
                 return;
             }
             
             textboxes[_currentTextbox].SetActive(true);
+        }
+
+        private void ActivateButton()
+        {
+            backgroundButton.interactable = true;
         }
     }
 }
