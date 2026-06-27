@@ -1,6 +1,7 @@
 ﻿using System;
 using FlorianMan.Game;
 using FlorianMan.Inventory;
+using FlorianMan.MainMenu;
 using FlorianMan.UI;
 using FlorianMan.Watch;
 using UnityEngine;
@@ -28,12 +29,17 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
         private bool _placedHintRecord;
         private bool _playedHintRecordForward;
         private bool _playedHintRecordBackwards;
+
+        private float _volumeModifier;
         
         private void Awake()
         {
             Instance = this;
             
-            _activeRecord = 0;
+            _activeRecord   = 0;
+            _volumeModifier = 0.5f;
+            
+            Invoke(nameof(VolumeChanged), 1f);
         }
 
         private void Start()
@@ -274,6 +280,17 @@ namespace FlorianMan.DetailedObject.RecordPlayerObject
             
             if (time == Times.Evening) _recordAtEvening = _activeRecord;
             else if (time == Times.Morning) _recordAtMorning = _activeRecord;
+        }
+
+        public void RoomChanged(Rooms room)
+        {
+            _volumeModifier = room == Rooms.Bedroom ? 1f : 0.5f;
+            audioSource.volume = _volumeModifier * PlayerPrefs.GetFloat(Settings.KeyVolume, 1);
+        }
+
+        public void VolumeChanged()
+        {
+            audioSource.volume = _volumeModifier * PlayerPrefs.GetFloat(Settings.KeyVolume, 1);
         }
     }
 }

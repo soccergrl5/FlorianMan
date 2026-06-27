@@ -1,4 +1,5 @@
-﻿using FlorianMan.Game;
+﻿using FlorianMan.DetailedObject.RecordPlayerObject;
+using FlorianMan.Game;
 using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
@@ -73,6 +74,11 @@ namespace FlorianMan.MainMenu
             PlayerPrefs.SetFloat(KeyVolume, value);
             
             AudioManager.Instance.CheckSettings();
+
+            if (RecordPlayer.Instance != null)
+            {
+                RecordPlayer.Instance.VolumeChanged();
+            }
         }
 
         private void SubtitlesChange()

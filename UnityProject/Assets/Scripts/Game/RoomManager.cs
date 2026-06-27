@@ -1,4 +1,5 @@
 using System;
+using FlorianMan.DetailedObject.RecordPlayerObject;
 using FlorianMan.DetectiveBook;
 using FlorianMan.UI;
 using FlorianMan.Watch;
@@ -50,6 +51,8 @@ namespace FlorianMan.Game
             _currentRoom = nextRoom;
 
             CameraMovement.Instance.MoveToNewRoom(_currentRoom);
+            
+            RecordPlayer.Instance.RoomChanged(_currentRoom);
 
             if (_currentRoom != Rooms.LivingRoom) return;
 
