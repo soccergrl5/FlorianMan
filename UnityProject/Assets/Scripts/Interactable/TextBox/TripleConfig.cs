@@ -81,7 +81,7 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Morning, TextBoxes.CircularSawDryBlood, buzzSaw);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.CircularSawDryBlood, buzzSaw);
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.CircularSawFreshBlood, buzzSaw);
-        TripleHandler.instance.Add(Times.Noon, TextBoxes.Empty, buzzSaw);
+        TripleHandler.instance.Add(Times.Noon, TextBoxes.CircularSawClean, buzzSaw);
 
         TripleHandler.instance.Add(Times.Morning, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);
         TripleHandler.instance.Add(Times.Evening, TextBoxes.CryssAngleVinyl, cryssAngelVinyl);

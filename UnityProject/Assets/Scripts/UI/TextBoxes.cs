@@ -60,6 +60,7 @@
         //Basement
         CircularSawDryBlood,
         CircularSawFreshBlood,
+        CircularSawClean,
         PieceOfButterUnreachable,
         PieceOfButterReachable,
         Finger,

@@ -27,11 +27,20 @@ namespace FlorianMan.UI
             button.onClick.AddListener(() =>
             {
                 ButtonSounds.Instance.Play();
-                
-                if (book.activeSelf) HideBook();
+
+                if (book.activeSelf)
+                {
+                    HideBook();
+                    
+                    HintUI.Instance.Enable();
+                    OpenClockUI.Instance.Enable();
+                }
                 else
                 {
                     ShowBook();
+                    
+                    HintUI.Instance.Disable();
+                    OpenClockUI.Instance.Disable();
                     
                     if (!TextBoxesUI.Instance.CheckIfTextWasShown(TextBoxes.DetectiveBook))
                         TextBoxesUI.Instance.ActivateTextBox(TextBoxes.DetectiveBook);
