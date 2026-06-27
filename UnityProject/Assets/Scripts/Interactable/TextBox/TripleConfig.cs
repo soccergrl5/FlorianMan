@@ -23,6 +23,7 @@ public class TripelConfig : MonoBehaviour
     [SerializeField] private TextBoxActivated bed;
     [SerializeField] private TextBoxActivated invitationLetter;
     [SerializeField] private TextBoxActivated cakeRecipe;
+    [SerializeField] private TextBoxActivated tv;
 
 
     private void Awake()
@@ -106,5 +107,10 @@ public class TripelConfig : MonoBehaviour
         TripleHandler.instance.Add(Times.Evening, TextBoxes.CakeRecipe, cakeRecipe);
         TripleHandler.instance.Add(Times.Afternoon, TextBoxes.CakeRecipe, cakeRecipe);
         TripleHandler.instance.Add(Times.Noon, TextBoxes.CakeRecipe, cakeRecipe);
+        
+        TripleHandler.instance.Add(Times.Morning, TextBoxes.TV, tv);
+        TripleHandler.instance.Add(Times.Evening, TextBoxes.TV, tv);
+        TripleHandler.instance.Add(Times.Afternoon, TextBoxes.TV, tv);
+        TripleHandler.instance.Add(Times.Noon, TextBoxes.TV, tv);
     }
 }

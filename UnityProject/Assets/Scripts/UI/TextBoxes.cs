@@ -33,6 +33,7 @@
         ToyOnShelfMorning,
         ToyOnShelfMurderDay,
         CryssAngleVinyl,
+        TV,
         
         //Kitchen
         CakeRecipe,
