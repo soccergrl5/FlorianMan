@@ -64,6 +64,7 @@
         PieceOfButterUnreachable,
         PieceOfButterReachable,
         Finger,
+        Formula,
         
         Empty,
     }
