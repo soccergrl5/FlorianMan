@@ -1,4 +1,5 @@
 ﻿using FlorianMan.DetectiveBook;
+using FlorianMan.Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -25,6 +26,8 @@ namespace FlorianMan.UI
             
             button.onClick.AddListener(() =>
             {
+                ButtonSounds.Instance.Play();
+                
                 if (book.activeSelf) HideBook();
                 else
                 {

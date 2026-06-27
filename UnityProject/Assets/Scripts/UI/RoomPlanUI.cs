@@ -17,21 +17,29 @@ namespace FlorianMan.UI
             buttons[0].onClick.AddListener(() =>
             {
                 RoomManager.Instance.ChangeToRoom(Rooms.LivingRoom);
+                
+                ButtonSounds.Instance.Play();
             });
             
             buttons[1].onClick.AddListener(() =>
             {
                 RoomManager.Instance.ChangeToRoom(Rooms.Kitchen);
+                
+                ButtonSounds.Instance.Play();
             });
             
             buttons[2].onClick.AddListener(() =>
             {
                 RoomManager.Instance.ChangeToRoom(Rooms.Bedroom);
+                
+                ButtonSounds.Instance.Play();
             });
             
             buttons[3].onClick.AddListener(() =>
             {
                 RoomManager.Instance.ChangeToRoom(Rooms.Basement);
+                
+                ButtonSounds.Instance.Play();
             });
         }
         

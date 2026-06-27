@@ -13,6 +13,7 @@ namespace FlorianMan.DetailedObject.TelephoneObject
         [SerializeField] private AudioClip call811;
         [SerializeField] private AudioClip circularSawHint;
         [SerializeField] private AudioClip ringing;
+        [SerializeField] private AudioClip call911;
         
         [SerializeField] private AudioSource audioSource;
 
@@ -112,6 +113,20 @@ namespace FlorianMan.DetailedObject.TelephoneObject
                 _dialedNumber = "";
                 
                 ToyInteractable.Instance.ChangeMorningLine();
+            }
+            else if (_dialedNumber == "911")
+            {
+                TurnablePart.Instance.LockTelephone();
+                CloseDetailViewUI.Instance.LockButton();
+                
+                audioSource.clip = call911;
+                
+                Invoke(nameof(UnlockTurnablePart), 22f);
+                SubtitlesUI.Instance.ShowSubtitles(Subtitles.Call911);
+                
+                audioSource.Play();
+                
+                _dialedNumber = "";
             }
         }
 

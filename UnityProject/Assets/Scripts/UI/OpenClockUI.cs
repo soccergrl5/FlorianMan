@@ -1,4 +1,5 @@
-﻿using FlorianMan.Inventory;
+﻿using FlorianMan.Game;
+using FlorianMan.Inventory;
 using FlorianMan.Watch;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +27,8 @@ namespace FlorianMan.UI
             openButton.onClick.AddListener(() =>
             {
                 _clockVisible = !_clockVisible;
+                
+                ButtonSounds.Instance.Play();
 
                 if (_clockVisible)
                 {

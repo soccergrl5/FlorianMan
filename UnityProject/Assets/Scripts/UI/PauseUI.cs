@@ -35,16 +35,22 @@ namespace FlorianMan.UI
                     AudioManager.Instance.CheckSettings();
                     SubtitlesUI.Instance.CheckSettings();
                 }
+                
+                ButtonSounds.Instance.Play();
             });
 
             quitButton.onClick.AddListener(() =>
             {
+                ButtonSounds.Instance.Play();
+                
                 SceneManager.LoadScene("MainMenu");
             });
             
             settings.onClick.AddListener(() =>
             {
                 Settings.Instance.Show();
+                
+                ButtonSounds.Instance.Play();
             });
             
             panel.SetActive(false);

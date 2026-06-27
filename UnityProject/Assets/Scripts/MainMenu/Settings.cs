@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FlorianMan.Game;
+using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 using Slider = UnityEngine.UI.Slider;
@@ -30,7 +31,12 @@ namespace FlorianMan.MainMenu
             volumeSlider.onValueChanged.AddListener(VolumeChange);
             subtitlesButton.onClick.AddListener(SubtitlesChange);
             
-            close.onClick.AddListener(Hide);
+            close.onClick.AddListener(() =>
+            {
+                Hide();
+                
+                ButtonSounds.Instance.Play();
+            });
             
             Hide();
         }
@@ -73,6 +79,8 @@ namespace FlorianMan.MainMenu
             PlayerPrefs.SetInt(KeySubtitles, _subtitles ? 1 : 0);
             
             subtitlesButton.GetComponent<Image>().sprite = _subtitles ? subtitlesOn : subtitlesOff;
+                
+            ButtonSounds.Instance.Play();
         }
     }
 }

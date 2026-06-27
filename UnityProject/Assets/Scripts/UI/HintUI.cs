@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FlorianMan.DetectiveBook;
+using FlorianMan.Game;
 using FlorianMan.Inventory;
 using FlorianMan.Watch;
 using TMPro;
@@ -29,7 +30,12 @@ namespace FlorianMan.UI
             
             button.onClick.AddListener(() =>
             {
-                if (!_activeHint) LookForHint();
+                if (!_activeHint)
+                {
+                    LookForHint();
+                    
+                    ButtonSounds.Instance.Play();
+                }
             });
             
             background.onClick.AddListener(() =>

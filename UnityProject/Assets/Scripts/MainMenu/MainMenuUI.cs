@@ -1,3 +1,4 @@
+using FlorianMan.Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,16 +15,22 @@ namespace FlorianMan.MainMenu
         {
             playButton.onClick.AddListener(() =>
             {
+                ButtonSounds.Instance.Play();
+                
                 SceneManager.LoadScene("LocalNews");
             });
             
             settingsButton.onClick.AddListener(() =>
             {
                 Settings.Instance.Show();
+                
+                ButtonSounds.Instance.Play();
             });
             
             exitButton.onClick.AddListener(() =>
             {
+                ButtonSounds.Instance.Play();
+                
                 Application.Quit();
             });
         }
