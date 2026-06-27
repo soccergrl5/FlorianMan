@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e9239af053876b748a6aed5aaf899076
+guid: 57f7221b0a09bee46984d5ba9741f530
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2121234911423521480
-    second: "k\xFCche_k\xFChlschrank_nah_0"
+      213: 8836167354628991873
+    second: "k\xFChlschrank_hintergrund_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "k\xFCche_k\xFChlschrank_nah_0"
+      name: "k\xFChlschrank_hintergrund_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83d917b361cdf82e0800000000000000
-      internalID: -2121234911423521480
+      spriteID: 18b609c946f50aa70800000000000000
+      internalID: 8836167354628991873
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "k\xFCche_k\xFChlschrank_nah_0": -2121234911423521480
+      "k\xFChlschrank_hintergrund_0": 8836167354628991873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

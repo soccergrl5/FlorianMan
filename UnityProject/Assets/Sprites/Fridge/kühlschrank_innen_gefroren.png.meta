@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e9239af053876b748a6aed5aaf899076
+guid: f6a41ac7088741541985fcbb89295720
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2121234911423521480
-    second: "k\xFCche_k\xFChlschrank_nah_0"
+      213: 5789079284831025617
+    second: "k\xFChlschrank_innen_gefroren_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "k\xFCche_k\xFChlschrank_nah_0"
+      name: "k\xFChlschrank_innen_gefroren_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83d917b361cdf82e0800000000000000
-      internalID: -2121234911423521480
+      spriteID: 1d9fcec00f0f65050800000000000000
+      internalID: 5789079284831025617
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "k\xFCche_k\xFChlschrank_nah_0": -2121234911423521480
+      "k\xFChlschrank_innen_gefroren_0": 5789079284831025617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

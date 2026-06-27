@@ -39,6 +39,13 @@ namespace FlorianMan.MainMenu
         {
             _volume    = PlayerPrefs.GetFloat(KeyVolume, 1);
             _subtitles = PlayerPrefs.GetInt(KeySubtitles, 0) == 1;
+
+            if (PlayerPrefs.GetInt("STARTED") == 0)
+            {
+                _subtitles = true;
+                PlayerPrefs.SetInt(KeySubtitles, 1);
+                PlayerPrefs.SetInt("STARTED", 1);
+            }
             
             volumeSlider.value                                      = _volume;
             subtitlesButton.gameObject.GetComponent<Image>().sprite = _subtitles ? subtitlesOn : subtitlesOff;
