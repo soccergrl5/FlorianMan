@@ -1,2 +1,2 @@
-# FlorianMan
-Project for the very serious Game Jam
+# FloroianMan
+Project for the Very Serious Juniper Dev Game Jam
