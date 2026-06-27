@@ -15554,7 +15554,7 @@ PrefabInstance:
       objectReference: {fileID: 8336301925441561663, guid: 73e8081ca8db1ea4db96a7f1a93c9b47, type: 3}
     - target: {fileID: 9222619972950505787, guid: 1f48088f1c65b4741a8e8296fb155974, type: 3}
       propertyPath: m_text
-      value: There's a note sticking out underneath the shelf.
+      value: There's a note lying on the carpet.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

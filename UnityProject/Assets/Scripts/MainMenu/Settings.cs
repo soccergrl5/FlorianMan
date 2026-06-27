@@ -71,6 +71,8 @@ namespace FlorianMan.MainMenu
         {
             _volume = value;
             PlayerPrefs.SetFloat(KeyVolume, value);
+            
+            AudioManager.Instance.CheckSettings();
         }
 
         private void SubtitlesChange()

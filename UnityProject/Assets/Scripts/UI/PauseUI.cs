@@ -32,7 +32,6 @@ namespace FlorianMan.UI
                 else
                 {
                     InputBlockage.Instance.UnblockInput();
-                    AudioManager.Instance.CheckSettings();
                     SubtitlesUI.Instance.CheckSettings();
                 }
                 

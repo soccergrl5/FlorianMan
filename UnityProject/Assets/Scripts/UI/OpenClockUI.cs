@@ -88,6 +88,8 @@ namespace FlorianMan.UI
 
             turnButton.onClick.AddListener(() =>
             {
+                ButtonSounds.Instance.Play();
+                
                 Watch.Watch.Instance.TurnClock();
             });
             
