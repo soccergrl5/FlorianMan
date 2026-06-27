@@ -6,6 +6,9 @@ namespace FlorianMan.DetailedObject.FridgeObject
     public class FrozenCogwheel : MonoBehaviour
     {
         public static FrozenCogwheel Instance {get; private set;}
+
+        [SerializeField] private GameObject frozenCogwheelObject;
+        [SerializeField] private GameObject unfrozenCogwheelObject;
         
         [SerializeField] private Sprite cogwheelSprite;
         [SerializeField] private Sprite frozenCogwheel;
@@ -32,6 +35,9 @@ namespace FlorianMan.DetailedObject.FridgeObject
         {
             _isFrozen = true;
             GetComponent<SpriteRenderer>().sprite = frozenCogwheel;
+            
+            frozenCogwheelObject.SetActive(true);
+            unfrozenCogwheelObject.SetActive(false);
         }
 
         /// <summary>
@@ -41,6 +47,9 @@ namespace FlorianMan.DetailedObject.FridgeObject
         {
             _isFrozen = false;
             GetComponent<SpriteRenderer>().sprite = cogwheelSprite;
+            
+            unfrozenCogwheelObject.SetActive(true);
+            frozenCogwheelObject.SetActive(false);
         }
     }
 }
